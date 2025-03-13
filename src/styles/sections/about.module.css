@@ -1,0 +1,32 @@
+.about{
+    margin-top: 100dvh;
+    padding: 5rem 0;
+}
+ 
+.about_wrapper > div{
+    display: flex;
+    margin: 0 auto;
+    gap: 3rem;
+    max-width: 90rem;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+.about_wrapper > div > div{
+    width: 50%;
+    text-align: center;
+}
+
+.about_wrapper > div > div > h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.about_wrapper > div > div > p{
+    font-size: 1.5rem;
+}
+.value_image,
+.mission_image{
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,8 +1,20 @@
 @import "tailwindcss";
 :root {
-  --background: #ffffff;
+  --background: #F0DAB8;
   --text-color: #0f0f0f;
   --accent-color: #850d09;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+ 
+body {
+  background: var(--background);
+ 
+  font-family: var(--font-poppins);
+}
+body>*+*{
+  background: var(--background);
+  z-index: 2;
 }
 
 *,
@@ -12,6 +24,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+ 
 
 p {
   line-height: 1.7;
@@ -20,7 +33,10 @@ p {
 li {
   list-style: none;
 }
-
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
 a {
   color: inherit;
   display: inline-block;

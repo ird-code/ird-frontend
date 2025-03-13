@@ -1,3 +1,11 @@
+import About from "./_sections/About";
+import HeroSection from "./_sections/Hero";
+
 export default function Home() {
-  return <h1>IRD</h1>;
+  return(
+    <div>
+      <HeroSection />
+      <About />
+    </div>
+  );
 }

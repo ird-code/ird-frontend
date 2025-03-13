@@ -1,83 +1,90 @@
-.navbar_wrapper {
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-  max-width: 72.5rem;
+.navbar {
+  --list-space: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+/* ====== START OF UNIVERSAL CSS ====== */
+
+.top_bar,
+.user_action_btns,
+.nav_lists ul {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
 }
 
-.non_active_navbar_lists ul {
+/* ====== END OF UNIVERSAL CSS ====== */
+
+/* ====== START OF TOPBAR ====== */
+
+.top_bar {
+  max-width: 90rem;
+  padding: 1rem 2rem .3rem 2rem;
+  margin: 0 auto;
+}
+
+.top_bar .user_action_btns > * + * {
+  margin-left: var(--list-space);
+}
+.top_bar_logo {
+  width: 20rem;
+}
+
+.login_btn {
+  background: var(--accent-color);
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 0.3rem 1rem;
+  color: white;
+  font-size: 0.9rem;
+}
+.search {
   display: flex;
   align-items: center;
-  list-style: none;
-  padding: 0;
 }
 
-.non_active_navbar_lists ul li {
-  padding: 0 1.2rem;
-}
+/* ====== END OF TOPBAR ====== */
 
-.non_active_navbar_lists ul li a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.non_active_navbar_lists ul li:hover a {
-  color: var(--accent-color);
-}
-
-.navbar_logo{
-    display: flex;
-    align-items: center;
-}
-.toggle_btn,
-.active_navbar_lists button{
-  display: none;
-  cursor: pointer;
-}
-
-.donate_btn button {
-  cursor: pointer;
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 20px;
-  padding: 0.4rem 1.5rem;
-  color: white;
-  font-size: 1rem;
-}
-
-@media screen and (max-width: 970px) {
-  .toggle_btn,
-  .active_navbar_lists button {
-    display: block;
-  }
+/* ====== START OF NAVBAR LISTS ====== */
  
-  .active_navbar_lists button {
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-  }
 
-  .non_active_navbar_lists {
-    display: none;
-  }
-
-  .active_navbar_lists {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 2rem 2rem;
-    display: block;
-    background: var(--accent-color);
-    height: 100vh;
-    width: 50%;
-  }
-  .active_navbar_lists ul li {
-    color: white;
-     font-size: 1.5rem;
-  }
-  .active_navbar_lists> ul >*+* {
-    margin-top: .5rem;
-  }
+.nav_lists {
+  max-width: 75rem;
+  padding: 0rem 2rem;
+  margin: 0 auto;
 }
+.nav_lists ul {
+  margin: 0 auto;
+  display: flex;
+}
+.nav_lists > ul > li {
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+.drop_down {
+  cursor: pointer;
+  position: relative;
+}
+.drop_down ul {
+  display: block;
+  left: 0;
+  line-height: 34px;
+  position: absolute;
+  background: var(--accent-color);
+  width: 100%;
+  padding: 0.4rem 0.8rem;
+  top: 50px;
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+}
+
+.drop_down:hover ul {
+  transition: all 0.3s ease;
+  top: 40px;
+  opacity: 1;
+  visibility: visible;
+}
+/* ====== END OF NAVBAR LISTS ====== */

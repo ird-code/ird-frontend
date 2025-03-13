@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import { Poppins } from "next/font/google";
+import "@/styles/globals.css";
 import Navbar from "@/ui/Navbar";
+import Footer from "@/ui/Footer";
 
-
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400","500", "600", "700"], // Choose the weights you need
+});
 
 export const metadata: Metadata = {
   title: "Institute for Rural Development",
-  description: "IRD is empowering and guiding the local leadership and communities to build the foundation for sustainable rural development rooted in Nepal’s ethos.",
+  description:
+    "IRD is empowering and guiding the local leadership and communities to build the foundation for sustainable rural development rooted in Nepal’s ethos.",
 };
 
 export default function RootLayout({
@@ -16,11 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="antialiased"
-      >
+      <body className={`${poppins.variable} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,85 +1,101 @@
-"use client";
+import React from "react";
+import styles from "@/styles/ui/navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/styles/ui/navbar.module.css";
-import { useState } from "react";
-
 const Navbar = () => {
-  const [isNavOpen, setisNavOpen] = useState(false);
-  const ToggleNavbar = () => {
-    setisNavOpen(!isNavOpen);
-  };
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_wrapper}>
-        <div className={styles.navbar_logo}>
-          <button
-            className={styles.toggle_btn}
-            onClick={ToggleNavbar}
-          >
-            {isNavOpen ? "Open" : "Close"}
-          </button>
-          <Link href="/" aria-label="Go to Home Page">
+        <div className={styles.top_bar}>
+          <div className={styles.top_bar_logo}>
             <Image
-              src="/irdlogo_300x180.webp"
-              width={120}
-              height={72}
+              src="/assets/images/IRD_logo_500x250.png"
+              width={500}
+              height={36}
               alt="IRD Logo"
-              priority
+              aria-label="IRD Logo"
             />
-          </Link>
+          </div>
+          <div className={styles.user_action_btns}>
+            <button className={styles.login_btn}>Login in</button>
+            <div className={styles.search}>
+              <p>O</p>
+              <p>Search</p>
+            </div>
+          </div>
         </div>
-
-        <div className={`${isNavOpen ? styles.active_navbar_lists : styles.non_active_navbar_lists}`}>
-          <ul>
-            <button className={`${isNavOpen ? styles.close_navbar : ""}`} onClick={ToggleNavbar}>Close</button>
+        <div className={styles.nav_lists}>
+          <ul aria-label="Navigation Menu">
             <li>
-              <Link href="/" aria-label="Home">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" aria-label="About Us">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/events" aria-label="Events">
+              <Link href="/#" aria-label="Events">
                 Events
               </Link>
             </li>
             <li>
-              <Link href="/fields" aria-label="Fields">
-                Fields
+              <Link href="/#" aria-label="Areas of Work">
+                Areas of Work
+              </Link>
+            </li>
+            <li
+              aria-label="Initiatives & Campaign"
+              className={styles.drop_down}
+            >
+              Initiatives & Campaigns
+              <ul>
+                <li>
+                  <Link href="/#" aria-label="">
+                    Menu Item 1
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#" aria-label="">
+                    Menu Item 2
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li
+              aria-label="Initiatives & Campaign"
+              className={styles.drop_down}
+            >
+              Flagship Programs
+              <ul>
+                <li>
+                  <Link href="/#" aria-label="">
+                    Menu Item 1
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#" aria-label="">
+                    Menu Item 2
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link href="/#" aria-label="News">
+                News
               </Link>
             </li>
             <li>
-              <Link href="/initiatives" aria-label="Initiatives">
-                Initiatives
-              </Link>
-            </li>
-            <li>
-              <Link href="/flagships" aria-label="Flagships">
-                Flagships
-              </Link>
-            </li>
-            <li>
-              <Link href="/involve" aria-label="Get Involved">
+              <Link href="/#" aria-label="Involve">
                 Involve
               </Link>
             </li>
             <li>
-              <Link href="/blogs" aria-label="Our Blogs">
-                Blogs
+              <Link href="/#" aria-label="Gallery">
+                Gallery
               </Link>
             </li>
+            <li>
+              <Link href="/#" aria-label="About Us">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <button>Donate</button>
+            </li>
           </ul>
-        </div>
-
-        <div className={styles.donate_btn}>
-          <Link href="/donate" passHref>
-            <button aria-label="Donate to IRD">Donate Now</button>
-          </Link>
         </div>
       </div>
     </nav>
