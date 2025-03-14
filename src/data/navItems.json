@@ -1,0 +1,53 @@
+{
+    "navItems": [
+      {
+        "type": "link",
+        "label": "Events",
+        "href": "/events"
+      },
+      {
+        "type": "dropdown",
+        "label": "Areas of Work",
+        "id": "areasOfWork",
+        "menuItems": [
+          { "href": "/", "label": "Menu Item 1" },
+          { "href": "/", "label": "Menu Item 2" }
+        ]
+      },
+      {
+        "type": "dropdown",
+        "label": "Flagship Programs",
+        "id": "flagshipPrograms",
+        "menuItems": [
+          { "href": "/", "label": "Menu Item 1" },
+          { "href": "/", "label": "Menu Item 2" }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "News",
+        "href": "/news"
+      },
+      {
+        "type": "link",
+        "label": "Involve",
+        "href": "/involve"
+      },
+      {
+        "type": "link",
+        "label": "Gallery",
+        "href": "/gallery"
+      },
+      {
+        "type": "link",
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "type": "button",
+        "label": "Donate",
+        "href": "/donate"
+      }
+    ]
+  }
+  

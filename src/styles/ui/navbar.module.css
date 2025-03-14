@@ -1,11 +1,15 @@
-
 .navbar {
   --login-color: #2e318a;
   --hover-color: red;
-  --text-color: #212121;
+  /* --text-color: #212121; */
+  --text-color: white;
+
   --primary-color: #850d09;
   --section-width: 1280px;
   --transition-speed: 0.3s;
+
+  --nav-font-size: 1.2rem;
+  --nav-font-weight: 500;
 
   position: fixed;
   width: 100%;
@@ -24,7 +28,7 @@
   padding: 0 1rem;
 }
 .mainNavWrapper {
-  --section-width: 75rem;
+  --section-width: 72rem;
 }
 /* ===== Transparent and Scrolled Navbar States ===== */
 .navbar {
@@ -32,6 +36,10 @@
 }
 
 .navbarScrolled {
+  --text-color: #212121;
+  --nav-font-size: 1.2rem;
+  --nav-font-weight: 400;
+
   background-color: rgba(255, 255, 255, 0.95);
 }
 
@@ -42,7 +50,8 @@
 }
 
 .navbarScrolled .topBar {
-  background-color: rgba(255, 255, 255, 0.95);
+  /* background-color: rgba(255, 255, 255, 0.95); */
+  background-color: var(--primary-color);
 }
 
 .topBarWrapper {
@@ -54,7 +63,7 @@
 }
 
 .logoContainer {
-  max-width: 20rem;
+  max-width: 30rem;
 }
 
 .logoContainer img {
@@ -115,7 +124,7 @@
 
 .navbarScrolled .mainNav {
   background-color: rgba(255, 255, 255, 0.95);
-  border-top: 1px solid rgba(238, 238, 238, 0.5);
+  /* border-top: 1px solid rgba(238, 238, 238, 0.5); */
 }
 
 .navList {
@@ -126,10 +135,16 @@
 
 .navLink {
   display: block;
-  padding: 1rem 0.8rem;
+  padding: 1rem 0.5rem;
   color: var(--text-color);
-  font-weight: 600;
+  font-size: var(--nav-font-size);
+  font-weight: var(--nav-font-weight);
   transition: color var(--transition-speed) ease;
+}
+
+.navbarScrolled .navLink{
+  font-size: var(--nav-font-size);
+  font-weight: var(--nav-font-weight);
 }
 
 .navLink:hover {
@@ -145,13 +160,16 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 0.8rem;
+  padding: 1rem 0.5rem;
+  font-size: var(--nav-font-size);
+  font-weight: var(--nav-font-weight);
   color: var(--text-color);
-  font-weight: 600;
-  font-size: 1rem;
   transition: color var(--transition-speed) ease;
 }
-
+.navbarScrolled .dropdownButton{
+  font-size: var(--nav-font-size);
+  font-weight: var(--nav-font-weight);
+}
 .dropdownButton:hover {
   color: var(--primary-color);
 }
@@ -287,7 +305,6 @@
     margin: 0.8rem 1.5rem;
   }
 }
-
 
 @media screen and (max-width: 480px) {
   .topBarWrapper {

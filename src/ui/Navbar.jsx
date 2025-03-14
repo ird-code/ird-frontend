@@ -1,17 +1,29 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
-
+import navData from "@/data/navItems.json"
 import styles from "@/styles/ui/navbar.module.css";
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRefs = useRef({});
+  
+  const [openDropdowns, setOpenDropdowns] = useState({
+    areasOfWork: false,
+    flagshipPrograms: false
+  });
+  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const dropdownRef = useRef(null);
   const isMobileRef = useRef(false);
+
+  // Function to set a ref for a dropdown by key
+  const setDropdownRef = useCallback((element, key) => {
+    if (element) {
+      dropdownRefs.current[key] = element;
+    }
+  }, []);
 
   // Check If we are in mobile view or not
   useEffect(() => {
@@ -24,7 +36,7 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-// check if we have scrolled more than 100vh
+  // check if we have scrolled more than 100vh
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -32,24 +44,29 @@ const Navbar = () => {
       setIsScrolled(scrollPosition > viewportHeight);
     };
 
+    handleScroll();
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close the dropdown when we click outside on mobile
+  // Close dropdowns when clicking outside on mobile
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isMobileRef.current && 
-          dropdownRef.current && 
-          !dropdownRef.current.contains(event.target)
-        ) {
-        setIsDropdownOpen(false);
+      if (isMobileRef.current) {
+        Object.entries(openDropdowns).forEach(([key, isOpen]) => {
+          if (isOpen && 
+              dropdownRefs.current[key] && 
+              !dropdownRefs.current[key].contains(event.target)) {
+            setOpenDropdowns(prev => ({ ...prev, [key]: false }));
+          }
+        });
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [openDropdowns]);
 
   // Close mobile menu when window resizes above mobile breakpoint
   useEffect(() => {
@@ -63,11 +80,34 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMobileMenuOpen]);
 
-  const toggleDropdown = (e) => {
-    // Only toggle dropdown on click for mobile
+
+  // Only toggle dropdown on click for mobile
+  const toggleDropdown = (dropdownKey) => (e) => {
     if (isMobileRef.current) {
       e.preventDefault();
-      setIsDropdownOpen(!isDropdownOpen);
+      setOpenDropdowns(prev => ({
+        ...prev,
+        [dropdownKey]: !prev[dropdownKey]
+      }));
+    }
+  };
+  
+  // Handle hover events for desktop mode
+  const handleMouseEnter = (dropdownKey) => () => {
+    if (!isMobileRef.current) {
+      setOpenDropdowns(prev => ({
+        ...prev,
+        [dropdownKey]: true
+      }));
+    }
+  };
+  
+  const handleMouseLeave = (dropdownKey) => () => {
+    if (!isMobileRef.current) {
+      setOpenDropdowns(prev => ({
+        ...prev,
+        [dropdownKey]: false
+      }));
     }
   };
   
@@ -86,7 +126,7 @@ const Navbar = () => {
                 <Image
                   src="/assets/images/IRD_logo_500x250.png"
                   width={500}
-                  height={36}
+                  height={39}
                   alt="IRD Logo"
                   priority
                 />
@@ -121,80 +161,71 @@ const Navbar = () => {
           className={`${styles.mainNav} ${isMobileMenuOpen ? styles.mainNavOpen : ""}`}
         >
           <div className={styles.mainNavWrapper}>
-            <ul className={styles.navList}>
-              <li className={styles.navItem}>
-                <Link href="/events" className={styles.navLink}>
-                  Events
-                </Link>
-              </li>
-              
-              <li className={styles.navItem}>
-                <Link href="/work" className={styles.navLink}>
-                  Areas of Work
-                </Link>
-              </li>
-              
-              <li 
-                className={`${styles.navItem} ${styles.dropdownContainer}`}
-                ref={dropdownRef}
-                onMouseEnter={() => !isMobileRef.current && setIsDropdownOpen(true)}
-                onMouseLeave={() => !isMobileRef.current && setIsDropdownOpen(false)}
-              >
-                <button 
-                  className={styles.dropdownButton}
-                  onClick={toggleDropdown}
-                >
-                  Flagship Programs
-                  <span className={`${styles.dropdownIcon} ${isDropdownOpen ? styles.dropdownIconOpen : ''}`}>▼</span>
-                </button>
-                
-                <ul 
-                  className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownMenuOpen : ""}`}
-                  aria-label="Flagship Programs submenu"
-                >
-                  <li className={styles.dropdownItem}>
-                    <Link href="/" className={styles.dropdownLink}>
-                      Menu Item 1
+          <ul className={styles.navList}>
+            {navData.navItems.map((item) => {
+              if (item.type === "link") {
+                return (
+                  <li key={item.label} className={styles.navItem}>
+                    <Link href={item.href} className={styles.navLink}>
+                      {item.label}
                     </Link>
                   </li>
-                  <li className={styles.dropdownItem}>
-                    <Link href="/" className={styles.dropdownLink}>
-                      Menu Item 2
+                );
+              } else if (item.type === "dropdown") {
+                return (
+                  <li
+                    key={item.id}
+                    className={`${styles.navItem} ${styles.dropdownContainer}`}
+                    ref={(e) => setDropdownRef(e, item.id)}
+                    onMouseEnter={handleMouseEnter(item.id)}
+                    onMouseLeave={handleMouseLeave(item.id)}
+                  >
+                    <button
+                      className={styles.dropdownButton}
+                      onClick={toggleDropdown(item.id)}
+                    >
+                      {item.label}
+                      <span
+                        className={`${styles.dropdownIcon} ${
+                          openDropdowns[item.id] ? styles.dropdownIconOpen : ""
+                        }`}
+                      >
+                        ▼
+                      </span>
+                    </button>
+                    <ul
+                      className={`${styles.dropdownMenu} ${
+                        openDropdowns[item.id] ? styles.dropdownMenuOpen : ""
+                      }`}
+                    >
+                      {item.menuItems.map((subItem, index) => (
+                        <li key={index} className={styles.dropdownItem}>
+                          <Link
+                            href={subItem.href}
+                            className={styles.dropdownLink}
+                          >
+                            {subItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              } else if (item.type === "button") {
+                return (
+                  <li
+                    key={item.label}
+                    className={`${styles.navItem} ${styles.ctaItem}`}
+                  >
+                    <Link href={item.href} className={styles.ctaLink}>
+                      <Button size="medium">{item.label}</Button>
                     </Link>
                   </li>
-                </ul>
-              </li>
-              
-              <li className={styles.navItem}>
-                <Link href="/news" className={styles.navLink}>
-                  News
-                </Link>
-              </li>
-              
-              <li className={styles.navItem}>
-                <Link href="/involve" className={styles.navLink}>
-                  Involve
-                </Link>
-              </li>
-              
-              <li className={styles.navItem}>
-                <Link href="/gallery" className={styles.navLink}>
-                  Gallery
-                </Link>
-              </li>
-              
-              <li className={styles.navItem}>
-                <Link href="/about" className={styles.navLink}>
-                  About Us
-                </Link>
-              </li>
-              
-              <li className={`${styles.navItem} ${styles.ctaItem}`}>
-                <Link href="/donate" className={styles.ctaLink}>
-                  <Button size="medium">Donate</Button>
-                </Link>
-              </li>
-            </ul>
+                );
+              }
+              return null;
+            })}
+          </ul>
           </div>
         </div>
       </div>
