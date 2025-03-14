@@ -3,6 +3,8 @@
   --background: #F0DAB8;
   --text-color: #0f0f0f;
   --accent-color: #850d09;
+  --section-width: 85rem;
+  --section-padding: 0 2rem;
   --font-poppins: "Poppins", sans-serif;
 }
 
@@ -41,4 +43,9 @@ a {
   color: inherit;
   display: inline-block;
   text-decoration: none;
+}
+button{
+  cursor: pointer;
+  background: none;
+  border: none;
 }

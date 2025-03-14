@@ -7,7 +7,7 @@ import Footer from "@/ui/Footer";
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400","500", "600", "700"], // Choose the weights you need
+  weight: ["300","400","500", "600", "700"], 
 });
 
 export const metadata: Metadata = {

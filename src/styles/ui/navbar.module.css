@@ -1,90 +1,305 @@
+
 .navbar {
-  --list-space: 1rem;
+  --login-color: #2e318a;
+  --hover-color: red;
+  --text-color: #212121;
+  --primary-color: #850d09;
+  --section-width: 1280px;
+  --transition-speed: 0.3s;
+
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color var(--transition-speed) ease-in-out;
 }
-/* ====== START OF UNIVERSAL CSS ====== */
 
-.top_bar,
-.user_action_btns,
-.nav_lists ul {
+/* Container and wrappers */
+
+.topBarWrapper,
+.mainNavWrapper {
+  max-width: var(--section-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.mainNavWrapper {
+  --section-width: 75rem;
+}
+/* ===== Transparent and Scrolled Navbar States ===== */
+.navbar {
+  background-color: transparent;
+}
+
+.navbarScrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* ===== TOP BAR ===== */
+.topBar {
+  transition: background-color var(--transition-speed) ease-in-out;
+  background-color: transparent;
+}
+
+.navbarScrolled .topBar {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.topBarWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.logoContainer {
+  max-width: 20rem;
+}
+
+.logoContainer img {
+  width: 100%;
+  height: auto;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loginButton {
+  background-color: #2e318a;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.searchIcon {
+  font-size: 1.1rem;
+}
+
+/* Mobile Menu Toggle */
+.menuToggle {
+  display: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menuToggleText {
+  font-size: 0.9rem;
+}
+
+/* ===== MAIN NAVIGATION ===== */
+.mainNav {
+  background-color: transparent;
+  transition: background-color var(--transition-speed) ease-in-out,
+    max-height var(--transition-speed) ease;
+}
+
+.navbarScrolled .mainNav {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-top: 1px solid rgba(238, 238, 238, 0.5);
+}
+
+.navList {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* ====== END OF UNIVERSAL CSS ====== */
-
-/* ====== START OF TOPBAR ====== */
-
-.top_bar {
-  max-width: 90rem;
-  padding: 1rem 2rem .3rem 2rem;
-  margin: 0 auto;
+.navLink {
+  display: block;
+  padding: 1rem 0.8rem;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color var(--transition-speed) ease;
 }
 
-.top_bar .user_action_btns > * + * {
-  margin-left: var(--list-space);
-}
-.top_bar_logo {
-  width: 20rem;
+.navLink:hover {
+  color: var(--primary-color);
 }
 
-.login_btn {
-  background: var(--accent-color);
-  cursor: pointer;
-  border-radius: 50px;
-  padding: 0.3rem 1rem;
-  color: white;
-  font-size: 0.9rem;
-}
-.search {
-  display: flex;
-  align-items: center;
-}
-
-/* ====== END OF TOPBAR ====== */
-
-/* ====== START OF NAVBAR LISTS ====== */
- 
-
-.nav_lists {
-  max-width: 75rem;
-  padding: 0rem 2rem;
-  margin: 0 auto;
-}
-.nav_lists ul {
-  margin: 0 auto;
-  display: flex;
-}
-.nav_lists > ul > li {
-  font-weight: 500;
-  padding: 0.5rem;
-}
-
-.drop_down {
-  cursor: pointer;
+/* Dropdown */
+.dropdownContainer {
   position: relative;
 }
-.drop_down ul {
-  display: block;
-  left: 0;
-  line-height: 34px;
-  position: absolute;
-  background: var(--accent-color);
-  width: 100%;
-  padding: 0.4rem 0.8rem;
-  top: 50px;
-  opacity: 0;
-  visibility: hidden;
-  color: white;
+
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.8rem;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color var(--transition-speed) ease;
 }
 
-.drop_down:hover ul {
-  transition: all 0.3s ease;
-  top: 40px;
-  opacity: 1;
-  visibility: visible;
+.dropdownButton:hover {
+  color: var(--primary-color);
 }
-/* ====== END OF NAVBAR LISTS ====== */
+
+.dropdownIcon {
+  font-size: 0.7rem;
+  transition: transform var(--transition-speed) ease;
+}
+
+.dropdownIconOpen {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background-color: var(--primary-color);
+  padding: 0.5rem 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition-speed) ease;
+  z-index: 100;
+}
+
+/* Show Dropdown on Hover For Desktop Only */
+@media (min-width: 971px) {
+  .dropdownContainer:hover .dropdownMenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .dropdownMenuOpen {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+/* .dropdownItem {
+  width: 100%;
+} */
+
+.dropdownLink {
+  display: block;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+}
+
+.dropdownLink:hover {
+  background-color: var(--hover-color);
+}
+
+@media screen and (max-width: 970px) {
+  .menuToggle {
+    display: flex;
+  }
+
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .navbarScrolled .topBar,
+  .topBar {
+    background-color: var(--primary-color);
+  }
+
+  .logoContainer {
+    max-width: 150px;
+  }
+
+  /* Mobile Navbar */
+  .mainNav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    z-index: 50;
+  }
+
+  .mainNavOpen {
+    max-height: 1000px;
+  }
+
+  .navList {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+
+  .navItem {
+    width: 100%;
+  }
+
+  .navLink,
+  .dropdownButton {
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* Mobile Dropdown When clicked */
+  .dropdownMenu {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+  }
+
+  .dropdownMenuOpen {
+    max-height: 500px;
+    visibility: visible;
+    opacity: 1;
+    padding: 0.5rem 0;
+  }
+
+  .dropdownLink {
+    padding: 0.6rem 2.5rem;
+  }
+
+  .ctaItem {
+    margin: 0.8rem 1.5rem;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .topBarWrapper {
+    padding: 0.5rem 1rem;
+  }
+
+  .actionButtons {
+    gap: 0.5rem;
+  }
+
+  .loginButton {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
