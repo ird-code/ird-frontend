@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "@/styles/sections/about.module.css";
 import Image from "next/image";
+import Link from "next/link";
+import Button from "@/components/Button";
 const About = () => {
   return (
     <div className={styles.about}>
-      <div className={styles.about_wrapper}>
-        <div className={styles.our_mission}>
-          <div className={styles.mission_desc}>
+      <div className={styles.aboutWrapper}>
+        <div className={styles.ourMission}>
+          <div className={styles.desc}>
             <h2>Our Value</h2>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -15,26 +17,26 @@ const About = () => {
               ipsam. Cupiditate, quasi blanditiis.
             </p>
           </div>
-          <div className={styles.mission_image}>
+          <div className={styles.image}>
             <Image
-              src="/assets/images/IRD_logo_500x250.png"
-              alt="IRD Logo"
-              width={500}
-              height={36}
+              src="/assets/images/Nepal_Flag_Circle_500x500.png"
+              alt="Nepal Flag Circle"
+              width={250}
+              height={250}
             />
           </div>
         </div>
-        <div className={styles.our_value}>
-          <div className={styles.value_image}>
+        <div className={styles.ourValue}>
+          <div className={styles.image}>
             <Image
-              src="/assets/images/IRD_logo_500x250.png"
-              alt="IRD Logo"
-              width={500}
-              height={36}
+              src="/assets/images/Nepal_Flag_Circle_500x500.png"
+              alt="Nepal Flag Circle"
+              width={250}
+              height={250}
             />
           </div>
-          <div className={styles.value_desc}>
-            <h2>Our Value</h2>
+          <div className={styles.desc}>
+            <h2>Our Mission</h2>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Dignissimos dolores iste explicabo nihil? Earum nostrum, assumenda
@@ -42,6 +44,9 @@ const About = () => {
               ipsam. Cupiditate, quasi blanditiis.
             </p>
           </div>
+        </div>
+        <div className={styles.moreEventButton}>
+          <button>Learn More</button>
         </div>
       </div>
     </div>

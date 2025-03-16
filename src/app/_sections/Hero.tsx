@@ -1,15 +1,22 @@
-import React from 'react'
-import styles from "@/styles/sections/hero.module.css"
-import Image from 'next/image'
+import styles from "@/styles/sections/hero.module.css";
 const HeroSection = () => {
   return (
-    <div className={styles.hero}>
-        <div className={styles.hero_wrapper}>
-
-        <Image src="/assets/images/IRD_Logo_750x750.png" alt="IRD Logo" width={500} height={500}/>
+    <section className={styles.hero}>
+      <div className={styles.heroWrapper}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.contentContainer}>
+            {/* <Image
+              src="/assets/images/IRD_Logo_750x750.png"
+              alt="IRD Logo"
+              width={500}
+              height={500}
+              className={styles.logo}
+            /> */}
+          </div>
         </div>
-    </div>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default HeroSection
+export default HeroSection;

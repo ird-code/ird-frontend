@@ -13,8 +13,7 @@ const Button = ({ children, size = 'medium' }) => {
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  onClick: PropTypes.func,
+  size: PropTypes.oneOf(['small', 'medium', 'large'])
 };
 
 export default Button;

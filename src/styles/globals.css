@@ -1,22 +1,18 @@
 @import "tailwindcss";
 :root {
-  --background: #F0DAB8;
+  --background: #ffffff;
   --text-color: #0f0f0f;
   --accent-color: #850d09;
-  --section-width: 85rem;
+  --section-width: 1280px;
   --section-padding: 0 2rem;
-  --font-poppins: "Poppins", sans-serif;
+  --p-font-size: 1.25rem;
+  --section-spacing: 5rem;
+  --section-header-size: 3.3rem;
 }
 
- 
 body {
-  background: var(--background);
- 
   font-family: var(--font-poppins);
-}
-body>*+*{
-  background: var(--background);
-  z-index: 2;
+  line-height: 1.5;
 }
 
 *,
@@ -26,26 +22,50 @@ body>*+*{
   padding: 0;
   box-sizing: border-box;
 }
- 
-
-p {
-  line-height: 1.7;
-}
 
 li {
   list-style: none;
 }
-h1 {
-  font-size: 3rem;
-  font-weight: 800;
-}
+
 a {
   color: inherit;
   display: inline-block;
   text-decoration: none;
 }
-button{
+button {
   cursor: pointer;
   background: none;
+  border: none;
+  font-family: inherit;
+}
+p {
+  font-size: var(--p-font-size);
+  font-family: var(--font-source-sans-pro);
+}
+
+.homePageWrapper > * + * {
+  margin-top: var(--section-spacing) !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-source-sans-pro) !important;
+  line-height: 1.7;
+}
+h2 {
+  font-size: 3.3rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+input{
+  outline: none;
   border: none;
 }

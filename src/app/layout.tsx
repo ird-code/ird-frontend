@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Source_Sans_3, Poppins } from "next/font/google";
 import "@/styles/globals.css";
 import Navbar from "@/ui/Navbar";
 import Footer from "@/ui/Footer";
+
+const sourceSansPro = Source_Sans_3({
+  variable: "--font-source-sans-pro",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -23,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${poppins.variable} ${sourceSansPro.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />

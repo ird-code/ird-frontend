@@ -134,10 +134,15 @@ const Navbar = () => {
             </div>
             
             <div className={styles.actionButtons}>
-              <button className={styles.loginButton} aria-label="Log in">
+              {/* <button className={styles.loginButton} aria-label="Log in">
                 Log in
-              </button>
+              </button> */}
               
+              <div className={styles.loginButton} aria-label="Search">
+                <span className={styles.loginIcon}>🔍</span>
+                <span className={styles.loginText}>Log in</span>
+              </div>
+
               <div className={styles.searchBox} aria-label="Search">
                 <span className={styles.searchIcon}>🔍</span>
                 <span className={styles.searchText}>Search</span>
