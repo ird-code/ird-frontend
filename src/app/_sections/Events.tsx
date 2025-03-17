@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/sections/events.module.css";
 import Link from "next/link";
+import Button from "@/components/Button";
 const Events = () => {
   return (
     <section className={styles.events}>
@@ -21,8 +22,8 @@ const Events = () => {
                 <p className={styles.impDates}>2024, Jan 7 - 2025 Jan 3</p>
               </div>
               <div className={styles.actionButton}>
-                <Link href="/">
-                  <button className={styles.registerButton}>Register</button>
+                <Link href="/register">
+                  <Button size="medium">Register</Button>
                 </Link>
               </div>
             </div>
@@ -43,8 +44,8 @@ const Events = () => {
                 <p className={styles.impDates}>2024, Jan 7 - 2025 Jan 3</p>
               </div>
               <div className={styles.actionButton}>
-                <Link href="/">
-                  <button className={styles.registerButton}>Register</button>
+                <Link href="/register">
+                  <Button size="medium">Register</Button>
                 </Link>
               </div>
             </div>
@@ -52,36 +53,15 @@ const Events = () => {
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Reprehenderit aut voluptatibus ab rem magnam harum aliquid
-                voluptates officia aliquam nisi minus voluptat.
-              </p>
-            </div>
-          </li>
-
-          <li className={styles.event}>
-            <div className={styles.eventHeader}>
-              <div className={styles.eventInfo}>
-                <h3 className={styles.eventName}>Event Name</h3>
-                <p className={styles.impDates}>2024, Jan 7 - 2025 Jan 3</p>
-              </div>
-              <div className={styles.actionButton}>
-                <Link href="/">
-                  <button className={styles.registerButton}>Register</button>
-                </Link>
-              </div>
-            </div>
-            <div className={styles.eventDesc}>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Reprehenderit aut voluptatibus ab rem magnam harum aliquid
-                voluptates officia aliquam nisi minus voluptate sunt, officiis
-                voluptas consequuntur quisquam, laudantium adipisci saepe. Lorem
-                ipsum, dolor sit amet consectetur adipisicing elit.
+                voluptates officia aliquam nisi.
               </p>
             </div>
           </li>
         </ul>
         <div className={styles.moreEventButton}>
-          <button>More Events</button>
+          <Link href="/about">
+            <Button size="large">Learn More</Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -8,9 +8,9 @@ const About = () => {
     <div className={styles.about}>
       <div className={styles.aboutWrapper}>
         <div className={styles.ourMission}>
-          <div className={styles.desc}>
-            <h2>Our Value</h2>
-            <p>
+          <div className={styles.info}>
+          <h2 className={styles.headline}>Our Value</h2>
+          <p className={styles.desc}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Dignissimos dolores iste explicabo nihil? Earum nostrum, assumenda
               at id non cupiditate veniam sed, beatae, minima laborum esse
@@ -35,9 +35,9 @@ const About = () => {
               height={250}
             />
           </div>
-          <div className={styles.desc}>
-            <h2>Our Mission</h2>
-            <p>
+          <div className={styles.info}>
+            <h2 className={styles.headline}>Our Mission</h2>
+            <p className={styles.desc}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Dignissimos dolores iste explicabo nihil? Earum nostrum, assumenda
               at id non cupiditate veniam sed, beatae, minima laborum esse
@@ -45,8 +45,10 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className={styles.moreEventButton}>
-          <button>Learn More</button>
+        <div className={styles.moreAboutUs}>
+          <Link href="/about">
+            <Button size="large">Learn More</Button>
+          </Link>
         </div>
       </div>
     </div>

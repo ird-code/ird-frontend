@@ -1,24 +1,21 @@
 .button {
   background: var(--accent-color);
   color: white;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-  font-weight: 300;
   transition: background 0.3s ease;
 }
 
 .small {
-  padding: 0.4rem 1.4rem;
-  font-size: 0.8rem;
+  padding: 0.6rem 1.8rem;
+  font-size: 1.1rem;
 }
 
 .medium {
-  padding: 0.6rem 2.6rem;
-  font-size: 1rem;
+  padding: 0.6rem 1.8rem;
+  font-size: 1.1rem;
 }
 
 .large {
-  padding: 1rem 3.6rem;
-  font-size: 1.2rem;
+  padding: 1rem 4rem;
+  font-size: 1.3em;
 }
+

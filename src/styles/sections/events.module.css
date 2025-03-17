@@ -8,36 +8,37 @@
   margin-top: var(--inside-section-spacing) !important;
 }
 .header h2 {
-  font-size: var(--section-header-size);
   color: var(--accent-color);
   text-transform: uppercase;
 }
 .header p {
   width: 70ch;
-  font-size: 1.6rem;
+  font-size: var(--sub-heading-font-size);
 }
-.impDates{
+.impDates {
   color: rgb(53, 53, 53);
-font-size:1.2rem;
-font-weight: 500;
-line-height: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 0;
 }
 .events {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.eventDesc p {
-  font-size: 22px;
-  color: rgb(47, 47, 47);
-}
 .event {
   background-color: rgb(243, 243, 243);
   padding: 2rem;
 }
-.event > * + * {
-  margin-top: 2rem;
+
+.eventDesc {
+  margin-top: 1.8rem;
 }
+.eventDesc p {
+  font-size: 22px;
+  color: rgb(47, 47, 47);
+}
+
 .event .eventHeader {
   display: flex;
   justify-content: space-between;
@@ -45,22 +46,9 @@ line-height: 0;
 }
 .eventInfo {
   display: flex;
-flex-direction: column;
-  gap:.5rem;
-}
-
-.moreEventButton button,
-.registerButton {
-  background-color: var(--accent-color);
-  padding: 0.6rem 1.8rem;
-  color: white;
-  font-size: 1.1rem;
-}
-.moreEventButton button {
-  padding: 1rem 4rem;
-  font-size: 1.3em;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .moreEventButton {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }

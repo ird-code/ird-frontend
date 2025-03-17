@@ -3,9 +3,11 @@
   --background: #ffffff;
   --text-color: #0f0f0f;
   --accent-color: #850d09;
+  --primary-color: #850d09;
   --section-width: 1280px;
   --section-padding: 0 2rem;
   --p-font-size: 1.25rem;
+  --sub-heading-font-size:1.6rem;
   --section-spacing: 5rem;
   --section-header-size: 3.3rem;
 }

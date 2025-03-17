@@ -2,18 +2,24 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/Button";
-import navData from "@/data/navItems.json"
+import navData from "@/data/navItems.json";
 import styles from "@/styles/ui/navbar.module.css";
+import { TbLogin2 } from "react-icons/tb";
+import { IoSearch } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
+import { RiCloseLargeFill } from "react-icons/ri";
+import { FaBars } from "react-icons/fa6";
+
+
 
 const Navbar = () => {
   const dropdownRefs = useRef({});
-  
+
   const [openDropdowns, setOpenDropdowns] = useState({
     areasOfWork: false,
-    flagshipPrograms: false
+    flagshipPrograms: false,
   });
-  
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobileRef = useRef(false);
@@ -30,7 +36,7 @@ const Navbar = () => {
     const checkMobile = () => {
       isMobileRef.current = window.innerWidth <= 970;
     };
-    
+
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -40,12 +46,12 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const viewportHeight = window.innerHeight - 120;      
+      const viewportHeight = window.innerHeight - 120;
       setIsScrolled(scrollPosition > viewportHeight);
     };
 
     handleScroll();
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -55,10 +61,12 @@ const Navbar = () => {
     const handleClickOutside = (event) => {
       if (isMobileRef.current) {
         Object.entries(openDropdowns).forEach(([key, isOpen]) => {
-          if (isOpen && 
-              dropdownRefs.current[key] && 
-              !dropdownRefs.current[key].contains(event.target)) {
-            setOpenDropdowns(prev => ({ ...prev, [key]: false }));
+          if (
+            isOpen &&
+            dropdownRefs.current[key] &&
+            !dropdownRefs.current[key].contains(event.target)
+          ) {
+            setOpenDropdowns((prev) => ({ ...prev, [key]: false }));
           }
         });
       }
@@ -80,42 +88,41 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMobileMenuOpen]);
 
-
   // Only toggle dropdown on click for mobile
   const toggleDropdown = (dropdownKey) => (e) => {
     if (isMobileRef.current) {
       e.preventDefault();
-      setOpenDropdowns(prev => ({
+      setOpenDropdowns((prev) => ({
         ...prev,
-        [dropdownKey]: !prev[dropdownKey]
+        [dropdownKey]: !prev[dropdownKey],
       }));
     }
   };
-  
+
   // Handle hover events for desktop mode
   const handleMouseEnter = (dropdownKey) => () => {
     if (!isMobileRef.current) {
-      setOpenDropdowns(prev => ({
+      setOpenDropdowns((prev) => ({
         ...prev,
-        [dropdownKey]: true
+        [dropdownKey]: true,
       }));
     }
   };
-  
+
   const handleMouseLeave = (dropdownKey) => () => {
     if (!isMobileRef.current) {
-      setOpenDropdowns(prev => ({
+      setOpenDropdowns((prev) => ({
         ...prev,
-        [dropdownKey]: false
+        [dropdownKey]: false,
       }));
     }
   };
-  
+
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <nav 
-      className={`${styles.navbar} ${isScrolled ? styles.navbarScrolled : ''}`} 
+    <nav
+      className={`${styles.navbar} ${isScrolled ? styles.navbarScrolled : ""}`}
       aria-label="Main Navigation"
     >
       <div className={styles.navbarContainer}>
@@ -132,28 +139,32 @@ const Navbar = () => {
                 />
               </Link>
             </div>
-            
+
             <div className={styles.actionButtons}>
               {/* <button className={styles.loginButton} aria-label="Log in">
                 Log in
               </button> */}
-              
+
               <div className={styles.loginButton} aria-label="Search">
-                <span className={styles.loginIcon}>🔍</span>
+                <span className={styles.loginIcon}>
+                  <TbLogin2 />
+                </span>
                 <span className={styles.loginText}>Log in</span>
               </div>
 
               <div className={styles.searchBox} aria-label="Search">
-                <span className={styles.searchIcon}>🔍</span>
+                <span className={styles.searchIcon}>
+                  <IoSearch />
+                </span>
                 <span className={styles.searchText}>Search</span>
               </div>
-              
+
               <button
                 className={styles.menuToggle}
                 onClick={toggleMobileMenu}
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               >
-                {isMobileMenuOpen ? "✕" : "☰"}
+                {isMobileMenuOpen ? <RiCloseLargeFill  /> : <FaBars  />}
                 <span className={styles.menuToggleText}>
                   {isMobileMenuOpen ? "Close" : "Menu"}
                 </span>
@@ -162,75 +173,79 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div 
-          className={`${styles.mainNav} ${isMobileMenuOpen ? styles.mainNavOpen : ""}`}
+        <div
+          className={`${styles.mainNav} ${
+            isMobileMenuOpen ? styles.mainNavOpen : ""
+          }`}
         >
           <div className={styles.mainNavWrapper}>
-          <ul className={styles.navList}>
-            {navData.navItems.map((item) => {
-              if (item.type === "link") {
-                return (
-                  <li key={item.label} className={styles.navItem}>
-                    <Link href={item.href} className={styles.navLink}>
-                      {item.label}
-                    </Link>
-                  </li>
-                );
-              } else if (item.type === "dropdown") {
-                return (
-                  <li
-                    key={item.id}
-                    className={`${styles.navItem} ${styles.dropdownContainer}`}
-                    ref={(e) => setDropdownRef(e, item.id)}
-                    onMouseEnter={handleMouseEnter(item.id)}
-                    onMouseLeave={handleMouseLeave(item.id)}
-                  >
-                    <button
-                      className={styles.dropdownButton}
-                      onClick={toggleDropdown(item.id)}
+            <ul className={styles.navList}>
+              {navData.navItems.map((item) => {
+                if (item.type === "link") {
+                  return (
+                    <li key={item.label} className={styles.navItem}>
+                      <Link href={item.href} className={styles.navLink}>
+                        {item.label}
+                      </Link>
+                    </li>
+                  );
+                } else if (item.type === "dropdown") {
+                  return (
+                    <li
+                      key={item.id}
+                      className={`${styles.navItem} ${styles.dropdownContainer}`}
+                      ref={(e) => setDropdownRef(e, item.id)}
+                      onMouseEnter={handleMouseEnter(item.id)}
+                      onMouseLeave={handleMouseLeave(item.id)}
                     >
-                      {item.label}
-                      <span
-                        className={`${styles.dropdownIcon} ${
-                          openDropdowns[item.id] ? styles.dropdownIconOpen : ""
+                      <button
+                        className={styles.dropdownButton}
+                        onClick={toggleDropdown(item.id)}
+                      >
+                        {item.label}
+                        <span
+                          className={`${styles.dropdownIcon} ${
+                            openDropdowns[item.id]
+                              ? styles.dropdownIconOpen
+                              : ""
+                          }`}
+                        >
+                          <IoIosArrowDown />
+                        </span>
+                      </button>
+                      <ul
+                        className={`${styles.dropdownMenu} ${
+                          openDropdowns[item.id] ? styles.dropdownMenuOpen : ""
                         }`}
                       >
-                        ▼
-                      </span>
-                    </button>
-                    <ul
-                      className={`${styles.dropdownMenu} ${
-                        openDropdowns[item.id] ? styles.dropdownMenuOpen : ""
-                      }`}
+                        {item.menuItems.map((subItem, index) => (
+                          <li key={index} className={styles.dropdownItem}>
+                            <Link
+                              href={subItem.href}
+                              className={styles.dropdownLink}
+                            >
+                              {subItem.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  );
+                } else if (item.type === "button") {
+                  return (
+                    <li
+                      key={item.label}
+                      className={`${styles.navItem} ${styles.ctaItem}`}
                     >
-                      {item.menuItems.map((subItem, index) => (
-                        <li key={index} className={styles.dropdownItem}>
-                          <Link
-                            href={subItem.href}
-                            className={styles.dropdownLink}
-                          >
-                            {subItem.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                );
-              } else if (item.type === "button") {
-                return (
-                  <li
-                    key={item.label}
-                    className={`${styles.navItem} ${styles.ctaItem}`}
-                  >
-                    <Link href={item.href} className={styles.ctaLink}>
-                      <Button size="medium">{item.label}</Button>
-                    </Link>
-                  </li>
-                );
-              }
-              return null;
-            })}
-          </ul>
+                      <Link href={item.href} className={styles.ctaLink}>
+                        <button className={styles.ctaButton}>{item.label}</button>
+                      </Link>
+                    </li>
+                  );
+                }
+                return null;
+              })}
+            </ul>
           </div>
         </div>
       </div>

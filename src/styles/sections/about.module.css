@@ -18,16 +18,12 @@
 .ourValue div {
   width: 50%;
 }
-.desc h2 {
-  font-size: var(--section-header-size) !important;
-  color: var(--accent-color) !important;
-  text-transform: uppercase !important;
+.headline {
+  color: var(--accent-color);
+  text-transform: uppercase;
 }
-.desc p {
-  --p-font-size2: calc(var(--p-font-size) * 1.6);
-  font-size: var(--p-font-size2);
-  font-size: 1.6rem;
-
+.desc {
+  font-size: var(--sub-heading-font-size);
   font-weight: 400;
 }
 
@@ -35,25 +31,7 @@
   display: flex;
   justify-content: center;
 }
-.learnMoreButton {
-  width: 100%;
 
+.moreAboutUs {
   text-align: center;
-}
-
-
-.moreEventButton button,
-.registerButton {
-  background-color: var(--accent-color);
-  padding: 0.6rem 1.8rem;
-  color: white;
-  font-size: 1.1rem;
-}
-.moreEventButton button {
-  padding: 1rem 4rem;
-  font-size: 1.3em;
-}
-.moreEventButton {
-  display: flex;
-  justify-content: center;
 }
