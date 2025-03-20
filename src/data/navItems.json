@@ -8,6 +8,8 @@
       {
         "type": "dropdown",
         "label": "Areas of Work",
+        "href": "/areas-of-work",
+
         "id": "areasOfWork",
         "menuItems": [
           { "href": "/", "label": "Menu Item 1" },
@@ -17,6 +19,7 @@
       {
         "type": "dropdown",
         "label": "Flagship Programs",
+        "href": "/flagship-programs",
         "id": "flagshipPrograms",
         "menuItems": [
           { "href": "/", "label": "Menu Item 1" },

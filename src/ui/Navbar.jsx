@@ -10,9 +10,11 @@ import { IoIosArrowDown } from "react-icons/io";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { FaBars } from "react-icons/fa6";
 
-
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathName = usePathname();
+
   const dropdownRefs = useRef({});
 
   const [openDropdowns, setOpenDropdowns] = useState({
@@ -45,16 +47,20 @@ const Navbar = () => {
   // check if we have scrolled more than 100vh
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const viewportHeight = window.innerHeight - 120;
-      setIsScrolled(scrollPosition > viewportHeight);
+      if (pathName === "/") {
+        const scrollPosition = window.scrollY;
+        const viewportHeight = window.innerHeight - 120;
+        setIsScrolled(scrollPosition > viewportHeight);
+      } else {
+        setIsScrolled(true);
+      }
     };
 
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathName]);
 
   // Close dropdowns when clicking outside on mobile
   useEffect(() => {
@@ -164,7 +170,7 @@ const Navbar = () => {
                 onClick={toggleMobileMenu}
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               >
-                {isMobileMenuOpen ? <RiCloseLargeFill  /> : <FaBars  />}
+                {isMobileMenuOpen ? <RiCloseLargeFill /> : <FaBars />}
                 <span className={styles.menuToggleText}>
                   {isMobileMenuOpen ? "Close" : "Menu"}
                 </span>
@@ -202,7 +208,7 @@ const Navbar = () => {
                         className={styles.dropdownButton}
                         onClick={toggleDropdown(item.id)}
                       >
-                        {item.label}
+                        <Link href={item.href}>{item.label}</Link>
                         <span
                           className={`${styles.dropdownIcon} ${
                             openDropdowns[item.id]
@@ -238,7 +244,9 @@ const Navbar = () => {
                       className={`${styles.navItem} ${styles.ctaItem}`}
                     >
                       <Link href={item.href} className={styles.ctaLink}>
-                        <button className={styles.ctaButton}>{item.label}</button>
+                        <button className={styles.ctaButton}>
+                          {item.label}
+                        </button>
                       </Link>
                     </li>
                   );

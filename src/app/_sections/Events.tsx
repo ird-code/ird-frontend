@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/styles/sections/events.module.css";
 import Link from "next/link";
 import Button from "@/components/Button";
+import eventsLists from "@/data/eventsLists.json";
 const Events = () => {
   return (
     <section className={styles.events}>
@@ -14,7 +15,7 @@ const Events = () => {
             assumenda delectus aliquam ipsam inventore
           </p>
         </div>
-        <ul className={styles.events}>
+        {/* <ul className={styles.events}>
           <li className={styles.event}>
             <div className={styles.eventHeader}>
               <div className={styles.eventInfo}>
@@ -57,6 +58,29 @@ const Events = () => {
               </p>
             </div>
           </li>
+        </ul> */}
+           <ul className={styles.eventLists}>
+          {eventsLists.eventLists.map((item, index) => {
+            return (
+              <li className={styles.event} key={index}>
+                <div className={styles.eventHeader}>
+                  <div className={styles.eventInfo}>
+                    <p className={styles.eventTag}>{item.eventTag}</p>
+                    <h3 className={styles.eventName}>{item.eventName}</h3>
+                    <p className={styles.impDates}>{item.eventDate}</p>
+                  </div>
+                  <div className={styles.actionButton}>
+                    <Link href={item.registerLink}>
+                      <Button size="medium">Register</Button>
+                    </Link>
+                  </div>
+                </div>
+                <div className={styles.eventDesc}>
+                  <p>{item.eventDisc}</p>
+                </div>
+              </li>
+            );
+          })}
         </ul>
         <div className={styles.moreEventButton}>
           <Link href="/about">
