@@ -8,7 +8,7 @@
   max-width: var(--section-width);
   margin: 0 auto;
   padding: 3rem 4rem;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(245, 245, 245);
   z-index: 1;
   overflow: hidden;
 }
@@ -44,7 +44,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0.8rem;
-  width: 60%;
+  width: 70%;
 }
 
 .inputField {
@@ -71,7 +71,7 @@
   flex-direction: column;
   align-items: end;
   gap: 0.5rem;
-  width: 40%;
+  width: 30%;
 }
 
 .socialMediaLinks {

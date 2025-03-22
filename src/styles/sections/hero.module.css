@@ -26,3 +26,13 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+@media (max-width: 768px) {
+  .contentContainer {
+    background-size: clamp(15rem, 60vw, 25rem);
+  }
+}
+@media (max-width: 480px) {
+  .contentContainer {
+    background-size: clamp(10rem, 70vw, 15rem);
+  }
+}

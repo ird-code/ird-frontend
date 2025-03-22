@@ -112,3 +112,9 @@
 
   }
 }
+@media (max-width: 768) {
+  .areasOfWork{
+    margin-top: 5rem;
+  }
+}
+
