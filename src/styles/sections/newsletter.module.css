@@ -1,33 +1,27 @@
- 
+.newsletterSection {
+  padding: 2rem 1rem;
+  position: relative;
+}
+
 .container {
   position: relative;
   max-width: var(--section-width);
   margin: 0 auto;
-  padding: 2rem 5rem;
+  padding: 3rem 4rem;
   background-color: rgb(250, 250, 250);
   z-index: 1;
+  overflow: hidden;
 }
 
-.decorationImage {
-  position: absolute;
-  width: 15rem;
-  height: 15rem;
-  z-index: -1;
-}
-
-.decorationImageTop {
-  left: 0;
-  top: 0;
-}
-
-.decorationImageBottom {
-  right: 0;
-  bottom: 0;
-}
-
-.organizationTitle {
-  text-align: center;
+.organizationLogo {
+  position: relative;
+  width: 35%;
+  height: auto;
+  margin: 0 auto;
   margin-bottom: 2rem;
+}
+.logo {
+  object-fit: contain;
 }
 
 .newsletterHeading {
@@ -37,46 +31,47 @@
 .newsletterHeading h2 {
   line-height: 1.25;
   font-weight: 600;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
 
 .contentWrapper {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 10rem;
 }
 
 .subscriptionForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0.8rem;
-  width: 50%;
+  width: 60%;
 }
 
 .inputField {
   padding: 0.8rem;
-  border-radius: 4px;
   border: 1px solid #ddd;
   width: 100%;
 }
+
 .emailField,
 .subscribeButton {
   grid-column: span 2;
 }
+
 .subscribeButton {
   background-color: var(--accent-color);
   padding: 0.8rem 1.8rem;
   color: white;
   font-size: 1.3em;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
   margin-top: 0.5rem;
 }
 
 .contactInfo {
   display: flex;
   flex-direction: column;
+  align-items: end;
   gap: 0.5rem;
+  width: 40%;
 }
 
 .socialMediaLinks {
@@ -84,4 +79,69 @@
   grid-template-columns: repeat(4, auto);
   grid-gap: 1rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 2.5rem 2rem;
+  }
+
+  .subscriptionForm {
+    width: 50%;
+  }
+
+  .contactInfo {
+    width: 50%;
+  }
+  .contentWrapper {
+    gap: 2rem;
+  }
+
+  .contactInfo {
+    align-items: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .subscriptionForm,
+  .contactInfo {
+    width: 100%;
+  }
+
+  .desktopBreak {
+    display: none;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .gradientTopLeft,
+  .gradientBottomRight {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscriptionForm {
+    grid-template-columns: 1fr;
+  }
+
+  .inputField,
+  .emailField,
+  .subscribeButton {
+    grid-column: span 1;
+  }
+
+  .gradientTopLeft,
+  .gradientBottomRight {
+    width: 120px;
+    height: 120px;
+  }
 }

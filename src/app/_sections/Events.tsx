@@ -1,9 +1,10 @@
 import React from "react";
-import styles from "@/styles/sections/events.module.css";
+import styles from "@/styles/reusable/events.module.css";
 import Link from "next/link";
 import Button from "@/components/Button";
 import eventsLists from "@/data/eventsLists.json";
 import Image from "next/image";
+
 const Events = () => {
   return (
     <section className={styles.events}>
@@ -16,17 +17,15 @@ const Events = () => {
             assumenda delectus aliquam ipsam inventore
           </p>
         </div>
-           <ul className={styles.eventLists}>
-          {eventsLists.eventLists.map((item, index) => {
-            return (
-              <li className={styles.event} key={index}>
+        <ul className={styles.eventLists}>
+          {eventsLists.eventLists.map((item, index) => (
+            <li className={styles.event} key={index}>
               <div className={styles.eventImageContainer}>
                 <Image
                   src={item.eventImage}
                   className={styles.eventImage}
-                  alt="Event Photo"
-                  width={500}
-                  height={500}
+                  alt={`${item.eventName} Event`}
+                  fill
                 />
               </div>
               <div className={styles.eventContent}>
@@ -47,12 +46,11 @@ const Events = () => {
                 </div>
               </div>
             </li>
-            );
-          })}
+          ))}
         </ul>
         <div className={styles.moreEventButton}>
-          <Link href="/about">
-            <Button size="large">Learn More</Button>
+          <Link href="/events">
+            <Button size="large">View All Events</Button>
           </Link>
         </div>
       </div>

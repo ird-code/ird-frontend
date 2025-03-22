@@ -14,10 +14,9 @@
   text-transform: uppercase;
 }
 .header p {
-  width: 70ch;
+  max-width: 70ch;
   font-size: var(--sub-heading-font-size);
 }
-
 
 .programLists {
   display: grid;
@@ -25,44 +24,17 @@
   gap: 2rem;
 }
 
-
-@media (min-width: 640px) {
-  .programLists {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 960px) {
-  .programLists {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1280px) {
-  .programLists {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .program {
   background-color: rgb(243, 243, 243);
-  overflow: hidden;
 }
-
 
 .imageContainer {
   position: relative;
   width: 100%;
   padding-top: 65%;
-  overflow: hidden;
 }
-
 .programImage {
-  transition: transform 0.5s ease;
-}
-
-.program:hover .programImage {
-  transform: scale(1.05);
+  object-fit: cover;
 }
 
 .programContent {
@@ -82,5 +54,22 @@
 
 .moreOpportunities {
   text-align: center;
+}
 
+@media (min-width: 640px) {
+  .programLists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .programLists {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .programLists {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

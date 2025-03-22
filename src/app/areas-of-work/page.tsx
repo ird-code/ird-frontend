@@ -1,8 +1,6 @@
-// AreasOfWork.js
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/Button";
 import areasOfWork from "@/data/areasOfWork.json";
 import styles from "@/styles/pages/areasOfWork.module.css";
 import { IoIosArrowForward } from "react-icons/io";
@@ -23,15 +21,13 @@ const AreasOfWork = () => {
             {areasOfWork.areasOfWork.map((item, index) => (
               <li className={styles.item} key={index}>
                 <div className={styles.imageContainer}>
-                  <div className={styles.imageWrapper}>
                     <Image
                       src="/assets/images/temp.webp"
-                      width={1000}
-                      height={1000}
-                      alt={`${item.initiativeName} illustration`}
+                      fill
+                      alt={`${item.initiativeName}`}
                       loading="lazy"
+                      className={styles.initiativeImage}
                     />
-                  </div>
                 </div>
 
                 <div className={styles.details}>

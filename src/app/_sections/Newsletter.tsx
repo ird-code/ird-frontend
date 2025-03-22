@@ -1,19 +1,19 @@
 import React from "react";
 import styles from "@/styles/sections/newsletter.module.css";
-
+import Image from "next/image";
 const Newsletter = () => {
   return (
     <section className={styles.newsletterSection}>
       <div className={styles.container}>
-        <div className={styles.organizationTitle}>
-          <h3>Institute For Rural Development</h3>
+        <div className={styles.organizationLogo}>
+          <Image src="/assets/images/IRD_logo_500x250.png" width={500} height={500} alt="IRD Logo" className={styles.logo}/>
         </div>
 
-        <div>
+        <div className={styles.newsletterContent}>
           <div className={styles.newsletterHeading}>
             <h2>
               Subscribe to our
-              <br /> newsletter
+              <br className={styles.desktopBreak} /> newsletter
             </h2>
           </div>
 
@@ -56,17 +56,6 @@ const Newsletter = () => {
             </div>
           </div>
         </div>
-
-        <img
-          className={`${styles.decorationImage} ${styles.decorationImageTop}`}
-          src="/assets/images/Blue_Shade.png"
-          alt="Decorative blue shade"
-        />
-        <img
-          className={`${styles.decorationImage} ${styles.decorationImageBottom}`}
-          src="/assets/images/Red_Shade.png"
-          alt="Decorative red shade"
-        />
       </div>
     </section>
   );
