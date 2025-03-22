@@ -1,10 +1,13 @@
+import React from "react";
 import styles from "@/styles/sections/join.module.css";
 import Link from "next/link";
 import Button from "@/components/Button";
 import joinUsPrograms from "@/data/joinUsPrograms.json";
-const JoinsUs = () => {
+import Image from "next/image";
+
+const JoinUs = () => {
   return (
-    <section className={styles.joinUS}>
+    <section className={styles.joinUs}>
       <div className={styles.joinUsWrapper}>
         <div className={styles.header}>
           <h2>Join Us</h2>
@@ -14,24 +17,34 @@ const JoinsUs = () => {
             assumenda delectus aliquam ipsam inventore
           </p>
         </div>
+        
         <ul className={styles.programLists}>
-          {joinUsPrograms.joinUsPrograms.map((item, index) => {
-            return (
-              <li className={styles.program} key={index}>
-                <Link href={item.programLink}>
+          {joinUsPrograms.joinUsPrograms.map((item, index) => (
+            <li className={styles.program} key={index}>
+              <Link href={item.programLink}>
+                <div className={styles.imageContainer}>
+                  <Image 
+                    src={item.programImage} 
+                    className={styles.programImage} 
+                    alt={`${item.programName} Image`} 
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                    priority={index < 2}
+                  />
+                </div>
+                <div className={styles.programContent}>
                   <div className={styles.programHeader}>
                     <h3 className={styles.programName}>{item.programName}</h3>
                   </div>
                   <div className={styles.programDesc}>
-                    <p>
-                     {item.programDesc}
-                    </p>
+                    <p>{item.programDesc}</p>
                   </div>
-                </Link>
-              </li>
-            );
-          })}
+                </div>
+              </Link>
+            </li>
+          ))}
         </ul>
+        
         <div className={styles.moreOpportunities}>
           <Link href="/opportunities">
             <Button size="large">More Opportunities</Button>
@@ -42,4 +55,4 @@ const JoinsUs = () => {
   );
 };
 
-export default JoinsUs;
+export default JoinUs;

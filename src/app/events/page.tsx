@@ -3,6 +3,7 @@ import styles from "@/styles/pages/events.module.css";
 import Link from "next/link";
 import Button from "@/components/Button";
 import eventsLists from "@/data/eventsLists.json";
+import Image from "next/image";
 const Page = () => {
   return (
     <section className={styles.events}>
@@ -20,22 +21,32 @@ const Page = () => {
           {eventsLists.eventLists.map((item, index) => {
             return (
               <li className={styles.event} key={index}>
-                <div className={styles.eventHeader}>
-                  <div className={styles.eventInfo}>
-                    <p className={styles.eventTag}>{item.eventTag}</p>
-                    <h3 className={styles.eventName}>{item.eventName}</h3>
-                    <p className={styles.impDates}>{item.eventDate}</p>
+                <div className={styles.eventImageContainer}>
+                  <Image
+                    src={item.eventImage}
+                    className={styles.eventImage}
+                    alt="Event Photo"
+                    width={500}
+                    height={500}
+                  />
+                </div>
+                <div className={styles.eventContent}>
+                  <div className={styles.eventHeader}>
+                    <div className={styles.eventInfo}>
+                      <p className={styles.eventTag}>{item.eventTag}</p>
+                      <h3 className={styles.eventName}>{item.eventName}</h3>
+                      <p className={styles.impDates}>{item.eventDate}</p>
+                    </div>
+                    <div className={styles.actionButton}>
+                      <Link href={item.registerLink}>
+                        <Button size="medium">Register</Button>
+                      </Link>
+                    </div>
                   </div>
-                  <div className={styles.actionButton}>
-                    <Link href={item.registerLink}>
-                      <Button size="medium">Register</Button>
-                    </Link>
+                  <div className={styles.eventDesc}>
+                    <p>{item.eventDisc}</p>
                   </div>
                 </div>
-                <div className={styles.eventDesc}>
-                  <p>{item.eventDisc}</p>
-                </div>
-                
               </li>
             );
           })}
