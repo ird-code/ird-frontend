@@ -1,4 +1,3 @@
-import Image from "next/image"
 import styles from "@/styles/about/member.module.css"
 
 export default function Members() {
