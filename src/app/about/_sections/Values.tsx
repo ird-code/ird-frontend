@@ -3,7 +3,7 @@ import styles from "@/styles/about/values.module.css";
 
 export default function Value() {
   return (
-    <main className={styles.valuesContainer}>
+    <main className={styles.valueContainer}>
       <div className={styles.content}>
         <div className={styles.section}>
           <div className={styles.leftBlob}>
