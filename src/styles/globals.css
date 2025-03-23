@@ -1,4 +1,8 @@
+
+
+
 @import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --text-color: #0f0f0f;
@@ -22,8 +26,8 @@ body {
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
   box-sizing: border-box;
 }
 
@@ -59,7 +63,11 @@ h6 {
   font-family: var(--font-source-sans-pro) !important;
   line-height: 1.7;
 }
-h2 {
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+/* h2 {
   font-size: 3.3rem;
   font-weight: 700;
 }
@@ -67,8 +75,10 @@ h2 {
 h3 {
   font-size: 1.6rem;
   font-weight: 600;
+} */
+footer{
+  margin-top: var(--section-spacing) !important;
 }
-
 input{
   outline: none;
   border: none;
