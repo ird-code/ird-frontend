@@ -1,13 +1,5 @@
 .aboutContainer {
   padding: 12rem 4rem 4rem;
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #f0f5fa 30%,
-    #e0eeff 60%,  
-    #d6ebff 80%,
-    #b3d4ff 100%
-  );  
   width: 100%;
 }
 

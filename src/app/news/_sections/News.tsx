@@ -14,7 +14,7 @@ function News() {
       <div className="w-full flex items-center flex-col">
         <div className="w-full max-w-[1440px] px-4 md:px-20 py-3 md:py-5">
           <div className="w-full flex flex-col md:flex-row gap-3 md:gap-5">
-         
+            {/* Main News Card */}
             <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative">
               <Image
                 src="/assets/images/Hero_BG.png"
@@ -34,7 +34,7 @@ function News() {
               </div>
             </div>
 
-            
+            {/* Side Cards Container */}
             <div className="w-full md:w-1/2 flex flex-col md:flex-row gap-3 md:gap-5">
               <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative">
                 <Image
@@ -76,10 +76,10 @@ function News() {
           </div>
         </div>
 
-     
+        {/* Second Row */}
         <div className="w-full max-w-[1440px] px-4 md:px-20 py-3 md:py-5">
           <div className="w-full flex flex-col md:flex-row gap-3 md:gap-5">
-            
+            {/* Side Cards Container (reversed on mobile) */}
             <div className="w-full md:w-1/2 flex flex-col md:flex-row gap-3 md:gap-5 order-2 md:order-1">
               <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative">
                 <Image
@@ -119,7 +119,7 @@ function News() {
               </div>
             </div>
 
-           
+            {/* Main News Card */}
             <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative order-1 md:order-2">
               <Image
                 src="/assets/images/Hero_BG.png"
