@@ -1,27 +1,5 @@
 .main {
   min-height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #f0f5fa 30%,
-    #e0eeff 60%,  
-    #d6ebff 80%,
-    #b3d4ff 100%
-  );
-  padding: 4rem 0;
-  position: relative;
-}
-
-.mainTeam {
-  min-height: 100vh;
-  background: linear-gradient(
-    to top,
-    #ffffff 0%,
-    #f0f5fa 30%,
-    #e0eeff 60%,  
-    #d6ebff 80%,
-    #b3d4ff 100%
-  );
   padding: 4rem 0;
   position: relative;
 }
