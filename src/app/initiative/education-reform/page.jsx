@@ -50,7 +50,7 @@ export default function EducationReform() {
         </div>
         <div className="mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 items-center pb-30">
           <div className="col-span-3">
-            <h1 className="pb-8 text-4xl">Holistic Curriculum Design</h1>
+            <h1>Holistic Curriculum Design</h1>
             <ul className="text-[18px]">
               <li className="pb-4">
                 <b>Project based Learning Modules:</b> Teaches students
@@ -83,7 +83,7 @@ export default function EducationReform() {
             className="col-span-2 rounded-md"
           />
           <div className="col-span-3">
-            <h1 className="pb-8 text-4xl">Teacher-Student-Parent</h1>
+            <h1>Teacher-Student-Parent</h1>
             <ul className="text-[18px]">
               <li className="pb-4">
                 <b>Teacher Training:</b> Holistic teaching strategies, including
@@ -109,7 +109,7 @@ export default function EducationReform() {
         </div>
         <div className="mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 items-center pb-30">
           <div className="col-span-3">
-            <h1 className="pb-8 text-4xl">Student Club Formation</h1>
+            <h1>Student Club Formation</h1>
             <ul className="text-[18px]">
               <ul className="text-[18px]">
                 <li className="pb-4">
@@ -167,7 +167,7 @@ export default function EducationReform() {
             className="col-span-2 rounded-md"
           />
           <div className="col-span-3">
-            <h1 className="pb-8 text-4xl">
+            <h1>
               Fostering extra-curricular activities
             </h1>
             <ul className="text-[18px]">

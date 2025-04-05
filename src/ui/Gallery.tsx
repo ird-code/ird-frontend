@@ -62,7 +62,7 @@ export default function ImageGallery() {
   }, [selectedImage]);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto py-8">
       {/* Gallery Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {galleryImages.map((image, index) => (
@@ -76,7 +76,7 @@ export default function ImageGallery() {
               alt={image.alt} 
               fill
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-              className="object-cover rounded-lg"
+              className="object-cover"
             />
           </div>
         ))}
@@ -85,7 +85,7 @@ export default function ImageGallery() {
       {/* Lightbox Modal */}
       {selectedImage !== null && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90"
           onClick={closeImage}
         >
           <div 
