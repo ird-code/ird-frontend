@@ -1,15 +1,18 @@
 import ImageGallery from '@/ui/Gallery'
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-100">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-center text-black mb-8">Gallery</h1>
-        <p className="text-lg text-gray-700 text-justify mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fugit cumque repellendus omnis at dolore dolor quisquam minima consequuntur facilis adipisci dignissimos quae ad reprehenderit excepturi nostrum, eum iure officiis.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum nesciunt nemo voluptate! Amet ducimus dolorem molestias ex quos, doloremque in? Culpa, modi. Qui numquam a repudiandae, quae mollitia eaque corrupti.
+    <div className="w-full mt-[10rem]">
+      <div className="max-w-[1280px] mx-auto px-6 space-y-[3rem]">
+        <div>
+          <h2>gallery</h2>
+          <p className="!text-[1.6rem] max-w-[70ch]">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Exercitationem aliquam sapiente quis! Sapiente reprehenderit
+            assumenda delectus aliquam ipsam inventore
           </p>
+        </div>
         <ImageGallery />
       </div>
-    </main>
+    </div>
   )
 }
