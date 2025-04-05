@@ -1,147 +1,86 @@
 import React from "react";
 import Image from "next/image";
+import Button from "@/components/Button";
+import Link from "next/link";
 
 function News() {
+  const news = [
+    {
+      id: 1,
+      image: "/assets/images/temp.webp",
+      title: "News Title",
+      meta_disc:
+        "Stanford researchers team up with student-athletes to unlock peak performance",
+    },
+    {
+      id: 2,
+      image: "/assets/images/temp.webp",
+      title: "News Title",
+      meta_disc:
+        "Stanford researchers team up with student-athletes to unlock peak performance",
+    },
+    {
+      id: 3,
+      image: "/assets/images/temp.webp",
+      title: "News Title",
+      meta_disc:
+        "Stanford researchers team up with student-athletes to unlock peak performance",
+    },
+    {
+      id: 4,
+      image: "/assets/images/temp.webp",
+      title: "News Title",
+      meta_disc:
+        "Stanford researchers team up with student-athletes to unlock peak performance",
+    },
+    {
+      id: 5,
+      image: "/assets/images/temp.webp",
+      title: "News Title",
+      meta_disc:
+        "Stanford researchers team up with student-athletes to unlock peak performance",
+    },
+  ];
+
   return (
-    <div className="w-full bg-[#fefefe] overflow-hidden py-8 md:py-15">
-      <div className="p-4 md:p-7 flex flex-col justify-center items-center gap-3 md:gap-4">
-        <h2 className="text-xl md:text-3xl font-semibold text-center">
-          News, Stories, and Blogs
-        </h2>
-        <p className="text-center text-sm md:text-base">Featuring Journeys of Transformation</p>
-      </div>
-
-      <div className="w-full flex items-center flex-col">
-        <div className="w-full max-w-[1440px] px-4 md:px-20 py-3 md:py-5">
-          <div className="w-full flex flex-col md:flex-row gap-3 md:gap-5">
-         
-            <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative">
-              <Image
-                src="/assets/images/Hero_BG.png"
-                alt="News Image"
-                layout="fill"
-                objectFit="cover"
-                priority
-              />
-              <div className="absolute inset-0 text-white bg-black/30 z-20">
-                <div className="absolute bottom-0 px-4 md:px-10 py-3 md:py-5 flex flex-col gap-1">
-                  <p className="text-sm md:text-base">Overlay Content</p>
-                  <h2 className="text-lg md:text-2xl font-semibold">
-                    Stanford researchers team up with student-athletes to unlock
-                    peak performance
-                  </h2>
-                </div>
-              </div>
-            </div>
-
-            
-            <div className="w-full md:w-1/2 flex flex-col md:flex-row gap-3 md:gap-5">
-              <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative">
-                <Image
-                  src="/assets/images/Hero_BG.png"
-                  alt="News Image"
-                  layout="fill"
-                  objectFit="cover"
-                  priority
-                />
-                <div className="absolute inset-0 text-white bg-black/30 z-20">
-                  <div className="absolute bottom-0 px-4 md:px-10 py-3 md:py-5 flex flex-col gap-1">
-                    <p className="text-sm md:text-base">Overlay Content</p>
-                    <h2 className="text-base font-semibold">
-                      Stanford researchers team up with student-athletes to unlock
-                      peak performance
-                    </h2>
-                  </div>
-                </div>
-              </div>
-              <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative">
-                <Image
-                  src="/assets/images/Hero_BG.png"
-                  alt="News Image"
-                  layout="fill"
-                  objectFit="cover"
-                  priority
-                />
-                <div className="absolute inset-0 text-white bg-black/30 z-20">
-                  <div className="absolute bottom-0 px-4 md:px-10 py-3 md:py-5 flex flex-col gap-1">
-                    <p className="text-sm md:text-base">Overlay Content</p>
-                    <h2 className="text-base font-semibold">
-                      Stanford researchers team up with student-athletes to unlock
-                      peak performance
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="w-full">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
+        <div>
+          <h2>News, Stories, and Blogs</h2>
+          <p className="!text-[1.6rem] max-w-[70ch]">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Exercitationem aliquam sapiente quis! Sapiente reprehenderit
+            assumenda delectus aliquam ipsam inventore
+          </p>
         </div>
 
-     
-        <div className="w-full max-w-[1440px] px-4 md:px-20 py-3 md:py-5">
-          <div className="w-full flex flex-col md:flex-row gap-3 md:gap-5">
-            
-            <div className="w-full md:w-1/2 flex flex-col md:flex-row gap-3 md:gap-5 order-2 md:order-1">
-              <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-12">
+          {news.map((news) => (
+            <div key={news.id} className="bg-[#f3f3f3]">
+              <div className="relative w-full pt-[65%]">
                 <Image
-                  src="/assets/images/Hero_BG.png"
-                  alt="News Image"
-                  layout="fill"
-                  objectFit="cover"
+                  src={news.image}
+                  alt={`${news.title} Logo`}
+                  fill
+                  className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 text-white bg-black/30 z-20">
-                  <div className="absolute bottom-0 px-4 md:px-10 py-3 md:py-5 flex flex-col gap-1">
-                    <p className="text-sm md:text-base">Overlay Content</p>
-                    <h2 className="text-base font-semibold">
-                      Stanford researchers team up with student-athletes to unlock
-                      peak performance
-                    </h2>
-                  </div>
-                </div>
               </div>
-              <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative">
-                <Image
-                  src="/assets/images/Hero_BG.png"
-                  alt="News Image"
-                  layout="fill"
-                  objectFit="cover"
-                  priority
-                />
-                <div className="absolute inset-0 text-white bg-black/30 z-20">
-                  <div className="absolute bottom-0 px-4 md:px-10 py-3 md:py-5 flex flex-col gap-1">
-                    <p className="text-sm md:text-base">Overlay Content</p>
-                    <h2 className="text-base font-semibold">
-                      Stanford researchers team up with student-athletes to unlock
-                      peak performance
-                    </h2>
-                  </div>
-                </div>
+              <div className="p-6">
+                <h3>{news.title}</h3>
+                <p className="text-[#505050]">{news.meta_disc}</p>
               </div>
             </div>
+          ))}
+        </div>
 
-           
-            <div className="h-[18rem] md:h-[23rem] w-full md:w-1/2 relative order-1 md:order-2">
-              <Image
-                src="/assets/images/Hero_BG.png"
-                alt="News Image"
-                layout="fill"
-                objectFit="cover"
-                priority
-              />
-              <div className="absolute inset-0 text-white bg-black/30 z-20">
-                <div className="absolute bottom-0 px-4 md:px-10 py-3 md:py-5 flex flex-col gap-1">
-                  <p className="text-sm md:text-base">Overlay Content</p>
-                  <h2 className="text-lg md:text-2xl font-semibold">
-                    Stanford researchers team up with student-athletes to unlock
-                    peak performance
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="text-center mt-12">
+          <Link href="/news">
+            <Button size="large">View More</Button>
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

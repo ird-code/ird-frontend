@@ -1,4 +1,4 @@
-.wrapper {
+/* .wrapper {
   display: flex;
   min-height: 100vh;
   max-width: var(--section-width);
@@ -39,4 +39,4 @@
 .desc {
   color: var(--text-color) !important;
   font-size: var(--p-font-size) !important;
-}
+} */

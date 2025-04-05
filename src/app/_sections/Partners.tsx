@@ -1,21 +1,39 @@
 import React from "react";
 import Image from "next/image";
-import Button from "./Button";
+import Button from "@/components/Button";
+import Link from "next/link";
+
+const partners = [
+  { id: 1, logo: "/assets/images/logo2.png", name: "Partner 1" },
+  { id: 2, logo: "/assets/images/logo2.png", name: "Partner 2" },
+  { id: 3, logo: "/assets/images/logo2.png", name: "Partner 3" },
+  { id: 4, logo: "/assets/images/logo2.png", name: "Partner 4" },
+  { id: 5, logo: "/assets/images/logo2.png", name: "Partner 5" },
+  { id: 6, logo: "/assets/images/logo2.png", name: "Partner 6" },
+
+];
 
 function Partners() {
   return (
-    <div className='w-screen bg-[#eeeeee] py-15'>
-      <div className="p-7 flex flex-col justify-center items-center gap-4">
-        <h2 className="text-3xl font-semibold text-center">Our Partners</h2>
-      </div>
-
-      <div className='w-full flex justify-center'>
-        <div className='w-full flex gap-10 px-10 py-10 justify-center items-center max-w-[1440px] flex-wrap'>
-          {[...Array(5)].map((_, index) => (
-            <div key={index} className='w-32 h-32 md:w-40 md:h-40 relative grayscale hover:grayscale-0'>
+    <section className="w-full bg-[#eeeeee] py-16">
+      <div className="max-w-[1280px] mx-auto px-6 space-y-[3rem]">
+        <div>
+          <h2>Our Partners</h2>
+          <p className="!text-[1.6rem] max-w-[70ch]">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Exercitationem aliquam sapiente quis! Sapiente reprehenderit
+            assumenda delectus aliquam ipsam inventore
+          </p>
+        </div>
+        <div className="w-full flex flex-wrap justify-between items-center">
+          {partners.map((partner) => (
+            <div
+              key={partner.id}
+              className="w-32 h-32 md:w-40 md:h-40 relative grayscale hover:grayscale-0 transition-all duration-300"
+            >
               <Image
-                src="/assets/images/logo2.png"
-                alt="Partner Image"
+                src={partner.logo}
+                alt={partner.name}
                 layout="fill"
                 objectFit="cover"
                 priority
@@ -23,21 +41,13 @@ function Partners() {
             </div>
           ))}
         </div>
-      </div>
-
-      <div className='w-full flex justify-center'>
-        <div className='w-full flex flex-col md:flex-row gap-10 px-10 py-10 my-10 justify-between max-w-[1440px]'>
-          <div className='md:w-2/3'>
-            <h2 className="text-2xl font-semibold text-left text-[#850d09]">
-              We collaborate with dedicated partners to drive sustainable rural development and create lasting impact
-            </h2>
-          </div>
-          <div className='md:w-1/3 flex justify-end'>
-            <Button/>
-          </div>
+        <div className="text-center">
+          <Link href="/about">
+            <Button size="large">Become a Partner</Button>
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
