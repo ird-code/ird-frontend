@@ -14,40 +14,56 @@
       "type": "dropdown",
       "label": "Areas of Work",
       "href": "/areas-of-work",
-
       "id": "areasOfWork",
       "menuItems": [
-        { "href": "#", "label": "Agriculture" },
-        { "href": "#", "label": "Culture and Heritage" },
-        { "href": "#", "label": "Education" },
-        { "href": "#", "label": "Entrepreneurship" },
-        { "href": "#", "label": "Tourism" }
+        { "href": "/areas-of-work/agriculture", "label": "Agriculture" },
+        {
+          "href": "/areas-of-work/culture-and-heritage",
+          "label": "Culture & Heritage"
+        },
+        { "href": "/areas-of-work/education", "label": "Education" },
+        {
+          "href": "/areas-of-work/entrepreneurship",
+          "label": "Entrepreneurship"
+        },
+        { "href": "/areas-of-work/tourism", "label": "Tourism" }
       ]
     },
     {
       "type": "dropdown",
       "label": "Initiatives & Campaigns",
       "href": "/flagship-programs",
-      "id": "flagshipPrograms",
+      "id": "initiativesAndCampaigns",
       "menuItems": [
         {
           "href": "/initiative/education-reform",
-          "label": "Conscious Village Initiative"
+          "label": "Conscious Village"
         },
         {
           "href": "/initiative/education-reform",
-          "label": "Save the Heritage Campaign"
+          "label": "Save the Heritage"
         },
         {
           "href": "/initiative/education-reform",
-          "label": "Education Reform Initiative"
+          "label": "Education Reform"
         }
       ]
     },
     {
-      "type": "link",
+      "type": "dropdown",
       "label": "Flagship Programs",
-      "href": "/flagship-programs"
+      "href": "/flagship-programs",
+      "id": "flagshipPrograms",
+      "menuItems": [
+        {
+          "href": "/flagship-programs/conscious-village-initiative",
+          "label": "Conscious Village"
+        },
+        {
+          "href": "/flagship-programs/one-app-one-tap",
+          "label": "One App One Tap"
+        }
+      ]
     },
     {
       "type": "link",
