@@ -1,16 +1,17 @@
 import React from "react";
 export default function EducationReform() {
   return (
-    <section className="mt-40">
-      <div className="max-w-[1280px] mx-auto px-4 pb-32">
-        <div className="text-center">
-          <h2 className="text-[#850d09] lg:text-[3.3rem] font-bold">
+    <section className="mt-20 md:mt-40">
+      
+      <div className="max-w-[1280px] mx-auto px-4 pb-16 md:pb-32">
+        <div className="text-center pb-8">
+          <h2 className="text-[#850d09] text-3xl">
             Education Reform
           </h2>
         </div>
-        <div className="mt-16 sm:px-4 grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-          <div className="col-span-3">
-            <p>
+        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-8 items-center ">
+          <div className="col-span-1 lg:col-span-3">
+            <p className="text-base md:text-lg">
               In a world that is rapidly evolving, the majority of schools in
               Nepal—particularly in rural areas—continue to rely on rigid,
               traditional methods of education. These systems prioritize rote
@@ -21,7 +22,7 @@ export default function EducationReform() {
               jeopardizes their ability to build successful futures.
             </p>
             <br></br>
-            <p>
+            <p className="text-base md:text-lg">
               At IRD, the Education Reform Initiative bridges this gap by
               empowering schools to reimagine their curriculum, pedagogy, and
               teaching practices. We collaborate with schools to foster a
@@ -33,25 +34,25 @@ export default function EducationReform() {
               capable of addressing the critical challenges of our time.
             </p>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2 flex justify-center items-center mt-6 lg:mt-0">
             <img
               src="/assets/images/education-reform.webp"
               alt="Education Reform"
-              className="w-full h-auto"
+              className="w-full max-w-md h-auto"
             />
           </div>
         </div>
       </div>
       <div className="max-w-[1280px] mx-auto px-4">
         <div className="text-center">
-          <h2 className="text-[#850d09] lg:text-[3.3rem] font-bold">
+          <h2 className="text-[#850d09]">
             ERI's Approach
           </h2>
         </div>
-        <div className="mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 items-center pb-30">
-          <div className="col-span-3">
-            <h1>Holistic Curriculum Design</h1>
-            <ul className="text-[18px]">
+        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
+          <div className="col-span-1 md:col-span-3">
+            <h3 className="mb-4">Holistic Curriculum Design</h3>
+            <ul className="text-base md:text-lg">
               <li className="pb-4">
                 <b>Project based Learning Modules:</b> Teaches students
                 teamwork, collaboration, and critical thinking through mini
@@ -70,21 +71,25 @@ export default function EducationReform() {
               </li>
             </ul>
           </div>
-          <img
-            src="/assets/images/holistic-curriculum.webp"
-            alt="Education Reform"
-            className="col-span-2 rounded-md"
-          />
+          <div className="col-span-1 md:col-span-2 flex justify-center items-center mt-6 md:mt-0">
+            <img
+              src="/assets/images/holistic-curriculum.webp"
+              alt="Education Reform"
+              className="w-full max-w-md h-auto rounded-md"
+            />
+          </div>
         </div>
-        <div className="mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 items-center pb-30">
-          <img
-            src="/assets/images/t-s-p.webp"
-            alt="Education Reform"
-            className="col-span-2 rounded-md"
-          />
-          <div className="col-span-3">
-            <h1>Teacher-Student-Parent</h1>
-            <ul className="text-[18px]">
+        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
+          <div className="col-span-1 md:col-span-2 flex justify-center items-center order-2 md:order-1 mt-6 md:mt-0">
+            <img
+              src="/assets/images/t-s-p.webp"
+              alt="Education Reform"
+              className="w-full max-w-md h-auto rounded-md"
+            />
+          </div>
+          <div className="col-span-1 md:col-span-3 order-1 md:order-2">
+            <h3 className="mb-4">Teacher-Student-Parent</h3>
+            <ul className="text-base md:text-lg">
               <li className="pb-4">
                 <b>Teacher Training:</b> Holistic teaching strategies, including
                 inquiry-based and experiential learning; classroom management,
@@ -95,7 +100,7 @@ export default function EducationReform() {
               </li>
               <li className="pb-4">
                 <b>Parent Workshop: </b> Understanding child psychology and
-                development; strategies to support children’s learning at home;
+                development; strategies to support children's learning at home;
                 building positive communication and fostering emotional
                 resilience in children; the importance of balancing academics
                 with other aspects of growth.
@@ -107,70 +112,70 @@ export default function EducationReform() {
             </ul>
           </div>
         </div>
-        <div className="mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 items-center pb-30">
-          <div className="col-span-3">
-            <h1>Student Club Formation</h1>
-            <ul className="text-[18px]">
-              <ul className="text-[18px]">
-                <li className="pb-4">
-                  <b>Science and Math Clubs:</b> Engage in experiments,
-                  innovations, and problem-solving activities to develop
-                  scientific and mathematical thinking.
-                </li>
-                <li className="pb-4">
-                  <b>Literary Clubs:</b> Encourage reading, creative writing,
-                  and public speaking to enhance communication and critical
-                  thinking skills.
-                </li>
-                <li className="pb-4">
-                  <b>Eco Clubs:</b> Promote sustainability and environmental
-                  activism through awareness campaigns, tree planting, and waste
-                  management initiatives.
-                </li>
-                <li className="pb-4">
-                  <b>Community Service Clubs:</b> Organize outreach projects to
-                  support local communities, such as charity events,
-                  volunteering, and social welfare programs.
-                </li>
-                <li className="pb-4">
-                  <b>Arts and Culture Clubs:</b> Celebrate creativity through
-                  visual arts, theater, music, and dance performances, fostering
-                  artistic expression.
-                </li>
-                <li className="pb-4">
-                  <b>Tech and Innovation Clubs:</b> Focus on coding, robotics,
-                  and emerging technologies to prepare students for the future
-                  of digital transformation.
-                </li>
-                <li className="pb-4">
-                  <b>Sports Clubs:</b> Promote physical fitness, teamwork, and
-                  discipline through various sports and athletic competitions.
-                </li>
-                <li className="pb-4">
-                  <b>Peer Mentorship Clubs:</b> Encourage senior students to
-                  guide and support younger peers in academics, personal
-                  development, and career planning.
-                </li>
-              </ul>
+        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
+          <div className="col-span-1 md:col-span-3">
+            <h3 className="mb-4">Student Club Formation</h3>
+            <ul className="text-base md:text-lg">
+              <li className="pb-4">
+                <b>Science and Math Clubs:</b> Engage in experiments,
+                innovations, and problem-solving activities to develop
+                scientific and mathematical thinking.
+              </li>
+              <li className="pb-4">
+                <b>Literary Clubs:</b> Encourage reading, creative writing,
+                and public speaking to enhance communication and critical
+                thinking skills.
+              </li>
+              <li className="pb-4">
+                <b>Eco Clubs:</b> Promote sustainability and environmental
+                activism through awareness campaigns, tree planting, and waste
+                management initiatives.
+              </li>
+              <li className="pb-4">
+                <b>Community Service Clubs:</b> Organize outreach projects to
+                support local communities, such as charity events,
+                volunteering, and social welfare programs.
+              </li>
+              <li className="pb-4">
+                <b>Arts and Culture Clubs:</b> Celebrate creativity through
+                visual arts, theater, music, and dance performances, fostering
+                artistic expression.
+              </li>
+              <li className="pb-4">
+                <b>Tech and Innovation Clubs:</b> Focus on coding, robotics,
+                and emerging technologies to prepare students for the future
+                of digital transformation.
+              </li>
+              <li className="pb-4">
+                <b>Sports Clubs:</b> Promote physical fitness, teamwork, and
+                discipline through various sports and athletic competitions.
+              </li>
+              <li className="pb-4">
+                <b>Peer Mentorship Clubs:</b> Encourage senior students to
+                guide and support younger peers in academics, personal
+                development, and career planning.
+              </li>
             </ul>
           </div>
-          <img
-            src="/assets/images/student-club.webp"
-            alt="Education Reform"
-            className="col-span-2 rounded-md"
-          />
+          <div className="col-span-1 md:col-span-2 flex justify-center items-center mt-6 md:mt-0">
+            <img
+              src="/assets/images/student-club.webp"
+              alt="Education Reform"
+              className="w-full max-w-md h-auto rounded-md"
+            />
+          </div>
         </div>
-        <div className="mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 items-center pb-30">
-          <img
-            src="/assets/images/extra-curriculars.webp"
-            alt="Education Reform"
-            className="col-span-2 rounded-md"
-          />
-          <div className="col-span-3">
-            <h1>
-              Fostering extra-curricular activities
-            </h1>
-            <ul className="text-[18px]">
+        <div className="mt-12 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 items-center pb-16 md:pb-32">
+          <div className="col-span-1 md:col-span-2 flex justify-center items-center order-2 md:order-1 mt-6 md:mt-0">
+            <img
+              src="/assets/images/extra-curriculars.webp"
+              alt="Education Reform"
+              className="w-full max-w-md h-auto rounded-md"
+            />
+          </div>
+          <div className="col-span-1 md:col-span-3 order-1 md:order-2">
+            <h3 className="mb-4">Fostering extra-curricular activities</h3>
+            <ul className="text-base md:text-lg">
               <li className="pb-4">
                 <b>Sports Programs:</b> Organize inter-school tournaments,
                 fitness sessions, and adventure activities like hiking or
