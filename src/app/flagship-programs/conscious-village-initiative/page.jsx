@@ -22,7 +22,7 @@ const Page = () => {
         "To make agroforestry accessible and beneficial for farmers, IRD plans to collaborate with local and provincial governments to incentivize agroforestry models and encourage widespread adoption. Additionally, we will provide trainings and workshops to educate farmers on the most suitable trees and plants for their land, ensuring they maximize both economic and environmental benefits.",
         "Through research, policy support, and hands-on implementation, IRD's agriculture team will work with local farmers and governments to expand agroforestry across Nepal, empowering communities to build a more resilient, productive, and eco-friendly agricultural system.",
       ],
-      imageSrc: "/api/placeholder/600/400",
+      imageSrc: "temp",
       features: [
         { text: "Improved soil health and water retention" },
         { text: "Enhanced biodiversity and ecosystem services" },
@@ -38,7 +38,7 @@ const Page = () => {
         "Soil health is the foundation of successful farming, yet many farmers in Nepal lack access to proper soil testing and analysis. To address this, IRD organizes an Annual Soil Check-Up Camp, providing farmers with scientific insights into their soil's condition to enhance productivity and sustainability.",
         "Through affordable soil testing and expert consultations, farmers will receive personalized recommendations on soil fertility, nutrient balance, and the most suitable crops and fertilizers to use. Our goal is to eliminate guesswork in farming, helping farmers make informed decisions that lead to higher yields, better-quality produce, and long-term soil health.",
       ],
-      imageSrc: "/api/placeholder/600/400",
+      imageSrc: "temp",
       features: [
         {
           text: "Soil Testing & Analysis: Farmers get access to professional soil testing to assess fertility, pH levels, and nutrient composition.",
@@ -61,7 +61,7 @@ const Page = () => {
         "In Nepal's rural villages, every household often has seasonal surplus—whether it's local chickens, fruits like mangoes and bananas, vegetables, gundruk, sesame seeds, or other homegrown products. However, many farmers struggle to sell their surplus because they lack direct access to buyers. On the other hand, consumers who want to purchase fresh, local produce have no easy way to find out who has what available at any given time.",
         "KisanConnect (KisCo) is IRD's digital marketplace designed to connect local farmers and consumers effortlessly. Integrated into the KrishiMitra app, KisCo allows farmers to list their surplus products, making them visible to potential buyers within a chosen radius. Consumers can search for available products, contact the farmer, and purchase directly—eliminating unnecessary middlemen and ensuring fair prices for both parties.",
       ],
-      imageSrc: "/api/placeholder/600/400",
+      imageSrc: "temp",
       features: [
         {
           text: "Empowers Farmers: Helps small-scale farmers sell surplus produce easily, turning potential waste into income.",
@@ -84,7 +84,7 @@ const Page = () => {
         "Access to financial resources is one of the biggest challenges smallholder farmers face in Nepal. AgroFinance, an initiative by IRD, is designed to support farmers living under the extreme poverty line by providing them with the necessary resources to cultivate their land and improve their livelihoods.",
         "Instead of traditional loans, AgroFinance operates through recoverable grants/funding, where farmers receive essential agricultural inputs such as fertilizers, seeds, saplings, and livestock. Once their harvest or livestock yields returns, they gradually repay the initial investment, ensuring a sustainable cycle of support that can help more farmers in need.",
       ],
-      imageSrc: "/api/placeholder/600/400",
+      imageSrc: "temp",
       features: [
         {
           text: "Access to Essential Farming Inputs – Farmers receive high-quality seeds, fertilizers, saplings, and livestock to start or expand their agricultural activities.",
@@ -122,7 +122,7 @@ const Page = () => {
               <div className="mb-12">
                 <div className="relative w-full h-96">
                   <Image
-                    src="/api/placeholder/800/400"
+                    src="temp"
                     alt="Agriculture Services"
                     layout="fill"
                     objectFit="cover"
