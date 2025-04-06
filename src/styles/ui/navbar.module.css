@@ -14,7 +14,7 @@
 
 /* Container and wrappers */
 .mainNavWrapper {
-  --section-width: 72rem;
+  /* --section-width: 72rem; */
 }
 
 .topBarWrapper,
@@ -115,7 +115,7 @@
 
 .navLink {
   display: block;
-  padding: 1rem 0.5rem;
+  /* padding: 1rem 0.8rem; */
   color: var(--nav-text-color);
   font-size: var(--nav-font-size);
   font-weight: var(--nav-font-weight);

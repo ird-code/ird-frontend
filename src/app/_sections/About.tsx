@@ -9,12 +9,11 @@ const About = () => {
       <div className={styles.aboutWrapper}>
         <div className={styles.ourMission}>
           <div className={styles.info}>
-          <h2 className={styles.headline}>Our Value</h2>
-          <p className={styles.desc}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos dolores iste explicabo nihil? Earum nostrum, assumenda
-              at id non cupiditate veniam sed, beatae, minima laborum esse
-              ipsam. Cupiditate, quasi blanditiis.
+            <h2 className={styles.headline}>Our Value</h2>
+            <p className={styles.desc}>
+              Empowering and guiding the local leadership and communities to
+              build the foundation for sustainable rural development rooted in
+              Nepal's ethos.
             </p>
           </div>
           <div className={styles.image}>
@@ -38,10 +37,9 @@ const About = () => {
           <div className={styles.info}>
             <h2 className={styles.headline}>Our Mission</h2>
             <p className={styles.desc}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos dolores iste explicabo nihil? Earum nostrum, assumenda
-              at id non cupiditate veniam sed, beatae, minima laborum esse
-              ipsam. Cupiditate, quasi blanditiis.
+              Develop IRD as an open and collaborative platform for all
+              individuals/groups who believe in the positive transformation of
+              Nepal at its fundamental level.
             </p>
           </div>
         </div>

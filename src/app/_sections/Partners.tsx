@@ -20,9 +20,9 @@ function Partners() {
         <div>
           <h2>Our Partners</h2>
           <p className="!text-[1.6rem] max-w-[70ch]">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Exercitationem aliquam sapiente quis! Sapiente reprehenderit
-            assumenda delectus aliquam ipsam inventore
+          We collaborate with dedicated partners
+to drive sustainable rural development and
+create lasting impact
           </p>
         </div>
         <div className="w-full flex flex-wrap justify-between items-center">

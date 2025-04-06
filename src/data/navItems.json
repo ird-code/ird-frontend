@@ -2,6 +2,11 @@
   "navItems": [
     {
       "type": "link",
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "type": "link",
       "label": "Events",
       "href": "/events"
     },
@@ -11,16 +16,38 @@
       "href": "/areas-of-work",
 
       "id": "areasOfWork",
-      "menuItems": [{ "href": "/", "label": "Education" }]
+      "menuItems": [
+        { "href": "#", "label": "Agriculture" },
+        { "href": "#", "label": "Culture and Heritage" },
+        { "href": "#", "label": "Education" },
+        { "href": "#", "label": "Entrepreneurship" },
+        { "href": "#", "label": "Tourism" }
+      ]
     },
     {
       "type": "dropdown",
-      "label": "Flagship Programs",
+      "label": "Initiatives & Campaigns",
       "href": "/flagship-programs",
       "id": "flagshipPrograms",
       "menuItems": [
-        { "href": "/initiative/education-reform", "label": "Education Reform" }
+        {
+          "href": "/initiative/education-reform",
+          "label": "Conscious Village Initiative"
+        },
+        {
+          "href": "/initiative/education-reform",
+          "label": "Save the Heritage Campaign"
+        },
+        {
+          "href": "/initiative/education-reform",
+          "label": "Education Reform Initiative"
+        }
       ]
+    },
+    {
+      "type": "link",
+      "label": "Flagship Programs",
+      "href": "/flagship-programs"
     },
     {
       "type": "link",
@@ -36,11 +63,6 @@
       "type": "link",
       "label": "Gallery",
       "href": "/gallery"
-    },
-    {
-      "type": "link",
-      "label": "About",
-      "href": "/about"
     },
     {
       "type": "button",
