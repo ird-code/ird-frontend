@@ -47,7 +47,7 @@ const JoinUs = () => {
         </ul>
 
         <div className={styles.moreOpportunities}>
-          <Link href="/opportunities">
+          <Link href="/involve">
             <Button size="large">More Opportunities</Button>
           </Link>
         </div>

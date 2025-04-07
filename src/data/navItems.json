@@ -13,7 +13,7 @@
     {
       "type": "dropdown",
       "label": "Areas of Work",
-      "href": "/areas-of-work",
+      "href": "#",
       "id": "areasOfWork",
       "menuItems": [
         { "href": "/areas-of-work/agriculture", "label": "Agriculture" },
@@ -55,7 +55,7 @@
     {
       "type": "dropdown",
       "label": "Flagship Programs",
-      "href": "/flagship-programs",
+      "href": "#",
       "id": "flagshipPrograms",
       "menuItems": [
         {
@@ -86,7 +86,7 @@
     {
       "type": "button",
       "label": "Donate",
-      "href": "/donate"
+      "href": "#"
     }
   ]
 }

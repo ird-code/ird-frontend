@@ -51,7 +51,7 @@ const Newsletter = () => {
             </form>
 
             <div className={styles.contactInfo}>
-              <p>Panchakanya-1, Nuwakot, Nepal</p>
+              <p>Panchakanya-1, Nuwakot, NP</p>
               <p>contact@ird.com.np</p>
               <p> +977 9843504464</p>
               <div className={styles.socialMediaLinks}>

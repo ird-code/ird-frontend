@@ -136,13 +136,23 @@ const Navbar = () => {
           <div className={styles.topBarWrapper}>
             <div className={styles.logoContainer}>
               <Link href="/">
-                <Image
-                  src="/assets/images/IRD_logo_500x250.png"
-                  width={500}
-                  height={39}
-                  alt="IRD Logo"
-                  priority
-                />
+                {isScrolled ? (
+                  <Image
+                    src="/assets/images/IRD_logo_500x250_white.png"
+                    width={500}
+                    height={39}
+                    alt="IRD Logo"
+                    priority
+                  />
+                ) : (
+                  <Image
+                    src="/assets/images/IRD_logo_500x250.png"
+                    width={500}
+                    height={39}
+                    alt="IRD Logo"
+                    priority
+                  />
+                )}
               </Link>
             </div>
 
