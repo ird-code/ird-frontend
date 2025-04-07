@@ -1,224 +1,166 @@
-import React from "react";
-export default function EducationReform() {
+import { React } from "react";
+import Image from "next/image";
+import Head from "next/head";
+
+const EducationReform = () => {
+  const mainSection = {
+    title: "Education Reform",
+    imageSrc: "/assets/images/education-reform.webp",
+    description: [
+      "In a world that is rapidly evolving, the majority of schools in Nepal—particularly in rural areas—continue to rely on rigid, traditional methods of education. These systems prioritize rote memorization and exam results as the primary markers of success, often at the expense of students' holistic development and creativity.",
+      "At IRD, the Education Reform Initiative bridges this gap by empowering schools to reimagine their curriculum, pedagogy, and teaching practices. We collaborate with schools to foster a dynamic and supportive learning environment that nurtures creativity and promotes students' intellectual, social, emotional, and academic growth.",
+    ],
+  };
+
+  const sections = [
+    
+    {
+      title: "Holistic Curriculum Design",
+      imageSrc: "/assets/images/holistic-curriculum.webp",
+      features: [
+        "Project based Learning Modules: Teaches students teamwork, collaboration, and critical thinking through mini projects (village surveys, filming, art, coding, etc.)",
+        "Environmental Education: Teach sustainability, climate change, and eco-friendly practices.",
+        "Workshops and Motivation Sessions: Sessions with leaders and experts across disciplines.",
+      ],
+    },
+    {
+      title: "Teacher-Student-Parent",
+      imageSrc: "/assets/images/t-s-p.webp",
+      features: [
+        "Teacher Training: Inquiry-based learning, lesson planning, integration of technology, diverse assessments.",
+        "Parent Workshop: Understanding child psychology, supporting learning at home, building emotional resilience.",
+        "Collaborative Sessions: Joint sessions for teachers and parents to align efforts in supporting students.",
+      ],
+    },
+    {
+      title: "Student Club Formation",
+      imageSrc: "/assets/images/student-club.webp",
+      features: [
+        "Science and Math Clubs: Engage in experiments, innovations, and problem-solving.",
+        "Literary Clubs: Promote reading, creative writing, and public speaking.",
+        "Eco Clubs: Promote environmental activism and sustainable practices.",
+        "Community Service Clubs: Support local communities through outreach.",
+        "Arts and Culture Clubs: Celebrate creativity through arts and performances.",
+        "Tech and Innovation Clubs: Focus on coding, robotics, and future tech.",
+        "Sports Clubs: Encourage fitness, teamwork, and discipline.",
+        "Peer Mentorship Clubs: Senior students support juniors in academics and growth.",
+      ],
+    },
+    {
+      title: "Extracurricular Integration",
+      imageSrc: "/assets/images/extra-curriculars.webp",
+      features: [
+        "Dedicated time and infrastructure for sports, music, drama, and more.",
+        "Holistic development beyond academics.",
+        "Boosts self-esteem, creativity, and emotional intelligence.",
+      ],
+    },
+  ];
+
   return (
-    <section className="mt-20 md:mt-40">
-      
-      <div className="max-w-[1280px] mx-auto px-4 pb-16 md:pb-32">
-        <div className="text-center pb-8">
-          <h2 className="text-[#850d09] text-3xl">
-            Education Reform
-          </h2>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-8 items-center ">
-          <div className="col-span-1 lg:col-span-3">
-            <p className="text-base md:text-lg">
-              In a world that is rapidly evolving, the majority of schools in
-              Nepal—particularly in rural areas—continue to rely on rigid,
-              traditional methods of education. These systems prioritize rote
-              memorization and exam results as the primary markers of success,
-              often at the expense of students' holistic development and
-              creativity. This narrow focus on exam performance through outdated
-              teaching methods not only stifles children's potential but also
-              jeopardizes their ability to build successful futures.
-            </p>
-            <br></br>
-            <p className="text-base md:text-lg">
-              At IRD, the Education Reform Initiative bridges this gap by
-              empowering schools to reimagine their curriculum, pedagogy, and
-              teaching practices. We collaborate with schools to foster a
-              dynamic and supportive learning environment that nurtures
-              creativity and promotes students' intellectual, social, emotional,
-              and academic growth. By prioritizing a more holistic and
-              student-centered education system, we can cultivate future leaders
-              who are not only equipped to seize emerging opportunities but also
-              capable of addressing the critical challenges of our time.
-            </p>
+    <>
+      <Head>
+        <title>Education Reform | IRD</title>
+        <meta
+          name="description"
+          content="IRD's education reform initiative for holistic student development in Nepal"
+        />
+      </Head>
+
+      <main className="min-h-screen pb-16 mt-[10rem]">
+        <section className="mt-12">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="max-w-[1280px] mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#850d09] mb-8 text-left">
+                {mainSection.title}
+              </h1>
+
+              <div className="mb-12">
+                <div className="relative w-full aspect-[16/9] max-h-[30rem]">
+                  <Image
+                    src={mainSection.imageSrc}
+                    alt="Education Reform"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-4 mb-12">
+                {mainSection.description.map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="col-span-1 lg:col-span-2 flex justify-center items-center mt-6 lg:mt-0">
-            <img
-              src="/assets/images/education-reform.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="max-w-[1280px] mx-auto px-4">
-        <div className="text-center">
-          <h2 className="text-[#850d09]">
-            ERI's Approach
-          </h2>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
-          <div className="col-span-1 md:col-span-3">
-            <h3 className="mb-4">Holistic Curriculum Design</h3>
-            <ul className="text-base md:text-lg">
-              <li className="pb-4">
-                <b>Project based Learning Modules:</b> Teaches students
-                teamwork, collaboration, and critical thinking through mini
-                projects that include village surveys, studies, filming,
-                photography, videography, art craft, coding, modeling, etc.
-                Together we aim to foster students' skills and creativity.
-              </li>
-              <li className="pb-4">
-                <b>Environmental Education: </b> Teach sustainability, climate
-                change, and eco-friendly practices.
-              </li>
-              <li className="pb-4">
-                <b>Workshops and Motivation Sessions:</b> Include frequent
-                sessions with leaders and experts across various disciplines
-                which students could be passionate about.
-              </li>
-            </ul>
-          </div>
-          <div className="col-span-1 md:col-span-2 flex justify-center items-center mt-6 md:mt-0">
-            <img
-              src="/assets/images/holistic-curriculum.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-md"
-            />
-          </div>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
-          <div className="col-span-1 md:col-span-2 flex justify-center items-center order-2 md:order-1 mt-6 md:mt-0">
-            <img
-              src="/assets/images/t-s-p.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-md"
-            />
-          </div>
-          <div className="col-span-1 md:col-span-3 order-1 md:order-2">
-            <h3 className="mb-4">Teacher-Student-Parent</h3>
-            <ul className="text-base md:text-lg">
-              <li className="pb-4">
-                <b>Teacher Training:</b> Holistic teaching strategies, including
-                inquiry-based and experiential learning; classroom management,
-                design and prepare lesson plan and content; integration of
-                technology and digital tools to enhance learning; assessment
-                techniques beyond exams: quizzes, multimedia and group projects,
-                etc.
-              </li>
-              <li className="pb-4">
-                <b>Parent Workshop: </b> Understanding child psychology and
-                development; strategies to support children's learning at home;
-                building positive communication and fostering emotional
-                resilience in children; the importance of balancing academics
-                with other aspects of growth.
-              </li>
-              <li className="pb-4">
-                <b>Collaborative Sessions:</b> Conduct joint sessions for
-                teachers and parents to align efforts in supporting students.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
-          <div className="col-span-1 md:col-span-3">
-            <h3 className="mb-4">Student Club Formation</h3>
-            <ul className="text-base md:text-lg">
-              <li className="pb-4">
-                <b>Science and Math Clubs:</b> Engage in experiments,
-                innovations, and problem-solving activities to develop
-                scientific and mathematical thinking.
-              </li>
-              <li className="pb-4">
-                <b>Literary Clubs:</b> Encourage reading, creative writing,
-                and public speaking to enhance communication and critical
-                thinking skills.
-              </li>
-              <li className="pb-4">
-                <b>Eco Clubs:</b> Promote sustainability and environmental
-                activism through awareness campaigns, tree planting, and waste
-                management initiatives.
-              </li>
-              <li className="pb-4">
-                <b>Community Service Clubs:</b> Organize outreach projects to
-                support local communities, such as charity events,
-                volunteering, and social welfare programs.
-              </li>
-              <li className="pb-4">
-                <b>Arts and Culture Clubs:</b> Celebrate creativity through
-                visual arts, theater, music, and dance performances, fostering
-                artistic expression.
-              </li>
-              <li className="pb-4">
-                <b>Tech and Innovation Clubs:</b> Focus on coding, robotics,
-                and emerging technologies to prepare students for the future
-                of digital transformation.
-              </li>
-              <li className="pb-4">
-                <b>Sports Clubs:</b> Promote physical fitness, teamwork, and
-                discipline through various sports and athletic competitions.
-              </li>
-              <li className="pb-4">
-                <b>Peer Mentorship Clubs:</b> Encourage senior students to
-                guide and support younger peers in academics, personal
-                development, and career planning.
-              </li>
-            </ul>
-          </div>
-          <div className="col-span-1 md:col-span-2 flex justify-center items-center mt-6 md:mt-0">
-            <img
-              src="/assets/images/student-club.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-md"
-            />
-          </div>
-        </div>
-        <div className="mt-12 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 items-center pb-16 md:pb-32">
-          <div className="col-span-1 md:col-span-2 flex justify-center items-center order-2 md:order-1 mt-6 md:mt-0">
-            <img
-              src="/assets/images/extra-curriculars.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-md"
-            />
-          </div>
-          <div className="col-span-1 md:col-span-3 order-1 md:order-2">
-            <h3 className="mb-4">Fostering extra-curricular activities</h3>
-            <ul className="text-base md:text-lg">
-              <li className="pb-4">
-                <b>Sports Programs:</b> Organize inter-school tournaments,
-                fitness sessions, and adventure activities like hiking or
-                cycling.
-              </li>
-              <li className="pb-4">
-                <b>Arts and Performances:</b> Arrange art exhibitions, talent
-                shows, theater productions, and music concerts to showcase
-                student creativity.
-              </li>
-              <li className="pb-4">
-                <b>Community Engagement:</b> Involve students in clean-up
-                drives, awareness campaigns, and charity events to promote
-                social responsibility.
-              </li>
-              <li className="pb-4">
-                <b>Skill-Building Workshops:</b> Provide hands-on training in
-                various skills, such as leadership, entrepreneurship, and
-                communication.
-              </li>
-              <li className="pb-4">
-                <b>Cultural Events:</b> Celebrate local and national festivals
-                with themed activities, performances, and exhibitions.
-              </li>
-              <li className="pb-4">
-                <b>Debates and Public Speaking:</b> Host debate competitions,
-                Model United Nations (MUN), and speech contests to enhance
-                oratory skills.
-              </li>
-              <li className="pb-4">
-                <b>Field Trips and Excursions:</b> Plan educational tours to
-                museums, historical sites, nature reserves, and local industries
-                for experiential learning.
-              </li>
-              <li className="pb-4">
-                <b>Science and Innovation Fairs:</b> Encourage students to
-                showcase creative projects, experiments, and technological
-                inventions.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
+
+        {sections.map((section, index) => (
+          <section key={index} className="py-16">
+            <div className="container mx-auto px-4 md:px-8">
+              <div className="max-w-[1280px] mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#850d09] mb-8 text-left">
+                  {section.title}
+                </h2>
+
+                <div className="mb-12">
+                  <div className="relative w-full aspect-[16/9] max-h-[30rem]">
+                    <Image
+                      src={section.imageSrc}
+                      alt={section.title}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                </div>
+
+                {section.description && (
+                  <div className="space-y-4 mb-8">
+                    {section.description.map((para, idx) => (
+                      <p key={idx} className="text-gray-700 leading-relaxed">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                {section.features && (
+                  <div className="p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-semibold text-[#850d09] mb-6 text-left">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-4">
+                      {section.features.map((feature, fidx) => (
+                        <li key={fidx} className="flex items-start">
+                          <span className="text-[#850d09] mr-3 mt-1">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                          <p className="text-gray-700">{feature}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        ))}
+      </main>
+    </>
   );
-}
+};
+
+export default EducationReform;

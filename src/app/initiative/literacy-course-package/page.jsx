@@ -1,287 +1,172 @@
-import React from "react";
-export default function LiteracyCourse() {
+import { React } from "react";
+import Image from "next/image";
+import Head from "next/head";
+
+const LiteracyCourse = () => {
+  const mainSection = {
+    title: "Literacy Course Package",
+    imageSrc: "/assets/images/literacy-course.webp",
+    description: [
+      "The Literacy Course Package is designed to equip students with essential skills to navigate an ever-changing world. Focusing on financial, media, political, and leadership literacy, the courses help students make informed decisions, think critically, and engage responsibly within their communities. IRD's approach combines practical knowledge with real-world applications to ensure students are well-prepared for the challenges they may face.",
+      "Through this comprehensive curriculum, IRD empowers students to manage their finances, evaluate media content, understand political systems, and develop strong leadership abilities. By fostering these key skills, the Literacy Course Package aims to prepare students to become active, informed, and responsible citizens, capable of thriving in an interconnected and rapidly evolving society."
+    ]
+  };
+
+  const sections = [
+    {
+      title: "Financial Literacy",
+      imageSrc: "/assets/images/fin-literacy.webp",
+      features: [
+        "Basics of Money Management – Understanding income, expenses, savings, and budgeting. The importance of setting financial goals.",
+        "Banking and Financial Systems – How banks, cooperatives, and microfinance institutions work. Steps to open and manage a bank account.",
+        "Introduction to Loans and Credit – Types of loans (personal, agricultural, etc.). Risks of debt and managing repayments.",
+        "Saving and Investment – Importance of savings for emergencies and future goals. Introduction to simple investment options like savings groups and fixed deposits.",
+        "Financial Safety – Recognizing financial fraud and scams. Importance of secure transactions and record-keeping."
+      ],
+      objective: "Equip students with the skills to manage money, understand financial systems, and make informed financial decisions."
+    },
+    {
+      title: "Media Literacy",
+      imageSrc: "/assets/images/media-literacy.jpg",
+      features: [
+        "Understanding Media – Types of prevalent media: traditional (radio, print) and digital (Facebook, Instagram, TikTok, YouTube, news websites, etc). Role of media in society and its influence on perceptions.",
+        "Evaluating Information – Identifying credible sources of news and information. Understanding fake news, misinformation, and propaganda.",
+        "Responsible Media Consumption – Ethical use of social media and digital platforms. Managing screen time and preventing cyberbullying.",
+        "Creating Media – Basics of photography, video production, and storytelling. Writing and presenting ideas effectively through media."
+      ],
+      objective: "Enable students to critically analyze media, differentiate between credible and false information, and use media responsibly."
+    },
+   
+   {
+      title: "Political Literacy",
+      imageSrc: "/assets/images/political-literacy.webp",
+      features: [
+        "Basics of Governance – Structure of Nepal's federal, provincial, and local governments. Power, roles, and responsibilities of elected officials.",
+        "Major Parties and Their Origin and Ideologies – Nepali Congress, UPN UML, Maoist, Rashtriya Swatantra Party.",
+        "Elections and Voting – Learn how elections work and the importance of voting through a mock election of student government. Independent candidate. Avoiding election-related misinformation and understanding political promises.",
+        "Civic Engagement – Role of individuals in shaping policies and holding leaders accountable. Advocacy and community organizing for local development."
+      ],
+      objective: "Foster an understanding of political systems, rights, and responsibilities to encourage active citizenship."
+    },
+    {
+      title: "Leadership Course",
+      imageSrc: "/assets/images/leadership-course.webp",
+      features: [
+        "Foundations of Leadership – Qualities of an effective leader. Leadership styles and their applications.",
+        "Teamwork and Collaboration – Building and leading a team. Effective communication and conflict resolution.",
+        "Time and Resource Management – Prioritization, scheduling, and goal-setting. Managing financial and human resources in projects.",
+        "Decision-Making and Problem-Solving – Identifying challenges and developing solutions. Risk assessment and adaptability in decision-making.",
+        "Leading for Change – Developing and implementing community-focused projects. Motivating others and creating a shared vision."
+      ],
+      objective: "Build leadership skills and equip students with management strategies to lead projects and initiatives effectively. Our leadership and management modules are inspired by courses at the world's best universities."
+    },
+  ];
+
   return (
-    <section className="mt-20 md:mt-40">
-      
-      <div className="max-w-[1280px] mx-auto px-4 pb-16 md:pb-32">
-        <div className="text-center pb-8">
-          <h2 className="text-[#850d09] text-3xl">
-          Literacy Course Package          </h2>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-8 items-center ">
-          <div className="col-span-1 lg:col-span-3">
-            <p className="text-base md:text-lg">
-            The Literacy Course Package is designed to equip students with essential skills to navigate an ever-changing world. Focusing on financial, media, political, and leadership literacy, the courses help students make informed decisions, think critically, and engage responsibly within their communities. IRD’s approach combines practical knowledge with real-world applications to ensure students are well-prepared for the challenges they may face.
+    <>
+      <Head>
+        <title>Literacy Course | IRD</title>
+        <meta
+          name="description"
+          content="IRD's Literacy Course initiative for holistic student development in Nepal"
+        />
+      </Head>
 
-            </p>
-            <br></br>
-            <p className="text-base md:text-lg">
-            Through this comprehensive curriculum, IRD empowers students to manage their finances, evaluate media content, understand political systems, and develop strong leadership abilities. By fostering these key skills, the Literacy Course Package aims to prepare students to become active, informed, and responsible citizens, capable of thriving in an interconnected and rapidly evolving society.
+      <main className="min-h-screen pb-16 mt-[10rem]">
+        <section className="mt-12">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="max-w-[1280px] mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#850d09] mb-8 text-left">
+                {mainSection.title}
+              </h1>
 
-            </p>
+              <div className="mb-12">
+                <div className="relative w-full aspect-[16/9] max-h-[30rem]">
+                  <Image
+                    src={mainSection.imageSrc}
+                    alt="Education Reform"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-4 mb-12">
+                {mainSection.description.map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="col-span-1 lg:col-span-2 flex justify-center items-center mt-6 lg:mt-0">
-            <img
-              src="/assets/images/literacy-course.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-xl"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="max-w-[1280px] mx-auto px-4 pb-12">
-        <div className="text-center">
-          <h2 className="text-[#850d09]">
-          Financial Literacy
-          </h2>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
-          <div className="col-span-1 md:col-span-3">
-          <div className="text-base md:text-lg">
-  <p className="pb-4">
-    <strong>Objective:</strong> Equip students with the skills to manage money, understand financial systems, and make informed financial decisions.
-  </p>
+        </section>
 
-  <ul className="list-disc pl-6">
-    <li className="pb-4">
-      <strong>Basics of Money Management</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Understanding income, expenses, savings, and budgeting.</li>
-        <li>The importance of setting financial goals.</li>
-      </ul>
-    </li>
+        {sections.map((section, index) => (
+          <section key={index} className="py-16">
+            <div className="container mx-auto px-4 md:px-8">
+              <div className="max-w-[1280px] mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#850d09] mb-8 text-left">
+                  {section.title}
+                </h2>
 
-    <li className="pb-4">
-      <strong>Banking and Financial Systems</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>How banks, cooperatives, and microfinance institutions work.</li>
-        <li>Steps to open and manage a bank account.</li>
-      </ul>
-    </li>
+                <div className="mb-12">
+                  <div className="relative w-full aspect-[16/9] max-h-[30rem]">
+                    <Image
+                      src={section.imageSrc}
+                      alt={section.title}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                </div>
 
-    <li className="pb-4">
-      <strong>Introduction to Loans and Credit</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Types of loans (personal, agricultural, etc.).</li>
-        <li>Risks of debt and managing repayments.</li>
-      </ul>
-    </li>
+                {section.description && (
+                  <div className="space-y-4 mb-8">
+                    {section.description.map((para, idx) => (
+                      <p key={idx} className="text-gray-700 leading-relaxed">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                )}
 
-    <li className="pb-4">
-      <strong>Saving and Investment</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Importance of savings for emergencies and future goals.</li>
-        <li>Introduction to simple investment options like savings groups and fixed deposits.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Financial Safety</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Recognizing financial fraud and scams.</li>
-        <li>Importance of secure transactions and record-keeping.</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-          </div>
-          <div className="col-span-1 md:col-span-2 flex justify-center items-center mt-6 md:mt-0">
-            <img
-              src="/assets/images/fin-literacy.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-md"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="max-w-[1280px] mx-auto px-4 pb-12">
-        <div className="text-center">
-          <h2 className="text-[#850d09]">
-          Media Literacy          </h2>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
-        <div className="col-span-1 md:col-span-2 flex justify-center items-center mt-6 md:mt-0">
-            <img
-              src="/assets/images/media-literacy.jpg"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-md"
-            />
-          </div>
-          <div className="col-span-1 md:col-span-3">
-
-          <div className="text-base md:text-lg">
-  <p className="pb-4">
-    <strong>Objective:</strong> Enable students to critically analyze media, differentiate between credible and false information, and use media responsibly.
-  </p>
-
-  <ul className="list-disc pl-6">
-    <li className="pb-4">
-      <strong>Understanding Media</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Types of prevalent media: traditional (radio, print) and digital (Facebook, Instagram, TikTok, YouTube, news websites, etc).</li>
-        <li>Role of media in society and its influence on perceptions.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Evaluating Information</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Identifying credible sources of news and information.</li>
-        <li>Understanding fake news, misinformation, and propaganda.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Responsible Media Consumption</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Ethical use of social media and digital platforms.</li>
-        <li>Managing screen time and preventing cyberbullying.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Creating Media</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Basics of photography, video production, and storytelling.</li>
-        <li>Writing and presenting ideas effectively through media.</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-            
-           
-          </div>
-          
-        </div>
-      </div>
-      <div className="max-w-[1280px] mx-auto px-4 pb-12">
-        <div className="text-center">
-          <h2 className="text-[#850d09]">
-          Political Literacy          </h2>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
-          <div className="col-span-1 md:col-span-3">
-          <div className="text-base md:text-lg">
-  <p className="pb-4">
-    <strong>Objective:</strong> Foster an understanding of political systems, rights, and responsibilities to encourage active citizenship.
-  </p>
-
-  <ul className="list-disc pl-6">
-    <li className="pb-4">
-      <strong>Basics of Governance</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Structure of Nepal’s federal, provincial, and local governments.</li>
-        <li>Power, roles, and responsibilities of elected officials.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Major Parties and Their Origin and Ideologies</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Nepali Congress</li>
-        <li>UPN UML</li>
-        <li>Maoist</li>
-        <li>Rashtriya Swatantra Party</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Elections and Voting</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Learn how elections work and the importance of voting through a mock election of student government.</li>
-        <li>Independent candidate.</li>
-        <li>Avoiding election-related misinformation and understanding political promises.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Civic Engagement</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Role of individuals in shaping policies and holding leaders accountable.</li>
-        <li>Advocacy and community organizing for local development.</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-          </div>
-          <div className="col-span-1 md:col-span-2 flex justify-center items-center mt-6 md:mt-0">
-            <img
-              src="/assets/images/political-literacy.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-md"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="max-w-[1280px] mx-auto px-4 pb-12">
-        <div className="text-center">
-          <h2 className="text-[#850d09]">
-          Leadership course          </h2>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8 items-center pb-12">
-        <div className="col-span-1 md:col-span-2 flex justify-center items-center mt-6 md:mt-0">
-            <img
-              src="/assets/images/leadership-course.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-md"
-            />
-          </div>
-          <div className="col-span-1 md:col-span-3">
-          <div className="text-base md:text-lg">
-  <p className="pb-4">
-    <strong>Objective:</strong> Build leadership skills and equip students with management strategies to lead projects and initiatives effectively. Our leadership and management modules are inspired by courses at the world’s best universities.
-  </p>
-
-  <ul className="list-disc pl-6">
-    <li className="pb-4">
-      <strong>Foundations of Leadership</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Qualities of an effective leader.</li>
-        <li>Leadership styles and their applications.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Teamwork and Collaboration</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Building and leading a team.</li>
-        <li>Effective communication and conflict resolution.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Time and Resource Management</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Prioritization, scheduling, and goal-setting.</li>
-        <li>Managing financial and human resources in projects.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Decision-Making and Problem-Solving</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Identifying challenges and developing solutions.</li>
-        <li>Risk assessment and adaptability in decision-making.</li>
-      </ul>
-    </li>
-
-    <li className="pb-4">
-      <strong>Leading for Change</strong>
-      <ul className="list-disc pl-6 pt-2">
-        <li>Developing and implementing community-focused projects.</li>
-        <li>Motivating others and creating a shared vision.</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-          </div>
-         
-        </div>
-      </div>
-    </section>
+                {section.features && (
+                  <div className="p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-semibold text-[#850d09] mb-6 text-left">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-4">
+                      {section.features.map((feature, fidx) => (
+                        <li key={fidx} className="flex items-start">
+                          <span className="text-[#850d09] mr-3 mt-1">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                          <p className="text-gray-700">{feature}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        ))}
+        
+      </main>
+    </>
   );
-}
+};
+
+export default LiteracyCourse;
