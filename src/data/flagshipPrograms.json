@@ -1,0 +1,17 @@
+{
+  "flagshipPrograms": [
+    {
+      "flagshipProgramsName": "Conscious Village Initiative",
+      "link":"/flagship-programs/conscious-village-initiative",
+      "flagshipProgramsDec": "The Conscious Village Initiative is a movement to empower villages in Nepal through education, economic support, awareness, and digital access. It aims to help villagers become self-reliant, make smart decisions, and lead their own progress. This grassroots revolution, called Gramkranti, seeks to build a better future for Nepal, one village at a time.",
+      "flagshipProgramsImage": "https://ird.com.np/wp-content/uploads/2025/01/20240719_184953-1536x710.jpg"
+    },
+    {
+      "flagshipProgramsName": "One App, One Tap",
+      "link":"/flagship-programs/one-app-one-tap",
+
+      "flagshipProgramsDec": "One App, One Tap is a key project by IRD to close the digital gap in rural Nepal. It focuses on building digital infrastructure, improving access, services, and digital skills. Many villagers still face difficulties using digital tools, which makes daily life harder as the world becomes more digital. This initiative aims to change that.",
+      "flagshipProgramsImage": "https://ird.com.np/wp-content/uploads/2025/01/20240719_184953-1536x710.jpg"
+    }
+  ]
+}

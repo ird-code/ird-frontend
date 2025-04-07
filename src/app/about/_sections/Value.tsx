@@ -29,7 +29,6 @@ export default function Value() {
             </p>
           </div>
         </div>
-        <h2 className={styles.leftHeading}>Commitment</h2>
       </div>
     </main>
   )

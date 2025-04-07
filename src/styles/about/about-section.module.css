@@ -8,7 +8,8 @@
   text-align: center;
   font-family: var(--font-poppins) !important;
   font-weight: 600;
-  font-size: 2.2rem;
+  font-size: 2.5rem !important;
+  text-transform: none; 
   margin-bottom: 2.5rem;
 }
 

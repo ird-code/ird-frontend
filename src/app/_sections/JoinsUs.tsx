@@ -12,23 +12,21 @@ const JoinUs = () => {
         <div className={styles.header}>
           <h2>Join Us</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Exercitationem aliquam sapiente quis! Sapiente reprehenderit
-            assumenda delectus aliquam ipsam inventore
+            Be part of something bigger. Be part of the change. Join us in
+            making a lasting impact.
           </p>
         </div>
-        
+
         <ul className={styles.programLists}>
           {joinUsPrograms.joinUsPrograms.map((item, index) => (
             <li className={styles.program} key={index}>
               <Link href={item.programLink}>
                 <div className={styles.imageContainer}>
-                  <Image 
-                    src={item.programImage} 
-                    className={styles.programImage} 
-                    alt={`${item.programName} Image`} 
+                  <Image
+                    src={item.programImage}
+                    className={styles.programImage}
+                    alt={`${item.programName} Image`}
                     fill
-  
                   />
                 </div>
                 <div className={styles.programContent}>
@@ -36,14 +34,18 @@ const JoinUs = () => {
                     <h3 className={styles.programName}>{item.programName}</h3>
                   </div>
                   <div className={styles.programDesc}>
-                    <p>{item.programDesc}</p>
+                    <p>
+                      {item.programDesc.length > 100
+                        ? `${item.programDesc.slice(0, 100)}...`
+                        : item.programDesc}
+                    </p>
                   </div>
                 </div>
               </Link>
             </li>
           ))}
         </ul>
-        
+
         <div className={styles.moreOpportunities}>
           <Link href="/opportunities">
             <Button size="large">More Opportunities</Button>

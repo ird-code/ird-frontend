@@ -6,6 +6,7 @@ export default function Value() {
     <main className={styles.valueContainer}>
       <div className={styles.content}>
         <div className={styles.section}>
+        <h2 className={styles.leftHeading}>Commitment</h2>
           <div className={styles.leftBlob}>
             <p className={styles.blobText}>
               We take on challenges with patience and resilience, staying
