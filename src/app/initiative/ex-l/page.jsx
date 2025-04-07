@@ -1,5 +1,44 @@
-import React from "react";
-export default function ExL() {
+import { React } from "react";
+import Image from "next/image";
+import Head from "next/head";
+
+const ExL = () => {
+  const mainSection = {
+    title: "Ex-L",
+    imageSrc: "/assets/images/ex-l.webp",
+    description: [
+      "Excel with Ex-L – Ex-L (Excel Learning) is an innovative personalized learning platform designed to enhance student education beyond the classroom. Aligned with the latest school and national curriculum guidelines, Ex-L supports students from Grade 1 to Grade 10 in mastering concepts, strengthening skills, and improving retention through interactive learning tools.",
+      "Why Ex-L? Traditional classroom learning in Nepal follows a 'one-size-fits-all' approach, where all students receive the same assignments, homework, and pace of instruction. This often leaves behind students who need extra support in specific areas. Teachers, burdened with large class sizes and limited time, struggle to provide personalized assistance to each student. Ex-L bridges this gap by offering personalized, interactive, and structured learning experiences."
+    ]
+  };
+
+  const sections = [
+    {
+      title: "Ex-L Features",
+      imageSrc: "/assets/images/exl-media.jpg",
+      features: [
+        "Personalized Learning Paths – Students can practice targeted concepts, math skills, and critical information at their own pace.",
+        "Interactive Tools for Better Retention – Flashcards, quizzes, and self-tests help students reinforce learning in a fun and engaging way.",
+        "Guided Progression from Basic to Advanced – A structured question bank covering all levels ensures step-by-step growth.",
+        "Workshops and Motivation Sessions – Frequent sessions with leaders and experts across various disciplines.",
+        "Reward Reinforcement Techniques – Achievement badges and progress tracking to keep students motivated.",
+        "Quick Access to Key Information – Clear and concise explanations make learning more efficient.",
+        "Teacher-Assigned Individual Homework – Custom tasks tailored to student needs for deeper understanding.",
+        "Skill-Based & Conceptual Strengthening – Modules that build fundamental skills and conceptual clarity."
+      ]
+    },
+   {
+      title: "Assessment",
+      imageSrc: "/assets/images/exl-media.jpg",
+      features: [
+        "Track Student Progress – Real-time assessments help teachers monitor growth and pinpoint challenges.",
+        "Assign Customized Practice Modules – Tailored exercises ensure every student gets the support they need.",
+        "Environmental Education – Emphasis on sustainability, climate change, and eco-practices.",
+        "School-Wide Portal for Collaboration – Dedicated Ex-L portals enhance communication and community."
+      ]
+    },
+   
+  ];
   const topRowSubjects = [
     "Mathematics",
     "Science",
@@ -10,133 +49,113 @@ export default function ExL() {
   const bottomRowSubjects = ["Sanskrit Language", "Social Studies"];
 
   return (
-    <section className="mt-20 md:mt-40">
-      <div className="max-w-[1280px] mx-auto px-4 pb-16 md:pb-32">
-        <div className="text-center pb-8">
-          <h2 className="text-[#850d09] text-3xl">Ex-L </h2>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-8 items-center">
-          <div className="col-span-1 lg:col-span-3">
-            <p className="text-base md:text-lg">
-              <b> Excel with Ex-L </b>– Ex-L (Excel Learning) is an innovative
-              personalized learning platform designed to enhance student
-              education beyond the classroom. Aligned with the latest school and
-              national curriculum guidelines, Ex-L supports students from Grade
-              1 to Grade 10 in mastering concepts, strengthening skills, and
-              improving retention through interactive learning tools.{" "}
-            </p>
-            <br></br>
-            <p className="text-base md:text-lg">
-              <b>Why Ex-L?</b> <br></br>
-              Traditional classroom learning in Nepal follows a
-              "one-size-fits-all" approach, where all students receive the same
-              assignments, homework, and pace of instruction. This often leaves
-              behind students who need extra support in specific areas.
-              Teachers, burdened with large class sizes and limited time,
-              struggle to provide personalized assistance to each student. Ex-L
-              bridges this gap by offering:
-            </p>
-          </div>
-          <div className="col-span-1 lg:col-span-2 flex justify-center items-center mt-6 lg:mt-0">
-            <img
-              src="/assets/images/ex-l.webp"
-              alt="Education Reform"
-              className="w-full max-w-md h-auto rounded-xl"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="max-w-[1280px] mx-auto px-4">
-        <div className="text-center">
-          <h2 className="text-[#850d09]">Ex-L Features </h2>
-        </div>
-        <div className="mt-8 md:mt-16 sm:px-4 items-center">
-          <div className="col-span-1 md:col-span-3">
-            <ul className="text-base md:text-lg">
-              <li className="pb-4">
-                <strong>Personalized Learning Paths</strong> – Students can
-                practice targeted concepts, math skills, and critical
-                information at their own pace.
-              </li>
-              <li className="pb-4">
-                <strong>Interactive Tools for Better Retention</strong> –
-                Flashcards, quizzes, and self-tests help students reinforce
-                learning in a fun and engaging way.
-              </li>
-              <li className="pb-4">
-                <strong>Guided Progression from Basic to Advanced</strong> – The
-                app features a structured question bank covering all levels of
-                understanding, ensuring students build confidence step by step
-                without feeling overwhelmed.
-              </li>
-              <li className="pb-4">
-                <strong>Workshops and Motivation Sessions</strong> – Include
-                frequent sessions with leaders and experts across various
-                disciplines which students could be passionate about.
-              </li>
-              <li className="pb-4">
-                <strong>Reward Reinforcement Techniques</strong> – Motivational
-                elements like achievement badges and progress tracking encourage
-                students to stay engaged and keep learning.
-              </li>
-              <li className="pb-4">
-                <strong>Quick Access to Key Information</strong> – No more
-                digging through textbooks for hours—Ex-L presents concepts in a
-                clear and concise manner, making learning more efficient.
-              </li>
-              <li className="pb-4">
-                <strong>Teacher-Assigned Individual Homework</strong> – Teachers
-                can assign customized tasks based on students' unique needs,
-                ensuring they get the right support to improve their
-                understanding.
-              </li>
-              <li className="pb-4">
-                <strong>Skill-Based & Conceptual Strengthening</strong> -
-                Focused learning modules help students grasp fundamental
-                concepts and build essential skills.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-12 md:mt-16 sm:px-4 grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 items-center">
-          <div className="col-span-1 md:col-span-2 flex justify-center items-center order-2 md:order-1 mt-6 md:mt-0">
-            <img
-              src="/assets/images/exl-media.jpg"
-              alt="Education Reform"
-              className="h-auto rounded-[30%]"
-            />
-          </div>
-          <div className="col-span-1 md:col-span-3 order-1 md:order-2">
-            <h3 className="mb-4">Assessment</h3>
-            <ul className="text-base md:text-lg">
-              <li className="pb-4">
-                <strong>Track Student Progress</strong> – Teachers have access
-                to real-time assessment results, enabling them to monitor
-                individual student growth and identify areas that need
-                improvement.
-              </li>
-              <li className="pb-4">
-                <strong>Assign Customized Practice Modules</strong> – Teachers
-                can assign specific lessons and exercises tailored to each
-                student’s learning needs.
-              </li>
-              <li className="pb-4">
-                <strong>Environmental Education</strong> – Teach sustainability,
-                climate change, and eco-friendly practices.
-              </li>
-              <li className="pb-4">
-                <strong>School-Wide Portal for Collaboration</strong> – Each
-                school will have a dedicated Ex-L portal where teachers and
-                students can communicate, share progress, and collaborate for a
-                more connected and efficient learning experience.
-              </li>
-            </ul>
-          </div>
-        </div>
+    <>
+      <Head>
+        <title>Ex-L | IRD</title>
+        <meta
+          name="description"
+          content="IRD's Ex-L initiative for holistic student development in Nepal"
+        />
+      </Head>
 
-        <div className="max-w-[1280px] mx-auto px-4 pt-20">
-          <div className="text-center">
-            <h2 className="text-[#850d09]">Subjects </h2>
+      <main className="min-h-screen pb-16 mt-[10rem]">
+        <section className="mt-12">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="max-w-[1280px] mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#850d09] mb-8 text-left">
+                {mainSection.title}
+              </h1>
+
+              <div className="mb-12">
+                <div className="relative w-full aspect-[16/9] max-h-[30rem]">
+                  <Image
+                    src={mainSection.imageSrc}
+                    alt="Education Reform"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-4 mb-12">
+                {mainSection.description.map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {sections.map((section, index) => (
+          <section key={index} className="py-16">
+            <div className="container mx-auto px-4 md:px-8">
+              <div className="max-w-[1280px] mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#850d09] mb-8 text-left">
+                  {section.title}
+                </h2>
+
+                <div className="mb-12">
+                  <div className="relative w-full aspect-[16/9] max-h-[30rem]">
+                    <Image
+                      src={section.imageSrc}
+                      alt={section.title}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                </div>
+
+                {section.description && (
+                  <div className="space-y-4 mb-8">
+                    {section.description.map((para, idx) => (
+                      <p key={idx} className="text-gray-700 leading-relaxed">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                {section.features && (
+                  <div className="p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-semibold text-[#850d09] mb-6 text-left">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-4">
+                      {section.features.map((feature, fidx) => (
+                        <li key={fidx} className="flex items-start">
+                          <span className="text-[#850d09] mr-3 mt-1">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                          <p className="text-gray-700">{feature}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        ))}
+        <section className="pt-20">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#850d09]">
+                Subjects
+              </h2>
+            </div>
             <div className="p-6">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                 {topRowSubjects.map((subject, index) => (
@@ -148,7 +167,6 @@ export default function ExL() {
                   </div>
                 ))}
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                 {bottomRowSubjects.map((subject, index) => (
                   <div
@@ -161,8 +179,10 @@ export default function ExL() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      </main>
+    </>
   );
-}
+};
+
+export default ExL;
