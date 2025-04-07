@@ -21,31 +21,34 @@
           "href": "/areas-of-work/culture-and-heritage",
           "label": "Culture & Heritage"
         },
-        { "href": "/areas-of-work/education", "label": "Education" },
-        {
-          "href": "/areas-of-work/entrepreneurship",
-          "label": "Entrepreneurship"
-        },
         { "href": "/areas-of-work/tourism", "label": "Tourism" }
       ]
     },
     {
       "type": "dropdown",
       "label": "Initiatives & Campaigns",
-      "href": "/flagship-programs",
+      "href": "#",
       "id": "initiativesAndCampaigns",
       "menuItems": [
         {
           "href": "/initiative/education-reform",
-          "label": "Conscious Village"
-        },
-        {
-          "href": "/initiative/education-reform",
-          "label": "Save the Heritage"
-        },
-        {
-          "href": "/initiative/education-reform",
           "label": "Education Reform"
+        },
+        {
+          "href": "/initiative/ex-l",
+          "label": "EXL"
+        },
+        {
+          "href": "/initiative/literacy-course-package",
+          "label": "Literacy Course Package"
+        },
+        {
+          "href": "/initiative/local-curriculum-development",
+          "label": "Local Curriculum Development"
+        },
+        {
+          "href": "/initiative/maitri",
+          "label": "Maitri"
         }
       ]
     },

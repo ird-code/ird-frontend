@@ -1,115 +1,60 @@
-
 import { React } from "react";
 import Image from "next/image";
 import Head from "next/head";
 
 const Page = () => {
-  const mainService = {
-    title: "Agriculture Services",
+  const mainSection = {
+    title: "Conscious Village Initiative",
+    imageSrc: "/assets/images/culture-and-heritage/agriculture/hero_img.webp",
     description: [
-      "Agriculture has long been the backbone of Nepal's economy, yet it faces unprecedented challenges due to shifting societal trends, economic transformations, and declining interest among younger generations. These issues are further exacerbated by a lack of proper policies, incentives, and modern alternatives.",
-      "At IRD, we are committed to revitalizing Nepal's agricultural sector by working closely with local governments and farmers to develop sustainable, innovative, and economically viable solutions. Our mission is to make agriculture secure, profitable, and resilient, ensuring that farming remains a thriving and attractive profession for generations to come.",
+      "Transforming Villages, Empowering Communities",
+      "The Conscious Village Initiative is one of IRD's flagship programs, designed to bring holistic and sustainable development to villages across Nepal. In close collaboration with local governments and communities, this initiative follows a graduation model spanning four years, much like a student's journey through college. During this time, IRD implements transformative projects across key sectors, including agriculture, education, entrepreneurship, health, and finance, equipping villages with knowledge, skills, resources, and digital infrastructure to level up in every aspect. By the time they graduate, these villages will have undergone a profound shift—from being under-resourced and financially weak to becoming conscious, self-sufficient, and empowered.",
+      "The Vision: A Revolution from the Village",
+      "The Conscious Village Initiative is more than just development—it's a movement. By empowering villages with education, economic stability, awareness, and digital connectivity, we ensure that no one can exploit them. Instead, they will lead their own progress, make informed political and economic decisions, and build a prosperous future for their community and the nation. This is more than an initiative—it's a revolution from the grassroots. Let's start the Gramkranti (Village Revolution) and reshape the future of Nepal, one village at a time.",
     ],
   };
-
-  const subServices = [
-    {
-      title: "Agroforestry",
-      description: [
-        "A Sustainable Future for Nepal's Agriculture",
-        "As soil health declines, farm productivity drops, and farmers struggle to generate sufficient income from their harvests, agroforestry is emerging as a game-changer. Many countries, including India, which shares Nepal's climatic and ecological conditions, have successfully integrated agroforestry to restore soil fertility, enhance biodiversity, and increase farmers' economic resilience.",
-        "At IRD, we are committed to promoting agroforestry as a sustainable agricultural practice. By integrating trees with conventional crops, farmers can improve soil health, enhance water retention, protect biodiversity, and create additional income sources through timber, fruits, and medicinal plants. This holistic approach not only strengthens the agricultural sector but also combats climate change and ensures long-term environmental sustainability.",
-        "To make agroforestry accessible and beneficial for farmers, IRD plans to collaborate with local and provincial governments to incentivize agroforestry models and encourage widespread adoption. Additionally, we will provide trainings and workshops to educate farmers on the most suitable trees and plants for their land, ensuring they maximize both economic and environmental benefits.",
-        "Through research, policy support, and hands-on implementation, IRD's agriculture team will work with local farmers and governments to expand agroforestry across Nepal, empowering communities to build a more resilient, productive, and eco-friendly agricultural system.",
-      ],
-      imageSrc: "temp",
-      features: [
-        { text: "Improved soil health and water retention" },
-        { text: "Enhanced biodiversity and ecosystem services" },
-        { text: "Additional income sources through diverse products" },
-        { text: "Climate change mitigation and adaptation" },
-        { text: "Long-term environmental sustainability" },
-      ],
-    },
-    {
-      title: "Annual Soil Check Up Camp",
-      description: [
-        "Empowering Farmers with Soil Health Insights",
-        "Soil health is the foundation of successful farming, yet many farmers in Nepal lack access to proper soil testing and analysis. To address this, IRD organizes an Annual Soil Check-Up Camp, providing farmers with scientific insights into their soil's condition to enhance productivity and sustainability.",
-        "Through affordable soil testing and expert consultations, farmers will receive personalized recommendations on soil fertility, nutrient balance, and the most suitable crops and fertilizers to use. Our goal is to eliminate guesswork in farming, helping farmers make informed decisions that lead to higher yields, better-quality produce, and long-term soil health.",
-      ],
-      imageSrc: "temp",
-      features: [
-        {
-          text: "Soil Testing & Analysis: Farmers get access to professional soil testing to assess fertility, pH levels, and nutrient composition.",
-        },
-        {
-          text: "Personalized Recommendations: Experts provide customized guidance on fertilizers, crop selection, and soil improvement techniques.",
-        },
-        {
-          text: "Affordable & Accessible: IRD collaborates with local governments, universities, and soil labs to ensure cost-effective and widespread participation.",
-        },
-        {
-          text: "Sustainability & Productivity: Encourages environmentally friendly farming by reducing excessive chemical use and improving natural soil health.",
-        },
-      ],
-    },
-    {
-      title: "KisanConnect (KisCo)",
-      description: [
-        "Bridging Farmers and Local Consumers",
-        "In Nepal's rural villages, every household often has seasonal surplus—whether it's local chickens, fruits like mangoes and bananas, vegetables, gundruk, sesame seeds, or other homegrown products. However, many farmers struggle to sell their surplus because they lack direct access to buyers. On the other hand, consumers who want to purchase fresh, local produce have no easy way to find out who has what available at any given time.",
-        "KisanConnect (KisCo) is IRD's digital marketplace designed to connect local farmers and consumers effortlessly. Integrated into the KrishiMitra app, KisCo allows farmers to list their surplus products, making them visible to potential buyers within a chosen radius. Consumers can search for available products, contact the farmer, and purchase directly—eliminating unnecessary middlemen and ensuring fair prices for both parties.",
-      ],
-      imageSrc: "temp",
-      features: [
-        {
-          text: "Empowers Farmers: Helps small-scale farmers sell surplus produce easily, turning potential waste into income.",
-        },
-        {
-          text: "Fair & Direct Pricing: Consumers can buy directly from farmers, avoiding inflated vendor prices.",
-        },
-        {
-          text: "Convenience: Buyers can locate nearby products instantly instead of searching door-to-door as it usually happens in the villages.",
-        },
-        {
-          text: "Community Growth: Strengthens local economies by fostering direct farmer-to-consumer connections.",
-        },
-      ],
-    },
-    {
-      title: "AgroFinance",
-      description: [
-        "Empowering Farmers Through Sustainable Investment",
-        "Access to financial resources is one of the biggest challenges smallholder farmers face in Nepal. AgroFinance, an initiative by IRD, is designed to support farmers living under the extreme poverty line by providing them with the necessary resources to cultivate their land and improve their livelihoods.",
-        "Instead of traditional loans, AgroFinance operates through recoverable grants/funding, where farmers receive essential agricultural inputs such as fertilizers, seeds, saplings, and livestock. Once their harvest or livestock yields returns, they gradually repay the initial investment, ensuring a sustainable cycle of support that can help more farmers in need.",
-      ],
-      imageSrc: "temp",
-      features: [
-        {
-          text: "Access to Essential Farming Inputs – Farmers receive high-quality seeds, fertilizers, saplings, and livestock to start or expand their agricultural activities.",
-        },
-        {
-          text: "Recoverable Grants Model – Farmers return the initial funding once they achieve a successful yield, ensuring continuous support for others.",
-        },
-        {
-          text: "Training & Support – IRD provides guidance, training, and mentorship to help farmers maximize their productivity and income.",
-        },
-        {
-          text: "Building Self-Reliance – By empowering farmers with resources rather than debt, AgroFinance creates long-term sustainability and financial independence.",
-        },
-      ],
-    },
-  ];
+  
+  const AreasOfImpact = {
+    headline: "Key Areas of Impact",
+    items: [
+      {
+        title: "Education",
+        description:
+          "Implementing school reforms, conduct literacy programs, and complete local curriculum development, conduct relevant surveys and studies",
+      },
+      {
+        title: "Agriculture",
+        description:
+          "Providing training, resources, and innovative farming solutions through agrifinance, KisCo, agroforestry, and Krisimitra to increase productivity and income.",
+      },
+      {
+        title: "Entrepreneurship & Economic Development",
+        description:
+          "Nurture and support entrepreneurial spirit in the village through Work Root Ventures, Aatmanibhar campaign, Aaditya, IRD seed bank and nurseries, Kutir, and more to create jobs, economic stability, and self reliance.",
+      },
+      {
+        title: "Health & Well-being",
+        description:
+          "Enhancing health services, awareness, and sanitation through Aayush, annual health camps, Yoga and Meditation camp, Maitri, Addiction and Substance Abuse Prevention camp, and more for better community health.",
+      },
+      {
+        title: "Culture, Heritage & Tourism",
+        description:
+          "Identifying, revitalizing, and promoting cultural sites, traditions, and tourism potential though cultural exchange programs, Kutir, Save the Heritage campaign, and more to integrate local tourism into economic ecosystem.",
+      },
+      {
+        title: "Digital Innovation & Connectivity",
+        description:
+          "Equipping villages with digital tools and technology through IRD's mobile apps and management software like Krishimitra, KisCo, Aayush, Surakshya, Mero Sahakari, Samvidha, Disaster Warning System (DWS) and more to make things efficient, reliable, less expensive, and safer.",
+      },
+    ],
+  };
 
   return (
     <>
       <Head>
-        <title>Agriculture Services | IRD</title>
-        <meta
-          name="description"
-          content="IRD's agricultural services for Nepal's farming communities"
-        />
+        <title>Conscious Village Initiative | IRD</title>
+        <meta name="description" content="" />
       </Head>
 
       <main className="min-h-screen pb-16 mt-[10rem]">
@@ -117,64 +62,47 @@ const Page = () => {
           <div className="container mx-auto px-4 md:px-8">
             <div className="max-w-[1280px] mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-8 text-left">
-                {mainService.title}
+                {mainSection.title}
               </h1>
-              <div className="mb-12">
-                <div className="relative w-full h-96">
-                  <Image
-                    src="temp"
-                    alt="Agriculture Services"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-4 mb-12">
-                {mainService.description.map((paragraph, index) => (
-                  <p key={index} className="text-gray-700 leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {subServices.map((service, index) => (
-          <section key={index} className="py-16">
-            <div className="container mx-auto px-4 md:px-8">
-              <div className="max-w-[1280px] mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-green-700 mb-8 text-left">
-                  {service.title}
-                </h2>
-
-                <div className="space-y-4 mb-12">
-                  {service.description.map((paragraph, idx) => (
-                    <p key={idx} className="text-gray-700 leading-relaxed">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-
+              {mainSection.imageSrc && (
                 <div className="mb-12">
-                  <div className="relative w-full h-96">
+                  <div className="relative w-full aspect-[16/9] max-h-[30rem]">
                     <Image
-                      src={service.imageSrc}
-                      alt={service.title}
+                      src={mainSection.imageSrc}
+                      alt="Agriculture Services"
                       layout="fill"
                       objectFit="cover"
                     />
                   </div>
                 </div>
+              )}
 
-                <div className="p-6 md:p-8">
+              {mainSection.description &&
+                mainSection.description.length > 0 && (
+                  <div className="space-y-4 mb-12">
+                    {mainSection.description.map((paragraph, index) => (
+                      <p key={index} className="text-gray-700 leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
+            </div>
+          </div>
+        </section>
+
+        {typeof AreasOfImpact !== "undefined" &&
+          AreasOfImpact.items &&
+          AreasOfImpact.items.length > 0 && (
+            <section className="mt-6">
+              <div className="container mx-auto px-4 md:px-8">
+                <div className="max-w-[1280px] mx-auto">
                   <h3 className="text-xl md:text-2xl font-semibold text-green-700 mb-6 text-left">
-                    Key Features
+                    {AreasOfImpact.headline}
                   </h3>
-                  <ul className="space-y-4">
-                    {service.features.map((feature, fidx) => (
-                      <li key={fidx} className="flex items-start">
+                  <ul className="space-y-4 mb-12">
+                    {AreasOfImpact.items.map((item, id) => (
+                      <li key={id} className="flex items-start">
                         <span className="text-green-500 mr-3 mt-1">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -189,15 +117,14 @@ const Page = () => {
                             />
                           </svg>
                         </span>
-                        <p className="text-gray-700">{feature.text}</p>
+                        <p className="text-gray-700"><b>{item.title}:  </b>{item.description}</p>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
-            </div>
-          </section>
-        ))}
+            </section>
+          )}
       </main>
     </>
   );
