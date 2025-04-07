@@ -31,6 +31,7 @@ export default function Member() {
   ]
 
   return (
+    <div className="hidden">
     <div className={styles.main}>
       <div className={styles.teamContainer}>
         <h1 className={styles.title}>Meet Our Team</h1>
@@ -67,6 +68,7 @@ export default function Member() {
           ))}
         </div>
       </div>
+    </div>
     </div>
   )
 }
