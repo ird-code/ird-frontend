@@ -1,5 +1,3 @@
-import { GiH2O } from "react-icons/gi";
-
 const Values = () => {
   const valuesData = [
     {
@@ -39,7 +37,7 @@ const Values = () => {
       <h1>Our Values</h1>
       <p className="!text-[1.6rem] max-w-[70ch] mb-16">
         Empowering and guiding the local leadership and communities to build the
-        foundation for sustainable rural development rooted in Nepal's ethos.
+        foundation for sustainable rural development rooted in Nepal&apos;s ethos.
       </p>
       <div>
         {valuesData.map((value, index) => (

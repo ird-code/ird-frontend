@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-import {galleryImages} from "@/data/gallery.json"
+import galleryImages from "@/data/gallery.json"
 export default function ImageGallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
@@ -19,7 +19,7 @@ export default function ImageGallery() {
     if (selectedImage === null) return;
 
     // Prevent navigating out of bounds
-    if (direction === 'next' && selectedImage === galleryImages.length - 1) return;
+    if (direction === 'next' && selectedImage === galleryImages.galleryImages.length - 1) return;
     if (direction === 'prev' && selectedImage === 0) return;
 
     const newIndex = direction === 'next' 
@@ -55,7 +55,7 @@ export default function ImageGallery() {
     <div className="container mx-auto py-8">
       {/* Gallery Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {galleryImages.map((image, index) => (
+        {galleryImages.galleryImages.map((image, index) => (
           <div 
             key={index} 
             className="relative w-full aspect-square cursor-pointer hover:opacity-80 transition-opacity"
@@ -103,15 +103,15 @@ export default function ImageGallery() {
             <button 
               onClick={() => navigateImage('next')}
               className={`absolute right-4 top-1/2 -translate-y-1/2 z-10
-                ${selectedImage === galleryImages.length - 1 ? 'text-gray-600' : 'text-white hover:text-gray-300'}`}
+                ${selectedImage === galleryImages.galleryImages.length - 1 ? 'text-gray-600' : 'text-white hover:text-gray-300'}`}
             >
               <ChevronRight size={48} />
             </button>
 
             {/* Selected Image */}
             <Image 
-              src={galleryImages[selectedImage].src} 
-              alt={galleryImages[selectedImage].alt}
+              src={galleryImages.galleryImages[selectedImage].src} 
+              alt={galleryImages.galleryImages[selectedImage].alt}
               width={1200}
               height={800}
               className="max-w-full max-h-[90vh] object-contain"
