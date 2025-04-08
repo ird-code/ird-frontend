@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
@@ -13,9 +13,9 @@ const EducationReform = () => {
   };
 
   const sections = [
-    
     {
       title: "Holistic Curriculum Design",
+      description:[],
       imageSrc: "/assets/images/holistic-curriculum.jpg",
       features: [
         "Project based Learning Modules: Teaches students teamwork, collaboration, and critical thinking through mini projects (village surveys, filming, art, coding, etc.)",
@@ -25,6 +25,7 @@ const EducationReform = () => {
     },
     {
       title: "Teacher-Student-Parent",
+      description:[],
       imageSrc: "/assets/images/t-s-p.jpg",
       features: [
         "Teacher Training: Inquiry-based learning, lesson planning, integration of technology, diverse assessments.",
@@ -34,6 +35,7 @@ const EducationReform = () => {
     },
     {
       title: "Student Club Formation",
+      description:[],
       imageSrc: "/assets/images/student-club.jpg",
       features: [
         "Science and Math Clubs: Engage in experiments, innovations, and problem-solving.",
@@ -48,6 +50,7 @@ const EducationReform = () => {
     },
     {
       title: "Extracurricular Integration",
+      description:[],
       imageSrc: "/assets/images/extra-curriculars.webp",
       features: [
         "Dedicated time and infrastructure for sports, music, drama, and more.",
@@ -63,7 +66,7 @@ const EducationReform = () => {
         <title>Education Reform | IRD</title>
         <meta
           name="description"
-          content="IRD's education reform initiative for holistic student development in Nepal"
+          content="IRD&apos;s education reform initiative for holistic student development in Nepal"
         />
       </Head>
 

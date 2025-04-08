@@ -1,10 +1,11 @@
-import { React } from "react";
+import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
 const Page = () => {
   const mainSection = {
     title: "Work Root Ventures",
+    imageSrc:"",
     description: [
       "IRD’s Work Root Ventures aim to empower Nepal’s rural communities through innovative, practical, and locally-rooted solutions in agriculture, self-employment, and sustainability. Our initiatives help communities become more self-reliant and resilient by bridging the gap between tradition and modern tools.",
       "We’re committed to improving farmer livelihoods, reducing rural-to-urban migration, and building ecosystems of opportunity through collaboration, training, and technology.",
@@ -112,7 +113,7 @@ const Page = () => {
         <title>Entrepreneurship | IRD</title>
         <meta
           name="description"
-          content="IRD's agricultural services for Nepal's farming communities"
+          content="IRD&apos;s agricultural services for Nepal&apos;s farming communities"
         />
       </Head>
 

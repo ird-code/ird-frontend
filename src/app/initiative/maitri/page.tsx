@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
@@ -16,6 +16,7 @@ const Maitri = () => {
   const sections = [
     {
       title: "Distributing Sports Materials",
+      description:[],
       imageSrc: "/assets/images/first-focus.jpg",
       features: [
         "Providing schools, youth clubs, and local communities with sports gear and equipment, ensuring financial barriers do not hinder participation in physical activities."
@@ -23,6 +24,7 @@ const Maitri = () => {
     },
     {
       title: "Reviving Outdoor Play",
+      description:[],
       imageSrc: "/assets/images/values-2.jpg",
       features: [
         "Encouraging children and youth to return to outdoor sports by creating engaging play spaces and organizing events that foster team spirit and active lifestyles."
@@ -30,6 +32,7 @@ const Maitri = () => {
     },
     {
       title: "Fostering Community Spirit",
+      description:[],
       imageSrc: "/assets/images/focus-2.jpg",
       features: [
         "Creating platforms for inter-community tournaments and games to strengthen bonds, celebrate local talent, and build inclusive, healthy environments."
@@ -44,7 +47,7 @@ const Maitri = () => {
         <title>Maitri | IRD</title>
         <meta
           name="description"
-          content="IRD's Maitri for holistic student development in Nepal"
+          content="IRD&apos;s Maitri for holistic student development in Nepal"
         />
       </Head>
 

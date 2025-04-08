@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
@@ -15,6 +15,7 @@ const LiteracyCourse = () => {
   const sections = [
     {
       title: "Financial Literacy",
+      description:[],
       imageSrc: "/assets/images/fin-literacy.jpg",
       features: [
         "Basics of Money Management – Understanding income, expenses, savings, and budgeting. The importance of setting financial goals.",
@@ -27,6 +28,7 @@ const LiteracyCourse = () => {
     },
     {
       title: "Media Literacy",
+      description:[],
       imageSrc: "/assets/images/media-literacy.jpg",
       features: [
         "Understanding Media – Types of prevalent media: traditional (radio, print) and digital (Facebook, Instagram, TikTok, YouTube, news websites, etc). Role of media in society and its influence on perceptions.",
@@ -39,6 +41,7 @@ const LiteracyCourse = () => {
    
    {
       title: "Political Literacy",
+      description:[],
       imageSrc: "/assets/images/political-literacy.jpg",
       features: [
         "Basics of Governance – Structure of Nepal's federal, provincial, and local governments. Power, roles, and responsibilities of elected officials.",
@@ -50,6 +53,7 @@ const LiteracyCourse = () => {
     },
     {
       title: "Leadership Course",
+      description:[],
       imageSrc: "/assets/images/leadership-course.jpg",
       features: [
         "Foundations of Leadership – Qualities of an effective leader. Leadership styles and their applications.",
@@ -68,7 +72,7 @@ const LiteracyCourse = () => {
         <title>Literacy Course | IRD</title>
         <meta
           name="description"
-          content="IRD's Literacy Course initiative for holistic student development in Nepal"
+          content="IRD&apos;s Literacy Course initiative for holistic student development in Nepal"
         />
       </Head>
 

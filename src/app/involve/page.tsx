@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import joinUsPrograms from "@/data/joinUsPrograms.json";
-
 import styles from "@/styles/pages/involve.module.css";
 import Button from "@/components/Button";
 

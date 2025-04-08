@@ -13,7 +13,7 @@ const Page = () => {
             Flagship Programs
           </h2>
           <p className="max-w-3xl !text-[1.6rem]">
-            IRD's flagship programs drive sustainable development and digital
+            IRD&apos;s flagship programs drive sustainable development and digital
             innovation to empower rural communities in Nepal.
           </p>
         </div>
