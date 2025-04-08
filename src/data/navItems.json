@@ -2,24 +2,72 @@
   "navItems": [
     {
       "type": "link",
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "type": "link",
       "label": "Events",
       "href": "/events"
     },
     {
       "type": "dropdown",
       "label": "Areas of Work",
-      "href": "/areas-of-work",
-
+      "href": "#",
       "id": "areasOfWork",
-      "menuItems": [{ "href": "/", "label": "Education" }]
+      "menuItems": [
+        { "href": "/areas-of-work/agriculture", "label": "Agriculture" },
+        {
+          "href": "/areas-of-work/culture-and-heritage",
+          "label": "Culture & Heritage"
+        },
+        { "href": "/areas-of-work/tourism", "label": "Tourism" },
+        { "href": "/areas-of-work/education", "label": "Education" },
+        { "href": "/areas-of-work/entrepreneurship", "label": "Entrepreneurship" }
+      ]
+    },
+    {
+      "type": "dropdown",
+      "label": "Initiatives & Campaigns",
+      "href": "#",
+      "id": "initiativesAndCampaigns",
+      "menuItems": [
+        {
+          "href": "/initiative/education-reform",
+          "label": "Education Reform"
+        },
+        {
+          "href": "/initiative/ex-l",
+          "label": "EXL"
+        },
+        {
+          "href": "/initiative/literacy-course-package",
+          "label": "Literacy Course Package"
+        },
+        {
+          "href": "/initiative/local-curriculum-development",
+          "label": "Local Curriculum Development"
+        },
+        {
+          "href": "/initiative/maitri",
+          "label": "Maitri"
+        }
+      ]
     },
     {
       "type": "dropdown",
       "label": "Flagship Programs",
-      "href": "/flagship-programs",
+      "href": "#",
       "id": "flagshipPrograms",
       "menuItems": [
-        { "href": "/initiative/education-reform", "label": "Education Reform" }
+        {
+          "href": "/flagship-programs/conscious-village-initiative",
+          "label": "Conscious Village"
+        },
+        {
+          "href": "/flagship-programs/one-app-one-tap",
+          "label": "One App One Tap"
+        }
       ]
     },
     {
@@ -38,14 +86,9 @@
       "href": "/gallery"
     },
     {
-      "type": "link",
-      "label": "About",
-      "href": "/about"
-    },
-    {
       "type": "button",
       "label": "Donate",
-      "href": "/donate"
+      "href": "#"
     }
   ]
 }

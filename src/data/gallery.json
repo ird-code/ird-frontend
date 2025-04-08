@@ -1,0 +1,10 @@
+{
+  "galleryImages": [
+    { "src": "/assets/images/gallery/initiative_image1.jpg", "alt": "Image 1" },
+    { "src": "/assets/images/gallery/initiative_image2.jpg", "alt": "Image 2" },
+    { "src": "/assets/images/gallery/initiative_image3.jpg", "alt": "Image 3" },
+    { "src": "/assets/images/gallery/initiative_image4.jpg", "alt": "Image 4" },
+    { "src": "/assets/images/gallery/initiative_image5.jpg", "alt": "Image 5" },
+    { "src": "/assets/images/gallery/initiative_image6.jpg", "alt": "Image 6" }
+  ]
+}
