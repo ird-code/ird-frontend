@@ -21,7 +21,7 @@ export default function AboutPage() {
             <p className="!text-[1.6rem]">
               Empowering and guiding the local leadership, youths, and
               communities to build the foundation for sustainable rural
-              development rooted in Nepal's ethos
+              development rooted in Nepal&apos;s ethos
             </p>
           </div>
           <div className="flex justify-center order-1 md:order-2">
