@@ -13,7 +13,7 @@ const About = () => {
             <p className={styles.desc}>
               Empowering and guiding the local leadership and communities to
               build the foundation for sustainable rural development rooted in
-              Nepal's ethos.
+              Nepal&apos;s ethos.
             </p>
           </div>
           <div className={styles.image}>
