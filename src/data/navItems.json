@@ -21,7 +21,9 @@
           "href": "/areas-of-work/culture-and-heritage",
           "label": "Culture & Heritage"
         },
-        { "href": "/areas-of-work/tourism", "label": "Tourism" }
+        { "href": "/areas-of-work/tourism", "label": "Tourism" },
+        { "href": "/areas-of-work/education", "label": "Education" },
+        { "href": "/areas-of-work/entrepreneurship", "label": "Entrepreneurship" }
       ]
     },
     {
