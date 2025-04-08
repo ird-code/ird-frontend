@@ -30,9 +30,11 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className='flex items-center gap-3 max-md:flex-col'>
-<AiOutlineGlobal  className="text-2xl font-semibold !text-[#fefefe] max-md:text-xl" />
-            <p className="text-2xl font-semibold text-[#fefefe] max-md:text-xl">NP</p>
+          <div className="flex items-center gap-3 max-md:flex-col">
+            <AiOutlineGlobal className="text-2xl font-semibold !text-[#fefefe] max-md:text-xl" />
+            <p className="text-2xl font-semibold text-[#fefefe] max-md:text-xl">
+              NP
+            </p>
           </div>
         </div>
 

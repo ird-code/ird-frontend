@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
@@ -9,40 +9,42 @@ const LocalCurriculum = () => {
     description: [
       "IRD works in close collaboration with local governments across municipalities to help design and implement tailored local curricula that reflect the unique cultural, historical, and developmental characteristics of each community. By engaging local historians, cultural experts, artisans, and community leaders, we ensure that the educational content is both rich in local relevance and fully aligned with national curriculum standards.",
       "Our vision is to foster a deep, lasting connection between students and their local heritage, culture, and the opportunities for growth and development within their communities. We aim to inspire a strong sense of pride and responsibility in students, encouraging them to actively participate in the preservation of their local culture and contribute to the sustainable development of their environment.",
-      "Through this initiative, students are empowered to see the value of their local identity, while also gaining the knowledge and skills needed to address the future needs of their communities."
-    ]
+      "Through this initiative, students are empowered to see the value of their local identity, while also gaining the knowledge and skills needed to address the future needs of their communities.",
+    ],
   };
-  
+
   const sections = [
     {
       title: "Key Components",
+      description: [],
       imageSrc: "/assets/images/component.jpg",
       features: [
         "Design Books and Booklets – Create comprehensive books with stories, poems, and essays written by or about local figures. Include content on traditions, local landmarks, agricultural practices, biodiversity, and historical events.",
         "Documentaries – Help film documentaries showcasing local heritage, cultural practices, festivals, oral histories, success stories, and community struggles.",
-        "Visual Aids – Make posters, maps, and charts showing the area's geography, flora and fauna, and socio-economic activities."
-      ]
+        "Visual Aids – Make posters, maps, and charts showing the area's geography, flora and fauna, and socio-economic activities.",
+      ],
     },
     {
       title: "Implementation",
+      description: [],
       imageSrc: "/assets/images/implementation.webp",
       features: [
         "Step 1: Needs Assessment – Collaborate with municipalities to understand local priorities and gaps. Analyze the existing curriculum to identify where local content fits.",
         "Step 2: Content Creation – Engage local experts, writers, and educators. Involve students and teachers through contests and workshops.",
         "Step 3: Piloting the Materials – Test content in selected schools. Gather feedback and refine materials for clarity and engagement.",
         "Step 4: Teacher Training – Train teachers to use the materials effectively. Provide tools to lead discussions and community-based activities.",
-        "Step 5: Full-Scale Implementation – Distribute materials to all schools in the municipality. Monitor and evaluate usage through reviews and feedback."
-      ]
-    }
+        "Step 5: Full-Scale Implementation – Distribute materials to all schools in the municipality. Monitor and evaluate usage through reviews and feedback.",
+      ],
+    },
   ];
-  
+
   return (
     <>
       <Head>
         <title>Local Curriculum Development | IRD</title>
         <meta
           name="description"
-          content="IRD's Local Curriculum Development for holistic student development in Nepal"
+          content="IRD&apos;s Local Curriculum Development for holistic student development in Nepal"
         />
       </Head>
 
@@ -108,7 +110,7 @@ const LocalCurriculum = () => {
                 {section.features && (
                   <div className="p-6 md:p-8">
                     <h3 className="text-xl md:text-2xl font-semibold text-[#850d09] mb-6 text-left">
-Our Process
+                      Our Process
                     </h3>
                     <ul className="space-y-4">
                       {section.features.map((feature, fidx) => (
@@ -137,7 +139,6 @@ Our Process
             </div>
           </section>
         ))}
-        
       </main>
     </>
   );

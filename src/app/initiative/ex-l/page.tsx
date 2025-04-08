@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
@@ -15,6 +15,7 @@ const ExL = () => {
   const sections = [
     {
       title: "Ex-L Features",
+      description:[],
       imageSrc: "/assets/images/exl-media1.jpg",
       features: [
         "Personalized Learning Paths – Students can practice targeted concepts, math skills, and critical information at their own pace.",
@@ -29,6 +30,7 @@ const ExL = () => {
     },
    {
       title: "Assessment",
+      description:[],
       imageSrc: "/assets/images/exl-media.jpg",
       features: [
         "Track Student Progress – Real-time assessments help teachers monitor growth and pinpoint challenges.",
@@ -54,7 +56,7 @@ const ExL = () => {
         <title>Ex-L | IRD</title>
         <meta
           name="description"
-          content="IRD's Ex-L initiative for holistic student development in Nepal"
+          content="IRD&apos;s Ex-L initiative for holistic student development in Nepal"
         />
       </Head>
 
