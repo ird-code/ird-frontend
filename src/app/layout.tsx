@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${sourceSansPro.variable} antialiased`}>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
