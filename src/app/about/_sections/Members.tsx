@@ -30,6 +30,7 @@ export default function Members() {
   ]
 
   return (
+    <div className="hidden">
     <div className={styles.main}>
       <div className={styles.teamContainer}>
         <div className={styles.teamGrid}>
@@ -50,6 +51,7 @@ export default function Members() {
           ))}
         </div>
       </div>
+    </div>
     </div>
   )
 }

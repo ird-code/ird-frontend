@@ -7,38 +7,45 @@ function News() {
   const news = [
     {
       id: 1,
-      image: "/assets/images/temp.webp",
-      title: "News Title",
+      image: "/assets/images/news/news1.png",
+      title: "Gramkranti Begins",
       meta_disc:
-        "Stanford researchers team up with student-athletes to unlock peak performance",
+        "IRD launches Conscious Village Initiative to empower rural Nepal sustainably.",
     },
     {
       id: 2,
-      image: "/assets/images/temp.webp",
-      title: "News Title",
+      image: "/assets/images/news/news2.png",
+      title: "One Tap to Empower",
       meta_disc:
-        "Stanford researchers team up with student-athletes to unlock peak performance",
+        "IRD's One App, One Tap bridges rural Nepal's digital divide.",
     },
     {
       id: 3,
-      image: "/assets/images/temp.webp",
-      title: "News Title",
+      image: "/assets/images/news/news3.png",
+      title: "Farming Goes Future",
       meta_disc:
-        "Stanford researchers team up with student-athletes to unlock peak performance",
+        "IRD boosts Nepalese agriculture with agroforestry, digital tools, and finance.",
     },
     {
       id: 4,
-      image: "/assets/images/temp.webp",
-      title: "News Title",
+      image: "/assets/images/news/news4.png",
+      title: "Saving the Soul of Nepal",
       meta_disc:
-        "Stanford researchers team up with student-athletes to unlock peak performance",
+        "IRD campaigns to preserve and promote Nepal's rich cultural heritage.",
     },
     {
       id: 5,
-      image: "/assets/images/temp.webp",
-      title: "News Title",
+      image: "/assets/images/news/news5.png",
+      title: "From Classrooms to Communities",
       meta_disc:
-        "Stanford researchers team up with student-athletes to unlock peak performance",
+        "IRD launches immersive learning trips blending education, culture, and exploration.",
+    },
+    {
+      id: 6,
+      image: "/assets/images/news/news6.png",
+      title: "Digital Tools, Real Change",
+      meta_disc:
+        "Apps like Krishimitra and Surakshya are transforming rural life in Nepal.",
     },
   ];
 

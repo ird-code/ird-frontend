@@ -3,17 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-
-
-const galleryImages = [
-  { src: '/assets/images/image1.png', alt: 'Image 1' },
-  { src: '/assets/images/image2.png', alt: 'Image 2' },
-  { src: '/assets/images/image3.png', alt: 'Image 3' },
-  { src: '/assets/images/image4.png', alt: 'Image 4' },
-  { src: '/assets/images/image5.png', alt: 'Image 5' },
-  { src: '/assets/images/image6.png', alt: 'Image 6' },
-];
-
+import {galleryImages} from "@/data/gallery.json"
 export default function ImageGallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 

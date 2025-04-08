@@ -12,9 +12,9 @@ const Events = () => {
         <div className={styles.header}>
           <h2>Events</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Exercitationem aliquam sapiente quis! Sapiente reprehenderit
-            assumenda delectus aliquam ipsam inventore
+          Discover upcoming events by IRD promoting rural development in Nepal
+            through community engagement, collaboration, and impactful local
+            initiatives.
           </p>
         </div>
         <ul className={styles.eventLists}>
