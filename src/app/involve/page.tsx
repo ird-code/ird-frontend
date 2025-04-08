@@ -22,7 +22,7 @@ const AreasOfWork = () => {
             </div>
             <div className={styles.heroSectionImage}>
               <Image
-                src="/assets/images/temp.webp"
+                src="/assets/images/involve/join.jpg"
                 alt="Join Us Hero Image"
                 className={styles.image}
                 fill

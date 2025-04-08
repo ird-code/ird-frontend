@@ -5,7 +5,7 @@ import Head from "next/head";
 const Page = () => {
   const mainSection = {
     title: "Conscious Village Initiative",
-    imageSrc: "/assets/images/culture-and-heritage/agriculture/hero_img.webp",
+    imageSrc: "/assets/images/areas-of-work/flagship-programs/conscious-village-initiative/hero_img.webp",
     description: [
       "Transforming Villages, Empowering Communities",
       "The Conscious Village Initiative is one of IRD's flagship programs, designed to bring holistic and sustainable development to villages across Nepal. In close collaboration with local governments and communities, this initiative follows a graduation model spanning four years, much like a student's journey through college. During this time, IRD implements transformative projects across key sectors, including agriculture, education, entrepreneurship, health, and finance, equipping villages with knowledge, skills, resources, and digital infrastructure to level up in every aspect. By the time they graduate, these villages will have undergone a profound shift—from being under-resourced and financially weak to becoming conscious, self-sufficient, and empowered.",
