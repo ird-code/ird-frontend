@@ -9,18 +9,13 @@ import { IoSearch } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { FaBars } from "react-icons/fa6";
-
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathName = usePathname();
-
   const dropdownRefs = useRef({});
 
-  const [openDropdowns, setOpenDropdowns] = useState({
-    areasOfWork: false,
-    flagshipPrograms: false,
-  });
+  const [openDropdowns, setOpenDropdowns] = useState({});
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -94,7 +89,12 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMobileMenuOpen]);
 
-  // Only toggle dropdown on click for mobile
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathName]);
+
+  // Toggle dropdown on click for mobile
   const toggleDropdown = (dropdownKey) => (e) => {
     if (isMobileRef.current) {
       e.preventDefault();
@@ -157,11 +157,7 @@ const Navbar = () => {
             </div>
 
             <div className={styles.actionButtons}>
-              {/* <button className={styles.loginButton} aria-label="Log in">
-                Log in
-              </button> */}
-
-              <div className={styles.loginButton} aria-label="Search">
+              <div className={styles.loginButton} aria-label="Log in">
                 <span className={styles.loginIcon}>
                   <TbLogin2 />
                 </span>

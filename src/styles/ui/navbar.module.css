@@ -98,7 +98,7 @@
 }
 
 .navbarScrolled .mainNav {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -202,7 +202,7 @@
     display: flex;
   }
   .navbar {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255,1);
   }
 
   .navbarScrolled .topBar,
@@ -293,5 +293,8 @@
 
   .actionButtons {
     gap: 0.5rem;
+  }
+  .actionButtons div {
+    display: none;
   }
 }

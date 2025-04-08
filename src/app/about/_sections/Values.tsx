@@ -35,7 +35,7 @@ const Values = () => {
   ];
 
   return (
-    <main className="py-16 overflow-hidden max-w-[1280px] mx-auto relative">
+    <main className="py-16 overflow-hidden max-w-[1280px] mx-auto relative pl-[1rem] pr-[1rem]">
       <h1>Our Values</h1>
       <p className="!text-[1.6rem] max-w-[70ch] mb-16">
         Empowering and guiding the local leadership and communities to build the
