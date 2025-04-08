@@ -5,7 +5,7 @@ import Head from "next/head";
 const LocalCurriculum = () => {
   const mainSection = {
     title: "Local Curriculum Development",
-    imageSrc: "/assets/images/local-cd.webp",
+    imageSrc: "/assets/images/local-cd.jpg",
     description: [
       "IRD works in close collaboration with local governments across municipalities to help design and implement tailored local curricula that reflect the unique cultural, historical, and developmental characteristics of each community. By engaging local historians, cultural experts, artisans, and community leaders, we ensure that the educational content is both rich in local relevance and fully aligned with national curriculum standards.",
       "Our vision is to foster a deep, lasting connection between students and their local heritage, culture, and the opportunities for growth and development within their communities. We aim to inspire a strong sense of pride and responsibility in students, encouraging them to actively participate in the preservation of their local culture and contribute to the sustainable development of their environment.",
@@ -16,7 +16,7 @@ const LocalCurriculum = () => {
   const sections = [
     {
       title: "Key Components",
-      imageSrc: "/assets/images/component.webp",
+      imageSrc: "/assets/images/component.jpg",
       features: [
         "Design Books and Booklets – Create comprehensive books with stories, poems, and essays written by or about local figures. Include content on traditions, local landmarks, agricultural practices, biodiversity, and historical events.",
         "Documentaries – Help film documentaries showcasing local heritage, cultural practices, festivals, oral histories, success stories, and community struggles.",

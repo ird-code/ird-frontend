@@ -5,7 +5,7 @@ import Head from "next/head";
 const EducationReform = () => {
   const mainSection = {
     title: "Education Reform",
-    imageSrc: "/assets/images/education-reform.webp",
+    imageSrc: "/assets/images/education-reform.jpg",
     description: [
       "In a world that is rapidly evolving, the majority of schools in Nepal—particularly in rural areas—continue to rely on rigid, traditional methods of education. These systems prioritize rote memorization and exam results as the primary markers of success, often at the expense of students' holistic development and creativity.",
       "At IRD, the Education Reform Initiative bridges this gap by empowering schools to reimagine their curriculum, pedagogy, and teaching practices. We collaborate with schools to foster a dynamic and supportive learning environment that nurtures creativity and promotes students' intellectual, social, emotional, and academic growth.",
@@ -16,7 +16,7 @@ const EducationReform = () => {
     
     {
       title: "Holistic Curriculum Design",
-      imageSrc: "/assets/images/holistic-curriculum.webp",
+      imageSrc: "/assets/images/holistic-curriculum.jpg",
       features: [
         "Project based Learning Modules: Teaches students teamwork, collaboration, and critical thinking through mini projects (village surveys, filming, art, coding, etc.)",
         "Environmental Education: Teach sustainability, climate change, and eco-friendly practices.",
@@ -25,7 +25,7 @@ const EducationReform = () => {
     },
     {
       title: "Teacher-Student-Parent",
-      imageSrc: "/assets/images/t-s-p.webp",
+      imageSrc: "/assets/images/t-s-p.jpg",
       features: [
         "Teacher Training: Inquiry-based learning, lesson planning, integration of technology, diverse assessments.",
         "Parent Workshop: Understanding child psychology, supporting learning at home, building emotional resilience.",
@@ -34,7 +34,7 @@ const EducationReform = () => {
     },
     {
       title: "Student Club Formation",
-      imageSrc: "/assets/images/student-club.webp",
+      imageSrc: "/assets/images/student-club.jpg",
       features: [
         "Science and Math Clubs: Engage in experiments, innovations, and problem-solving.",
         "Literary Clubs: Promote reading, creative writing, and public speaking.",

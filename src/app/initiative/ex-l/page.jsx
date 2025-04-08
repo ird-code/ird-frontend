@@ -5,7 +5,7 @@ import Head from "next/head";
 const ExL = () => {
   const mainSection = {
     title: "Ex-L",
-    imageSrc: "/assets/images/ex-l.webp",
+    imageSrc: "/assets/images/ex-l.jpg",
     description: [
       "Excel with Ex-L – Ex-L (Excel Learning) is an innovative personalized learning platform designed to enhance student education beyond the classroom. Aligned with the latest school and national curriculum guidelines, Ex-L supports students from Grade 1 to Grade 10 in mastering concepts, strengthening skills, and improving retention through interactive learning tools.",
       "Why Ex-L? Traditional classroom learning in Nepal follows a 'one-size-fits-all' approach, where all students receive the same assignments, homework, and pace of instruction. This often leaves behind students who need extra support in specific areas. Teachers, burdened with large class sizes and limited time, struggle to provide personalized assistance to each student. Ex-L bridges this gap by offering personalized, interactive, and structured learning experiences."
@@ -15,7 +15,7 @@ const ExL = () => {
   const sections = [
     {
       title: "Ex-L Features",
-      imageSrc: "/assets/images/exl-media.jpg",
+      imageSrc: "/assets/images/exl-media1.jpg",
       features: [
         "Personalized Learning Paths – Students can practice targeted concepts, math skills, and critical information at their own pace.",
         "Interactive Tools for Better Retention – Flashcards, quizzes, and self-tests help students reinforce learning in a fun and engaging way.",

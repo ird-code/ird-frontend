@@ -5,7 +5,7 @@ import Head from "next/head";
 const LiteracyCourse = () => {
   const mainSection = {
     title: "Literacy Course Package",
-    imageSrc: "/assets/images/literacy-course.webp",
+    imageSrc: "/assets/images/literacy-course.jpg",
     description: [
       "The Literacy Course Package is designed to equip students with essential skills to navigate an ever-changing world. Focusing on financial, media, political, and leadership literacy, the courses help students make informed decisions, think critically, and engage responsibly within their communities. IRD's approach combines practical knowledge with real-world applications to ensure students are well-prepared for the challenges they may face.",
       "Through this comprehensive curriculum, IRD empowers students to manage their finances, evaluate media content, understand political systems, and develop strong leadership abilities. By fostering these key skills, the Literacy Course Package aims to prepare students to become active, informed, and responsible citizens, capable of thriving in an interconnected and rapidly evolving society."
@@ -15,7 +15,7 @@ const LiteracyCourse = () => {
   const sections = [
     {
       title: "Financial Literacy",
-      imageSrc: "/assets/images/fin-literacy.webp",
+      imageSrc: "/assets/images/fin-literacy.jpg",
       features: [
         "Basics of Money Management – Understanding income, expenses, savings, and budgeting. The importance of setting financial goals.",
         "Banking and Financial Systems – How banks, cooperatives, and microfinance institutions work. Steps to open and manage a bank account.",
@@ -39,7 +39,7 @@ const LiteracyCourse = () => {
    
    {
       title: "Political Literacy",
-      imageSrc: "/assets/images/political-literacy.webp",
+      imageSrc: "/assets/images/political-literacy.jpg",
       features: [
         "Basics of Governance – Structure of Nepal's federal, provincial, and local governments. Power, roles, and responsibilities of elected officials.",
         "Major Parties and Their Origin and Ideologies – Nepali Congress, UPN UML, Maoist, Rashtriya Swatantra Party.",
@@ -50,7 +50,7 @@ const LiteracyCourse = () => {
     },
     {
       title: "Leadership Course",
-      imageSrc: "/assets/images/leadership-course.webp",
+      imageSrc: "/assets/images/leadership-course.jpg",
       features: [
         "Foundations of Leadership – Qualities of an effective leader. Leadership styles and their applications.",
         "Teamwork and Collaboration – Building and leading a team. Effective communication and conflict resolution.",
