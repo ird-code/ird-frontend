@@ -5,7 +5,7 @@ import Head from "next/head";
 const Page = () => {
   const mainSection = {
     title: "One App, One Tap",
-    imageSrc: "/assets/images/culture-and-heritage/agriculture/hero_img.webp",
+    imageSrc: "/assets/images/areas-of-work/flagship-programs/one-app-one-tap/One-Tap.png",
     description: [
       "Transforming Rural Nepal Through Digital Innovation",
       "One App, One Tap is a flagship initiative of IRD, designed to bridge the digital divide in rural Nepal by developing critical digital infrastructure, services, accessibility, and literacy. In many villages, people struggle to access and utilize digital tools, making their lives less efficient and more challenging as the world rapidly evolves",
