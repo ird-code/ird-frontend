@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="mt-[10rem] max-w-[1280px] mx-auto">
+    <div className="mt-[10rem] max-w-[1280px] mx-auto pl-[1rem] pr-[1rem]">
       {/* About Section */}
        
         <h1>Institute for Rural Development</h1>
