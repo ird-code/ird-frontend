@@ -14,11 +14,14 @@
 
 .topBarWrapper,
 .mainNavWrapper {
-  max-width: var(--section-width);
+  max-width: calc(var(--section-width));
   margin: 0 auto;
-  /* padding: 0 1rem; */
+  padding: 0 1rem;
 }
 
+.navLink{
+  flex: 1;
+}
 .navbarScrolled {
   --nav-text-color: var(--nav-text-color);
   --nav-font-weight: 400;
@@ -40,7 +43,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
 }
 
 .logoContainer {
@@ -67,9 +72,7 @@
   cursor: pointer;
   color: var(--nav-text-color);
 }
-.searchBox {
-  gap: 0.4rem;
-}
+
 .searchIcon,
 .loginIcon {
   font-size: 1.4rem;
@@ -110,7 +113,6 @@
 
 .navLink {
   display: block;
-  padding: 1rem 0.8rem;
   color: var(--nav-text-color);
   font-size: var(--nav-font-size);
   font-weight: var(--nav-font-weight);
@@ -120,7 +122,10 @@
 .navLink:hover {
   color: var(--primary-color);
 }
+.navLink, .dropdownButton{
+  padding: 1rem 0;
 
+}
 /* Dropdown */
 .dropdownContainer {
   position: relative;
@@ -129,8 +134,7 @@
 .dropdownButton {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  padding: 1rem 0.5rem;
+  gap: 0.2rem;
   font-size: var(--nav-font-size);
   font-weight: var(--nav-font-weight);
   color: var(--nav-text-color);
@@ -169,7 +173,7 @@
   display: block;
   color: #f0f0f0;
   font-weight: 500;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   text-decoration: none;
   transition: all var(--transition-speed) ease;
 }
@@ -184,7 +188,7 @@
   color: white;
   border-radius: 2rem;
   transition: background 0.3s ease;
-  padding: 0.6rem 2.6rem;
+  padding: 0.5rem 1.8rem;
   font-size: 1rem;
 }
 
@@ -202,7 +206,7 @@
     display: flex;
   }
   .navbar {
-    background-color: rgba(255, 255, 255,1);
+    background-color: rgba(255, 255, 255, 1);
   }
 
   .navbarScrolled .topBar,
@@ -244,10 +248,6 @@
     width: 100%;
   }
 
-  .navLink,
-  .dropdownButton {
-    padding: 0.8rem 1.5rem;
-  }
 
   /* Mobile Dropdown When clicked */
   .dropdownMenu {
@@ -282,7 +282,7 @@
   }
 
   .ctaItem {
-    margin: 0.8rem 1.5rem;
+    margin: 1rem 0;
   }
 }
 
