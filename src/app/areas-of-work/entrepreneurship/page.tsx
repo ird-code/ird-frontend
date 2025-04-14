@@ -8,7 +8,7 @@ const Page = () => {
     imageSrc:"",
     description: [
       "IRD’s Work Root Ventures aim to empower Nepal’s rural communities through innovative, practical, and locally-rooted solutions in agriculture, self-employment, and sustainability. Our initiatives help communities become more self-reliant and resilient by bridging the gap between tradition and modern tools.",
-      "We’re committed to improving farmer livelihoods, reducing rural-to-urban migration, and building ecosystems of opportunity through collaboration, training, and technology.",
+      "We’re committed to improving livelihoods by connecting investors with local enterprises and entrepreneurs to lower the financial barriers and promote local business.",
     ],
   };
   
@@ -16,10 +16,7 @@ const Page = () => {
     {
       title: "KrishiMitra",
       description: [
-        "Digital Farming Transformation",
-        "KrishiMitra is a digital-first initiative that brings AI, IoT, and accessible education to Nepal’s smallholder farmers.",
-        "Through our app and farmer helpline, we offer crop insights, weather alerts, and pest control advice. We also organize e-learning sessions, install IoT soil sensors, and analyze satellite data to support smarter farming.",
-        "Our mission is to help farmers increase yields, reduce losses, and make agriculture more sustainable and appealing for the next generation.",
+        "KrishiMitra is a complete digital infrastructure for the agriculture sector of Nepal. It is an AI-powered digital platform designed to support smallholder farmers by providing them with real-time weather information, technical solutions, and market access. By integrating smart and affordable farming technologies, affordable sensor-based soil testing, and data-driven insights, we aim to make farming more productive, sustainable, and profitable.",
       ],
       imageSrc: "/assets/images/areas-of-work/entrepreneurship/img_1.webp",
       features: [
@@ -31,11 +28,16 @@ const Page = () => {
       ],
     },
     {
+      title: "Kisan Connect (KisCo)",
+      description: [
+        "Promoting local and regional trade via enhanced customer and owner connectivity. It is a digital marketplace designed to connect local farmers and consumers effortlessly. Integrated into the KrishiMitra app, KisCo allows farmers to list their surplus products, making them visible to potential buyers within a chosen radius. Consumers can search for available products, contact the farmer, and purchase directly—eliminating unnecessary middlemen and ensuring fair prices for both parties.",
+      ],
+      imageSrc: "/assets/images/areas-of-work/entrepreneurship/img_6.webp",
+    },
+    {
       title: "IRD Seed Bank",
       description: [
-        "Access to Quality Seeds",
-        "To tackle the scarcity of reliable seeds, IRD has launched community-based seed banks across Nepal. These banks distribute quality seeds and saplings while also training farmers on seed preservation and agroforestry techniques.",
-        "We prioritize climate-resilient and indigenous crops that are better suited to local conditions and contribute to food security.",
+        "Access to high-quality seeds and saplings is one of the most crucial factors for successful farming. However, many farmers in Nepal struggle with the availability of reliable seeds, especially during peak planting seasons. To address this challenge, IRD Seed Bank aims to provide farmers and customers with high-quality seeds and saplings, ensuring they have the right resources at the right time for optimal agricultural productivity.",
       ],
       imageSrc: "/assets/images/areas-of-work/entrepreneurship/img_2.webp",
       features: [
@@ -49,9 +51,7 @@ const Page = () => {
     {
       title: "Kutir",
       description: [
-        "Reviving Villages Through Rural Stays",
-        "Kutir turns abandoned rural homes into homestays, promoting tourism and creating income opportunities for locals. Each Kutir offers travelers a culturally immersive and affordable stay experience while giving villagers new ways to engage with Nepal’s growing tourism market.",
-        "We work with homeowners to renovate traditional houses, keeping them simple but comfortable.",
+        "Transforming abandoned houses into housing space to penetrate tourism into local level. Nepal’s breathtaking landscapes, rich cultural heritage, and warm hospitality make it an unparalleled destination for travelers. However, safe, affordable, and locally immersive accommodations remain a challenge, especially in rural areas. At the same time, many homes in villages and hillsides lie abandoned as families migrate to cities and abroad. Kutir—a term that signifies a simple, small dwelling for seekers and wanderers—aims to bridge this gap by converting these abandoned houses into low-cost cabins and guest stays.",
       ],
       imageSrc: "/assets/images/areas-of-work/entrepreneurship/img_3.webp",
       features: [
@@ -64,9 +64,7 @@ const Page = () => {
     {
       title: "Aaditya",
       description: [
-        "Hybrid Solar + Electric Dryer",
-        "To reduce food spoilage and empower local food processing, Aaditya provides farmers with hybrid solar-electric dryers. These dryers preserve fruits, vegetables, and herbs more efficiently, even in unpredictable weather conditions.",
-        "The result is lower waste, higher incomes, and greater food security.",
+        "Solar + electric dual mode dryer system for rural communities. In Nepal’s villages, drying vegetables and herbs has been a long-standing tradition to ensure food availability during off-seasons. However, traditional drying methods rely solely on sunlight, which is often unreliable due to unpredictable weather conditions leading to significant food waste due to fungus development. With Aaditya, farmers and households no longer have to depend solely on sunlight for drying food. This hybrid solution ensures a steady food supply, reduces waste, and enables villagers to preserve vegetables, herbs, etc. efficiently and affordably.",
       ],
       imageSrc: "/assets/images/areas-of-work/entrepreneurship/img_4.webp",
       features: [
@@ -77,11 +75,9 @@ const Page = () => {
       ],
     },
     {
-      title: "Aatmanirbhar Initiative",
+      title: "Aatmanirbhar Abhiyaan",
       description: [
-        "Self-Reliant Villages",
-        "Aatmanirbhar promotes self-employment and reduces import dependency by helping villages produce daily-use goods using locally available natural resources.",
-        "From handmade incense and herbal toothpaste to bamboo products and dried foods, these goods provide healthier alternatives while supporting local jobs and entrepreneurship.",
+        "Aatmanirbhar promotes production and consumption at the local level using locally available resources to promote healthier life and bring down expenses. Incense sticks from local flowers, Bamboo crafts and household items, Herbal toothpaste and neem-stick toothbrushes, Organic colors for festivals and art, Straw mats, and many more can be created at home using locally available resources in the villages.",
       ],
       features: [
         { text: "Trains locals in producing and selling essential goods" },
@@ -93,7 +89,6 @@ const Page = () => {
     {
       title: "Entrepreneurship Camps & Trainings",
       description: [
-        "Inspiring Innovation at the Grassroots",
         "We organize hands-on entrepreneurship camps and workshops for villagers, students, and returnee migrants. These trainings build confidence, business skills, and a problem-solving mindset.",
         "Our goal is to nurture rural innovation and create homegrown businesses that thrive within local ecosystems.",
       ],
