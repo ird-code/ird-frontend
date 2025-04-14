@@ -2,141 +2,161 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
-const Page = () => {
+const EducationPage = () => {
   const mainSection = {
-    title: "Education Reform Initiative (ERI)",
-    imageSrc: "/assets/images/areas-of-work/education/img_1.webp",
+    title: "Education",
+    imageSrc: "/assets/images/areas-of-work/education/img_2.webp", 
     description: [
-      "The Education Reform Initiative (ERI) is transforming education in Nepal, with a particular focus on rural areas. ERI moves away from traditional rote learning and embraces a holistic, student-centered approach. It nurtures intellectual, emotional, social, and creative development through a range of programs.",
-      "Key components of ERI include a holistic curriculum that encourages project-based learning, integrates local context and environmental education, and involves students in workshops with leaders and experts. The initiative also emphasizes teacher and parent training, promoting skills for effective teaching and support at home.",
-      "Additional elements include student clubs, extracurricular activities like sports tournaments and field trips, and courses in financial, media, and political literacy. Local curriculum development and the Maitreyi sports initiative further contribute to empowering communities. With tools like Samvidha (for school administration) and Ex-L (for personalized learning), ERI is creating a more inclusive and engaging education system that prepares students for the future.",
+      "Education in Nepal continues to rely heavily on rote memorization and exam-based success. At IRD, we aim to transform this landscape by promoting holistic development, critical thinking, and community-rooted learning.",
+      "Through a diverse range of programs—from curriculum reform and literacy training to mentorship and digital platforms—we work with schools, students, and local governments to reimagine education as an empowering, inclusive, and future-ready journey.",
     ],
   };
 
-  const eriProjects = {
-    headline: "ERI Key Projects",
-    items: [
-      {
-        title: "Project-Based Learning",
-        description:
-          "Encourages creativity and critical thinking by having students work on real-world projects, fostering skills needed for the future.",
-      },
-      {
-        title: "Teacher & Parent Training",
-        description:
-          "Teachers are trained in holistic teaching strategies, while parents are empowered with tools to support learning and emotional development at home.",
-      },
-      {
-        title: "Student Clubs & Extra-Curricular Activities",
-        description:
-          "Clubs for science, arts, sports, and leadership provide students with collaborative opportunities. Extra-curricular activities enhance life skills through tournaments, performances, and community engagement.",
-      },
-      {
-        title: "Literacy Courses",
-        description:
-          "Financial, media, and political literacy courses equip students with crucial life skills, while leadership and management courses prepare them for future careers.",
-      },
-      {
-        title: "Local Curriculum Development",
-        description:
-          "Collaborates with local governments to develop a curriculum reflecting local heritage and addressing regional needs.",
-      },
-      {
-        title: "Maitreyi - The Spirit of Sports",
-        description:
-          "Promotes physical activity and strengthens community bonds through sports events and rural infrastructure development.",
-      },
-      {
-        title: "Samvidha - School Administration Software",
-        description:
-          "A digital platform to streamline school management, including student records, communication, and financial transactions.",
-      },
-      {
-        title: "Ex-L - Personalized Learning Platform",
-        description:
-          "An interactive platform providing personalized learning paths, teacher-assigned tasks, and real-time student progress tracking.",
-      },
-    ],
-  };
+  const subSections = [
+    {
+      title: "Education Reform Initiative",
+      description: [
+        "Current systems prioritize rote memorization and exam results as the primary markers of success, often at the expense of students’ holistic development and creativity. Our reform initiative bridges this gap by empowering schools to reimagine their curriculum, pedagogy, and teaching practices.",
+      ],
+      imageSrc: "/assets/images/areas-of-work/education/img_3.webp", 
+    },
+    {
+      title: "Literacy Course Package",
+      description: [
+        "This package includes Media Literacy, Political Literacy, Financial Literacy, and Leadership training. The package aims to equip students with knowledge and skills that are usually not included in the mainstream curriculum but are vital for a successful future.",
+      ],
+    },
+    {
+      title: "Local Curriculum Development",
+      description: [
+        " IRD collaborates with local governments in municipalities to help and guide them to design local curriculum. Our vision is to foster a deep connection between students and their local heritage, culture, and developmental potential through tailored educational materials (booklets, documentary) that reflect the unique identity of their community.",
+      ],
+      imageSrc: "/assets/images/areas-of-work/education/img_1.webp", 
+    },
+    {
+      title: "Excel Learning (Ex-L)",
+      description: [
+        "We are developing an innovative personalized learning platform designed to enhance student education beyond the traditional classroom learning in Nepal that follows a “one-size-fits-all” approach, where all students receive the same assignments, homework, and pace of instruction. This often leaves behind students who need extra support in specific areas. Teachers, burdened with large class sizes and limited time, struggle to provide personalized assistance to each student.",
+      ],
+      imageSrc: "/assets/images/areas-of-work/education/exl.webp",
+    },
+    {
+      title: "Maitri",
+      description: [
+        "We are promoting sports and physical activities. Through distribution of sports materials, construction of local sport infrastructures, and organization of sports events, we not only nurtures talent but also strengthens community bonds, enhances well-being, and instills values of teamwork and perseverance.",
+      ],
+      imageSrc: "/assets/images/areas-of-work/education/maitri.webp", 
+    },
+    {
+      title: "Phonics Project",
+      description: [
+        "It aims to promote English speaking and reading skills for primary school students using a phonetic based technique which is simpler and more efficient to learn.",
+      ],
+      imageSrc: "/assets/images/areas-of-work/education/img_4.webp", 
+    },
+    {
+      title: "Mentorship Program",
+      description: [
+        "Providing a thorough guidance to High school students on their college application to universities in the US and abroad.",
+      ],
+    },
+    {
+      title: "Scholarship Program",
+      description: [
+        "Supporting promising students with high academic performance and weak financial background and gradually mentoring them to gain leadership skills and mindset.",
+      ],
+    },
+    {
+      title: "Samvidha",
+      description: [
+        "A comprehensive digital platform tailored for schools, empowering administrators, students, and parents to manage critical school functions seamlessly. By integrating cutting-edge technology into daily operations, Samvidha reduces administrative burdens, streamlines communication, and enhances the overall educational experience.",
+      ],
+      imageSrc: "/assets/images/areas-of-work/education/samvidha.webp", 
+    },
+  ];
 
   return (
     <>
       <Head>
-        <title>Education Reform Initiative | IRD</title>
-        <meta name="description" content="" />
+        <title>Education Services | IRD</title>
+        <meta name="description" content="IRD's education programs and services" />
       </Head>
 
       <main className="min-h-screen pb-16 mt-[10rem]">
         <section className="mt-12">
           <div className="container mx-auto px-4 md:px-8">
             <div className="max-w-[1280px] mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-8 text-left">
-                {mainSection.title}
-              </h1>
+              {mainSection.title && (
+                <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-8 text-left">
+                  {mainSection.title}
+                </h1>
+              )}
+
               {mainSection.imageSrc && (
                 <div className="mb-12">
                   <div className="relative w-full aspect-[16/9] max-h-[30rem]">
                     <Image
                       src={mainSection.imageSrc}
-                      alt="Education Reform Initiative"
+                      alt="Education Services"
                       layout="fill"
-                      style={{ objectFit: "cover" }}
+                      objectFit="cover"
                     />
                   </div>
                 </div>
               )}
 
-              {mainSection.description &&
-                mainSection.description.length > 0 && (
+              {mainSection.description?.length > 0 && (
+                <div className="space-y-4 mb-12">
+                  {mainSection.description.map((paragraph, index) => (
+                    <p key={index} className="text-gray-700 leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {subSections.map((section, index) => (
+          <section key={index} className="py-16">
+            <div className="container mx-auto px-4 md:px-8">
+              <div className="max-w-[1280px] mx-auto">
+                {section.title && (
+                  <h2 className="text-3xl md:text-4xl font-bold text-green-700 mb-8 text-left">
+                    {section.title}
+                  </h2>
+                )}
+
+                {section.imageSrc && (
+                  <div className="mb-12">
+                    <div className="relative w-full aspect-[16/9] max-h-[30rem]">
+                      <Image
+                        src={section.imageSrc}
+                        alt={section.title}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {section.description?.length > 0 && (
                   <div className="space-y-4 mb-12">
-                    {mainSection.description.map((paragraph, index) => (
-                      <p key={index} className="text-gray-700 leading-relaxed">
+                    {section.description.map((paragraph, idx) => (
+                      <p key={idx} className="text-gray-700 leading-relaxed">
                         {paragraph}
                       </p>
                     ))}
                   </div>
                 )}
-            </div>
-          </div>
-        </section>
-
-        {eriProjects.items && eriProjects.items.length > 0 && (
-          <section className="mt-6">
-            <div className="container mx-auto px-4 md:px-8">
-              <div className="max-w-[1280px] mx-auto">
-                <h3 className="text-xl md:text-2xl font-semibold text-green-700 mb-6 text-left">
-                  {eriProjects.headline}
-                </h3>
-                <ul className="space-y-4 mb-12">
-                  {eriProjects.items.map((item, id) => (
-                    <li key={id} className="flex items-start">
-                      <span className="text-green-500 mr-3 mt-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </span>
-                      <p className="text-gray-700">
-                        <b>{item.title}:</b> {item.description}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           </section>
-        )}
+        ))}
       </main>
     </>
   );
 };
 
-export default Page;
+export default EducationPage;
