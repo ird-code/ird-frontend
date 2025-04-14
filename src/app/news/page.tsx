@@ -16,8 +16,7 @@ function Page() {
       id: 2,
       image: "/assets/images/news/news2.png",
       title: "One Tap to Empower",
-      meta_disc:
-        "IRD's One App, One Tap bridges rural Nepal's digital divide.",
+      meta_disc: "IRD's One App, One Tap bridges rural Nepal's digital divide.",
     },
     {
       id: 3,
@@ -55,9 +54,9 @@ function Page() {
         <div>
           <h2>News, Stories, and Blogs</h2>
           <p className="!text-[1.6rem] max-w-[70ch]">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Exercitationem aliquam sapiente quis! Sapiente reprehenderit
-            assumenda delectus aliquam ipsam inventore
+            Latest news and updates on rural empowerment initiatives, community
+            leadership programs, and sustainable development efforts across
+            Nepal&apos;s rural regions.
           </p>
         </div>
 
