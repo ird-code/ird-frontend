@@ -33,24 +33,30 @@ const Values = () => {
   ];
 
   return (
-    <main className="py-16 overflow-hidden max-w-[1280px] mx-auto relative pl-[1rem] pr-[1rem]">
-      <h1>Our Values</h1>
-      <p className="!text-[1.6rem] max-w-[70ch] mb-16">
+    <main className="py-16 px-4 overflow-hidden max-w-[1280px] mx-auto relative">
+      <h1 className="text-4xl font-bold mb-6">Our Values</h1>
+      <p className="text-xl max-w-[70ch] mb-16">
         Empowering and guiding the local leadership and communities to build the
         foundation for sustainable rural development rooted in Nepal&apos;s ethos.
       </p>
-      <div>
+
+      {/* Value Cards */}
+      <div className="flex flex-col gap-y-16">
         {valuesData.map((value, index) => (
           <div
             key={value.id}
-            className={`mb-24 ${
-              index % 2 === 0 ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"
-            } md:max-w-[600px] bg-[#f3f3f3] p-10`}
+            className={`
+              bg-[#f3f3f3] p-12 rounded-2xl shadow-md 
+              md:max-w-[650px] w-full min-h-[250px] 
+              ${index % 2 === 0 ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"}
+            `}
           >
-            <h2 className="!text-[2rem]">{value.title}</h2>
-            <div className="mx-auto">
-              <p className="!text-[1.6rem]">{value.description}</p>
-            </div>
+            <h2 className="text-2xl font-bold text-[#800000] mb-3">
+              {value.title.toUpperCase()}
+            </h2>
+            <p className="text-lg leading-relaxed text-black">
+              {value.description}
+            </p>
           </div>
         ))}
       </div>
