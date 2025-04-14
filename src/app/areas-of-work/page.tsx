@@ -12,8 +12,9 @@ const AreasOfWork = () => {
         <div className={styles.header}>
           <h2>Areas of Work</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit.
+            We focus on enhancing local leadership, fostering sustainable
+            livelihoods, and nurturing resilient, self-reliant rural communities
+            grounded in Nepal&apos;s unique values.
           </p>
         </div>
         <div>
@@ -21,13 +22,13 @@ const AreasOfWork = () => {
             {areasOfWork.areasOfWork.map((item, index) => (
               <li className={styles.item} key={index}>
                 <div className={styles.imageContainer}>
-                    <Image
-                      src="/assets/images/temp.webp"
-                      fill
-                      alt={`${item.initiativeName}`}
-                      loading="lazy"
-                      className={styles.initiativeImage}
-                    />
+                  <Image
+                    src="/assets/images/temp.webp"
+                    fill
+                    alt={`${item.initiativeName}`}
+                    loading="lazy"
+                    className={styles.initiativeImage}
+                  />
                 </div>
 
                 <div className={styles.details}>
