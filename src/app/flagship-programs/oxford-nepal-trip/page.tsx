@@ -59,7 +59,7 @@ const Page = () => {
                       src={mainSection.imageSrc}
                       alt="Agriculture Services"
                       layout="fill"
-                      objectFit="cover"
+                      objectFit="contain"
                     />
                   </div>
                 </div>
