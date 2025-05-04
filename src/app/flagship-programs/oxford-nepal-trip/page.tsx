@@ -4,188 +4,101 @@ import Head from "next/head";
 
 const Page = () => {
   const mainSection = {
-    title: "Oxford Diplomatic Society's Nepal Trip",
-    subtitle: "April 8–18, 2025",
+    title: "Oxford Diplomatic Society Nepal Trip",
+    imageSrc: "/assets/images/flagship-programs/Oxford Diplomatic Society Nepal Trip.jpeg",
     description: [
-      "Diplomatic meetings, cultural exchanges, and political engagement in Nepal.",
+      "We are thrilled to announce the Oxford Diplomatic Society's upcoming international trip to Nepal, taking place from April 8-18, 2025. This 10-day journey offers a rare opportunity for students and members to engage directly with high-level policymakers, diplomats, international organizations, and nonprofits. Participants will explore Nepal's dynamic landscape of diplomacy, governance, development, and culture through a series of official meetings, site visits, and immersive experiences.",
+      "Led by Asmod Khakurel, Director of the Tourism and Cultural Exchange department at IRD and a valued member of the Society, this trip marks a milestone as the first official exchange program organized in partnership with IRD. From discussions at the Prime Minister's Office to cultural walks through the historic Kathmandu Valley, the program promises a rich blend of intellectual engagement and cultural discovery.",
     ],
-    imageSrc: "/assets/images/flagship-programs/oxford-bg.webp",
   };
-
-  const tripOverview = [
-    "The Oxford Diplomatic Society is organizing a 10-day trip to Nepal from April 8 to 18, 2025. This initiative focuses on engaging with Nepal’s key political, diplomatic, and cultural institutions while fostering cross-cultural exchange and intellectual dialogue.",
-    "Delegates will collaborate with Panchakanya Rural Municipality in Nuwakot, alongside the Institute for Rural Development (IRD), to draft a framework for local development initiatives. These efforts will center on sustainable tourism, cultural preservation, and regional development.",
-    "The trip will also explore Nepal’s unique geopolitical role, its challenges in balancing environmental conservation with economic growth, and its approach to regional diplomacy. Activities include diplomatic discussions, cultural immersion events, and a two-day trek at an altitude of approximately 3,700 meters.",
-  ];
-
+  
   const ODCWork = {
-    headline: "Our Impact",
+    headline: "What Do Oxford Diplomatic Society Do?",
     items: [
-      {
-        title: "Speaker Events & Panels",
-        description:
-          "Focused on issues related to diplomacy and international relations, hosting experts ranging from business leaders to UN officials and heads of state.",
-      },
       {
         title: "Workshops",
         description:
-          "Run by experts for our annual Diplomatic Academy, assessed by members of the DPIR and DCE faculty.",
+          "The Oxford Diplomatic Society offers interactive workshops led by experienced practitioners across a range of fields, providing members with practical skills and valuable tools. From mastering negotiations and policy drafting to refining speechwriting, our sessions are designed to prepare members for real-world diplomatic challenges.",
       },
       {
-        title: "The Diplomatic Dispatch",
+        title: "Social Events",
         description:
-          "Our well-respected journal available to read on our website for free.",
+          "The Society hosts bi-weekly socials that bring together students from across Oxford's colleges and disciplines. These relaxed gatherings provide a space to connect, exchange ideas, and build community over drinks and shared experiences.",
       },
       {
-        title: "Competitions & Initiatives",
+        title: "Trips & Excursions",
         description:
-          "Sponsored by international organizations, such as NATO.",
+          "Leveraging its proximity to London, the Society organizes exclusive visits to embassies, think tanks, and multilateral organizations. These excursions offer members direct engagement with professionals in diplomacy and international affairs.",
       },
       {
-        title: "Domestic & Foreign Trips",
+        title: "Events & Networking",
         description:
-          "Visits to embassies, government offices, and foreign excursions for cultural exchange and exploring key institutions.",
-      },
+          "Through speaker events, panels, and networking sessions, the Society facilitates conversations with leading diplomats, scholars, and global thinkers. These events are designed to inspire dialogue and shape the future of diplomacy.",
+      }
     ],
   };
 
   return (
     <>
       <Head>
-        <title>Oxford Diplomatic Society Nepal Trip – April 8–18, 2025</title>
-        <meta
-          name="description"
-          content="The Oxford Diplomatic Society's Nepal Trip is a 10-day journey focusing on diplomatic meetings, cultural exchanges, and political engagement in Nepal."
-        />
+        <title>Oxford Diplomatic Society Nepal Trip | IRD</title>
+        <meta name="description" content="Oxford Diplomatic Society Nepal Trip is a 10-day trip that offers a unique opportunity to engage with high-level policymakers, diplomats, international organizations, and nonprofits while also exploring Nepal's diplomacy, governance, development, and cultural landscape." />
       </Head>
 
-      <main className="min-h-screen pb-16">
-        {/* Hero Section */}
-        <section className="relative min-h-[600px] mt-[80px]">
-          <div className="relative w-full h-full min-h-[600px]">
-            <Image
-              src={mainSection.imageSrc}
-              alt="Nepal Trip Banner"
-              fill
-              priority
-              className="object-cover"
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent flex flex-col items-center justify-center text-center px-4">
-              <h1 className="text-4xl md:text-[60px] text-white font-bold mb-8 drop-shadow-lg">
-                Oxford Diplomatic Society&apos;s Nepal Trip
+      <main className="min-h-screen pb-16 mt-[10rem]">
+        <section className="mt-12">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="max-w-[1280px] mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-8 text-left">
+                {mainSection.title}
               </h1>
-              <h2 className="text-4xl md:text-[44px] text-white mb-6 drop-shadow-lg">
-                April 8–18, 2025
-              </h2>
-              <p className="text-[20px] text-white drop-shadow">
-                {mainSection.description[0]}
-              </p>
-              <div className="mt-6 flex flex-wrap gap-4 justify-center py-12">
-                <a
-                  href="#schedule"
-                  className="bg-yellow-400 uppercase tracking-wide text-blue-900 text-sm md:text-[17px] py-2 px-4 md:py-[17px] md:px-[37px] rounded hover:bg-opacity-80"
-                >
-                  Scroll to Schedule
-                </a>
-                <a
-                  href="https://calendar.google.com/calendar/render?cid=d48247634828fad41e38038c23eebb1a8629a939971f034e710f07bbfac4ecf0@group.calendar.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white uppercase tracking-wide text-blue-900 text-sm md:text-[17px] py-2 px-4 md:py-[17px] md:px-[37px] rounded hover:bg-gray-100"
-                >
-                  Add Trip to Calendar
-                </a>
+              {mainSection.imageSrc && (
+                <div className="mb-12">
+                  <div className="relative w-full aspect-[16/9] max-h-[30rem]">
+                    <Image
+                      src={mainSection.imageSrc}
+                      alt="Agriculture Services"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {mainSection.description &&
+                mainSection.description.length > 0 && (
+                  <div className="space-y-4 mb-12">
+                    {mainSection.description.map((paragraph, index) => (
+                      <p key={index} className="text-gray-700 leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
+            </div>
+          </div>
+        </section>
+
+        {typeof ODCWork !== "undefined" &&
+          ODCWork.items &&
+          ODCWork.items.length > 0 && (
+            <section className="mt-6">
+              <div className="container mx-auto px-4 md:px-8">
+                <div className="max-w-[1280px] mx-auto">
+                  <h3 className="text-xl md:text-2xl font-semibold text-green-700 mb-6 text-left">
+                    {ODCWork.headline}
+                  </h3>
+                  <ul className="space-y-4 mb-12">
+                    {ODCWork.items.map((item, id) => (
+                      <li key={id} className="flex items-start">
+                        <p className="text-gray-700"><b>{item.title}:  </b>{item.description}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Trip Overview Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-[45px] text-blue-900 mb-6 text-center">
-              Trip Overview
-            </h2>
-            <div className="space-y-4 mb-12">
-              {tripOverview.map((paragraph, index) => (
-                <p key={index} className="text-gray-700 leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Our Impact Section */}
-        {ODCWork.items && ODCWork.items.length > 0 && (
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <h3 className="text-[28px] font-semibold mb-4 text-blue-900">
-                {ODCWork.headline}
-              </h3>
-              <ul className="list-decimal list-inside space-y-4">
-                {ODCWork.items.map((item, id) => (
-                  <li key={id} className="text-gray-700">
-                    <b>{item.title}: </b>
-                    {item.description}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-        )}
-
-        {/* Google Calendar Section */}
-        <section id="schedule" className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-[45px] text-blue-900 mb-6 text-center">
-              Trip Schedule
-            </h2>
-            <div className="overflow-x-auto">
-              <iframe
-                src="https://calendar.google.com/calendar/embed?src=d48247634828fad41e38038c23eebb1a8629a939971f034e710f07bbfac4ecf0@group.calendar.google.com&dates=20250407/20250414&mode=WEEK"
-                style={{ border: 0 }}
-                width="100%"
-                height="600"
-                frameBorder="0"
-                scrolling="no"
-              ></iframe>
-            </div>
-            <div className="mt-12 text-center">
-              <a
-                href="https://calendar.google.com/calendar/render?cid=d48247634828fad41e38038c23eebb1a8629a939971f034e710f07bbfac4ecf0@group.calendar.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-blue-600 text-white font-bold text-[17px] py-[17px] px-[37px] rounded hover:bg-blue-700"
-              >
-                Add to Google Calendar
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-[45px] text-blue-900 mb-6 text-center">Contact</h2>
-            <div className="mb-8">
-              <h3 className="text-[32px] font-semibold mb-2">Contact Information</h3>
-              <p className="mb-2"><strong>Asmod Khakurel</strong></p>
-              <p className="mb-2">Area Contact for Nepal, Oxford Alumni Network</p>
-              <p className="mb-2">
-                Email:{" "}
-                <a
-                  href="mailto:asmodkhakurel@gmail.com"
-                  className="text-blue-600 hover:underline"
-                >
-                  asmodkhakurel@gmail.com
-                </a>
-              </p>
-              <p className="mb-2">Phone / WhatsApp: +977 980-3609207</p>
-            </div>
-          </div>
-        </section>
+            </section>
+          )}
       </main>
     </>
   );
