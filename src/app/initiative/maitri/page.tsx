@@ -5,7 +5,7 @@ import Head from "next/head";
 const Maitri = () => {
   const mainSection = {
     title: "Maitri",
-    imageSrc: "/assets/images/maitri.jpg",
+    imageSrc: "/assets/images/initiative/maitri/maitri.jpg",
     description: [
       "Villages are known and cherished for nurturing a sense of closeness and mutual interactions. However, as digital tools become increasingly invasive in people’s lives, outdoor sports are losing importance. This shift not only impacts psychological and physical health but also weakens the foundation for building strong community bonds through shared moments of joy and playfulness.",
       "Sports have the power to bring people together, fostering celebration, unity, and a collective spirit. A little joy and playfulness in life always go a long way.",
@@ -17,7 +17,7 @@ const Maitri = () => {
     {
       title: "Distributing Sports Materials",
       description:[],
-      imageSrc: "/assets/images/first-focus.jpg",
+      imageSrc: "/assets/images/initiative/maitri/first-focus.jpg",
       features: [
         "Providing schools, youth clubs, and local communities with sports gear and equipment, ensuring financial barriers do not hinder participation in physical activities."
       ]
@@ -25,7 +25,7 @@ const Maitri = () => {
     {
       title: "Reviving Outdoor Play",
       description:[],
-      imageSrc: "/assets/images/values-2.jpg",
+      imageSrc: "/assets/images/initiative/maitri/values-2.jpg",
       features: [
         "Encouraging children and youth to return to outdoor sports by creating engaging play spaces and organizing events that foster team spirit and active lifestyles."
       ]
@@ -33,7 +33,7 @@ const Maitri = () => {
     {
       title: "Fostering Community Spirit",
       description:[],
-      imageSrc: "/assets/images/focus-2.jpg",
+      imageSrc: "/assets/images/initiative/maitri/focus-2.jpg",
       features: [
         "Creating platforms for inter-community tournaments and games to strengthen bonds, celebrate local talent, and build inclusive, healthy environments."
       ]
